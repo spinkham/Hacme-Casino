@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//Tigris//DTD XHTML 1.0 Transitional//EN"
+"http://style.tigris.org/tigris_transitional.dtd">
+<html>
+<head>
+ <style type="text/css">
+/* <![CDATA[ */ 
+@import "css/readyset.css"; 
+@import "css/inst.css";
+/*  ]]> */
+ </style>
+
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+ <title>HacmeCasino - Project Proposal</title>
+</head>
+
+<body>
+<h2>HacmeCasino - Project Proposal</h2>
+
+<div class="app">
+<div class="readyset">
+
+ <div id="projectinfo">
+ <h3>Project Information</h3>
+ <table border="1" cellpadding="3" cellspacing="2" class="axial">
+  <tr>
+   <th>Project:</th> 
+   <td><a href="index.html">HacmeCasino</a></td> 
+  </tr>
+  <tr>
+   <th>Project Time-frame:</th> 
+   <td>2006/4/26 to 2006/5/10 to beyond...</td> 
+  </tr>
+  <tr>
+   <th>Summary:</th> 
+   <td>HacmeCasino is an online gambling site with multiple introduced security vulnerabilites. It is based on the Ruby on Rails framework and features AJAX support. It is part of the HacmeInc application portfolio from Foundstone</td> 
+  </tr>
+  <tr>
+   <th>Attached Worksheets:</th> 
+   <td>
+    <div>Project Proposal &gt; <a href="target-and-benefits.html">Target audience and benefits</a></div>
+   </td>
+  </tr>
+  <tr>
+   <th>Related Documents:</th> 
+   <td>
+    <div><a href="plan.html">Project plan</a> &gt;
+         <a href="resource-needs.html">Resource needs</a></div>
+    <div><a href="glossary.html">Glossary</a></div>
+   </td>
+  </tr>
+ </table>
+ </div> <!-- /projectinfo -->
+
+ <div id="processimpact">
+  <strong>Process impact:</strong> This proposal,
+  along with drafts of related documents, will be used by management to
+  determine whether or not to approve work on this project.  A clear
+  and precise project plan helps set expectations that will be used
+  later to evaluate the success of the project.
+ </div> <!-- /processimpact -->
+
+
+ 
+ <div id="background">
+ <h3>Background and Motivation</h3>
+
+ <dl> 
+
+  <dt>What is the setting and history behind this project?</dt> 
+ 
+  <dd class="sample1">HacmeInc is the name given to the fictional business which has a series of online applications developed by Foundstone with the purpose of demonstrating application security vulnerabilities in "real-world" applications. The goal of each of these applications is show how application security is a complex problem: it has do with the application business process as well as the application technology. Thus, each site is for a different type of business and in a different language. HacmeCasino is meant to represent an online gambling site built using Ruby on Rails and AJAX.</dd>
+
+
+  <dt>What is the problem to be addressed?</dt> 
+  
+  <dd class="sample1">Application security is a new, complex, and crucial problem to organizations who are trying to secure their information system infrastructure. Online gambling is a business that is highly dependent on the ability to provide a secure platform for players. Ruby on Rails and AJAX are new "enabling" technologies which not only inherit previous problems in the app sec space, but also introduce new issues. Also, to be illustrated effectively, these issues should be embodied in a demonstrative application which is open-source, free-to-use, and educational in nature.</dd>
+
+
+  <dt>What are some current approaches to this problem?</dt> 
+ 
+  <dd class="sample1">There are currently several different HacmeInc applications, and this should be complimentary to them. Otherwise, this problem is fairly uncharted :)
+ 
+  </dd>
+
+
+  <dt>Why is this problem worth solving or worth solving better?</dt> 
+ 
+  <dd class="sample1">Being able to demonstrate how application security affects new tecnolgoies and businesses demonstrates expertise and thought leadership.</dd>
+
+
+  <dt>How will this product be better than previous approaches?</dt> 
+ 
+  <dd class="sample1">HacmeCasino will be based on new technologies. It will attempt a slightly more formal development process for a higher quality repeatable effort. </dd>
+  
+  
+  <dt>Where is there more information on this problem?</dt> 
+ 
+  <dd>Nowhere, yet. <a href="http://www.foundstone.com/">Foundstone website </a>
+  </dd> 
+ </dl>
+ </div> <!-- /background -->
+
+
+ <div id="goal">
+ <h3>Goal</h3>
+ <dl>
+
+  <dt>What is the goal of this project?</dt>
+ 
+  <dd class="sample1">To create an application security teaching tool as a "real world" Hacme application for online gambling, blackjack, and other games.</dd>
+ 
+ 
+  <dt>What are the defining features and benefits of this product?</dt>
+ 
+  <dd>
+  <ul class="sample1">
+   <li>Built using Ruby on Rails and AJAX.</li>
+ 
+   <li>Contains numerous security vulnerabilities.</li>
+ 
+   <li>Integrates with HacmeInc (debits to HacmeBank, etc).</li>
+   
+   <li>Is a fully functioning online gambling experience.</li>
+  </ul>
+  </dd>
+
+
+  <dt>Where are other documents that further explain the goal of this
+  project?</dt>
+  
+  <dd class="sample1">
+  <ul>
+   <li><a href="">None yet.</a></li>
+  </ul>
+  </dd>
+ </dl>
+ </div> <!-- /goal -->
+
+
+
+ <div id="scope">
+ <h3>Scope</h3>
+
+ <p class="sample1">This application should be ready to use, be easily deployable on other computers, and function in a stable manner.</p>
+
+<!-- 
+
+Don't need this for now -- Alex
+ 
+ <table border="1" cellpadding="3" cellspacing="2" class="sample4" width="100%">
+  <tr>
+   <th>In Scope</th>
+   <th>Out of Scope</th>
+  </tr>
+
+  <tr>
+   <td>Building a web application for use with standard web
+   servers and application servers</td> 
+   <td>Building a new web server or application server</td>
+  </tr>
+
+  <tr>
+   <td>Working the most popular browsers (IE6, NN7/Mozilla)</td>
+   <td>Working with uncommon or outdated browsers</td>
+  </tr>
+
+  <tr>
+   <td>Security in the form of user accounts, passwords, and
+   permissions</td>
+   <td>Special security against hackers.  Finding or patching security
+   holes in existing software components.</td>
+  </tr>
+
+  <tr>
+   <td>One simple sample look-and-feel and instructions for
+   customization</td>
+   <td>Our own high-quality look-and-feel.  A library of look-and-feel
+   options.</td>
+  </tr>
+
+  <tr>
+   <td>Database and server load and data volume that can be handled by
+   one computer.</td>
+   <td>Managing a cluster of servers.</td>
+  </tr>
+
+  <tr>
+   <td>Keeping track of which users are in which
+   clans</td>
+   <td>Tracking all user activity on the site and
+   producing custom reports</td>
+  </tr>
+
+  <tr>
+   <td>Displaying advertisements to visitors. Billing
+   advertisers for impressions.</td>
+   <td>Automatically selecting ads that fit the
+   visitor's interests.  On-line management of advertising or
+   real-time reporting to advertisers.  Participating in existing
+   banner advertising affiliate networks.</td>
+  </tr>
+ </table>
+ </div> <!-- /scope -->
+  
+
+
+ <div id="deliverables">
+ <h3>Deliverables</h3>
+ <div class="todo">
+  TODO: Briefly list project deliverables.  When you are done, what will you
+  deliver to the customer?  This can be copied from the draft project
+  plan and simplified to reduce technical detail.
+ </div>
+
+ <ul class="sample1">
+  <li>Clan website directory engine</li>
+  <li>Customization guide</li>
+  <li>Sample look-and-feel</li>
+  <li>On-line help for end users</li>
+  <li>Command-line advertising configuration tool and report generator</li>
+ </ul>
+ </div> <!-- /deliverables -->
+
+
+ 
+ <div id="risks">
+ <h3>Risks and Rewards</h3>
+ <dl>
+
+  <div class="todo">
+   TODO: Briefly list and rank major risks.  Risks are detailed in the
+   draft <a href="plan.html">project plan</a>.  For this proposal
+   document, you should select the most important risks from the
+   project plan and explain them in non-technical terms.
+  </div>
+
+  <dt>What are the main risks of this project?</dt>
+ 
+  <dd class="sample1">
+   <ol>
+    <li>There is a potential conflict between the goals of a
+    high-quality appearance and one that is completely customizable.  We
+    can only succeed if players find the web site appealing, and game
+    vendors can customize it with no more effort than would be needed to
+    build a static website.  We already have a design in mind that will
+    address this risk and we will review it with a web site designer who
+    worked for a game vendor site.</li>
+  
+    <li>There are significant technical difficulties in building a web
+    site and web application.  This will be a risk because one person on
+    our team has much experience with the relevant tools and
+    technologies.  Although the others will learn, we will certainly
+    make some mistakes and suboptimal choices.  We will address this
+    risk by scoping the project such that we have enough time to train
+    and to review the design and implementation.</li>
+  
+    <li>The schedule for this project is very short.  We will manage
+    this by planning a conservatively scoped functional core and series
+    of functional enhancements that can be individually slipped to later
+    releases if needed.</li>
+   </ol>
+  </dd>
+
+ 
+  <dt>What are the main rewards if this project succeeds?</dt>
+
+  <dd class="sample1">If we accomplish the elements of our plan, our
+  clan directory website engine will replace existing clan directory
+  websites and generate traffic which will result in advertising
+  revenue and/or hosting fees paid by game vendors.  Our ability to
+  overcome the challenges above will determine time to market, the
+  speed of adoption, the amount of web traffic, and thus the generated
+  revenue over time.</dd>
+ </dl>
+ </div> <!-- /risks -->
+
+
+
+ <div id="projectplan">
+ <h3>Project Plan</h3>
+
+ <p>See attached draft of <a href="plan.html">project plan</a> and <a
+ href="resource-needs.html">resource needs</a>.</p>
+
+ </div> <!-- /projectplan -->
+
+ <div class="todo">
+  TODO:  Check for <a
+  href="http://readyset.tigris.org/words-of-wisdom/proposal.html">words
+  of wisdom</a> and discuss ways to improve this template.
+  Or, evaluate the ReadySET Pro <a title="pro use case template and sample test plan"
+  href="http://www.readysetpro.com/">professional project proposal template</a>.
+ </div>
+
+</div>
+
+<div class="legal1">Company Proprietary</div>
+
+<div class="footnote">
+ Copyright &#169; 2003-2004 Jason Robbins.  All rights reserved. <a href="readyset-license.html">License terms</a>.
+ Retain this copyright statement whenever this file is used as a
+ template.
+</div>
+
+</div>
+</body>
+</html>

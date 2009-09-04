@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//Tigris//DTD XHTML 1.0 Transitional//EN"
+"http://style.tigris.org/tigris_transitional.dtd">
+<html>
+<head>
+ <style type="text/css">
+/* <![CDATA[ */ 
+@import "css/readyset.css"; 
+@import "css/inst.css";
+/*  ]]> */
+ </style>
+
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+ <title>Review Meeting Notes</title>
+</head>
+
+<body>
+<div class="app">
+<div class="readyset">
+ <h2><a href="qa-plan.html">QA Plan</a> &gt; Review Meeting Notes</h2>
+
+ <div id="meetinginfo">
+ <h3>Review Meeting Information</h3>
+ <table border="1" cellpadding="3" cellspacing="2" class="axial">
+  <tr>
+   <th>Product:</th> 
+   <td><a href="http://www.COMPANY.com/products/PRODUCTNAME/">PRODUCTNAME</a></td> 
+  </tr>
+  <tr>
+   <th>Release Number:</th> 
+   <td>
+     X.Y.Z
+   </td> 
+  </tr>
+  <tr>
+   <th>Location of Meeting:</th> 
+   <td>
+     LOCATION, BUILDING, ROOM
+   </td> 
+  </tr>
+  <tr>
+   <th>Date and Time of Meeting:</th> 
+   <td>
+     YEAR/MONTH/DAY  HH:MM
+   </td> 
+  </tr>
+  <tr>
+   <th>Attendees:</th> 
+   <td>
+    <div>PERSONNAME</div>
+    <div>PERSONNAME</div>
+    <div>PERSONNAME</div>
+    <div>PERSONNAME</div>
+   </td> 
+  </tr>
+  <tr>
+   <th>Related documents:</th> 
+   <td>
+    <div><a href="review-meeting-checklists.html">Review Meeting Checklists</a></div>
+   </td> 
+  </tr>
+ </table>
+ </div> <!-- /meetinginfo -->
+
+
+ <div id="documents">
+ <h3>Documents and Code Reviewed at this Meeting</h3>
+
+ <ul class="sample1">
+    <li><a href="/requirements.html#functional">Feature list section of requirements</a></li>
+    <li><a href="/requirements.html#multiuser">Multi-user section of requirements</a></li>
+    <li><a href="/source/browse/PROJECTNAME/src/Hello.java">Hello.java</a></li>
+    <li><a href="/source/browse/PROJECTNAME/src/HelloStream.java">HelloStream.java</a></li>
+    <li><a href="/source/browse/PROJECTNAME/src/HelloPanel.java">HelloPanel.java</a></li>
+ </ul>
+ </div> <!-- /documents -->
+
+
+ <div id="meetingminutes">
+ <h3>Meeting Minutes</h3>
+
+ <div class="todo">
+  TODO: Fill in the information above and write a brief summary of what happened at the meeting.
+  The text below is just a sample.
+ </div>
+
+ <div class="sample1">
+ <p>We started on time with 3 members and the other team members
+ arrived shortly thereafter.</p>
+
+ <p>In the first hour of the review meeting, we went over issues that
+ the team had entered individually.  Most of the issues raised
+ questions about the error handling capability of Hello.java, but
+ there were also issues about multi-user robustness requirements and
+ UI.</p>
+
+ <p>In the second hour, we read through all of the methods of
+ HelloStream.java.  All team members agreed that they understood each
+ method and thought is was correct before we moved on to the next
+ method. We raised issues of consistency between the constructors in
+ that class and other classes.  The checklist was helpful in
+ identifying the fact that we needed to implement hash() and equals().
+ All raised issues were entered into the issue tracker and marked with
+ the word "review".</p>
+ 
+ <p>Although, some issues were found, we do not feel that Hello.java
+ and HelloStream.java need to be inspected again.  HelloPanel was not
+ inspected, it still needs review.</p>
+ </div>
+
+ </div> <!-- /meetingminutes -->
+
+
+ <div id="actionitems">
+ <h3>Action Items</h3>
+
+ <p>All defects and tasks identified in this review are being tracked
+ in the issue tracker.</p> <!-- If you start to write some other
+ action item, why not put it in the issue tracker instead?  -->
+
+ </div> <!-- /actionitems -->
+
+ <div class="todo">
+  TODO:  Check for <a
+  href="http://readyset.tigris.org/words-of-wisdom/review-meeting-notes.html">words
+  of wisdom</a> and discuss ways to improve this template.
+  Or, evaluate the ReadySET Pro <a title="pro use case template and sample test plan"
+  href="http://www.readysetpro.com/">professional review report template</a>.
+ </div>
+
+</div>
+
+<div class="legal1">Company Proprietary</div>
+
+<div class="footnote">
+ Copyright &#169; 2003-2004 Jason Robbins.  All rights reserved. <a href="readyset-license.html">License terms</a>.
+ Retain this copyright statement whenever this file is used as a
+ template.
+</div>
+
+</div>
+</body>
+</html>

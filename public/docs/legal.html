@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//Tigris//DTD XHTML 1.0 Transitional//EN"
+"http://style.tigris.org/tigris_transitional.dtd">
+<html>
+<head>
+ <style type="text/css">
+/* <![CDATA[ */ 
+@import "css/readyset.css"; 
+@import "css/inst.css";
+/*  ]]> */
+ </style>
+
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+ <title>Legal Issues</title>
+</head>
+
+<body>
+ <h2>Legal Issues</h2>
+
+ <div class="app">
+ <div class="readyset">
+
+
+ <div id="projectinfo">
+ <h3>Project Information</h3>
+ <table border="1" cellpadding="3" cellspacing="2" class="axial">
+  <tr>
+   <th>Project:</th> 
+   <td><a href="index.html">PROJECTNAME</a></td>
+  </tr>
+  <tr>
+   <th>Internal Release Number:</th> 
+   <td>X.Y.Z</td>
+  </tr>
+  <tr>
+   <th>Release Audience:</th> 
+   <td>
+    <div>General availability release</div>
+    <div>Customer-specific release: CUSTOMER(S)</div>
+    <div>Developer release (Internal usage only)</div>
+    <div>Early access release (Controlled external access)</div>
+   </td>
+  </tr>
+  <tr>
+   <th>Intended Product License:</th> 
+   <td>Commercial license</td>
+  </tr>
+  <tr>
+   <th>Related Documents:</th> 
+   <td>
+    <div><a href="proposal.html">Project proposal</a> &gt;
+         <a href="target-and-benefits.html">Target audience and benefits</a></div>
+    <div><a href="plan.html">Plan</a> &gt;
+         <a href="resource-needs.html">Resource needs</a></div>
+    <div><a href="glossary.html">Glossary</a></div>
+   </td>
+  </tr>
+ </table>
+ </div> <!-- /projectinfo -->
+
+ <div id="processimpact">
+  <strong>Process impact:</strong> This document
+  outlines legal issues that may affect this release.  Failure to
+  carefully consider these issues may put the development organization
+  at risk for legal action.
+ </div> <!-- /processimpact -->
+
+
+
+ <div class="todo">
+  TODO: Fill in the information above and below.  Add or remove rows
+  as needed. Use the worksheet to help identify legal issues.  Seek
+  professional counsel for review as needed.
+ </div>
+
+
+
+ <div id="ip">
+ <h3>Ownership of Intellectual Property</h3>
+
+ <table border="1" cellpadding="3" cellspacing="2" width="100%" class="sample1">
+  <tr>
+   <th>Component</th> 
+   <th>Owner</th> 
+   <th>License</th> 
+   <th>Status</th> 
+   <th>Comments</th> 
+  </tr>
+  <tr>
+   <td>Product name</td>
+   <td>Us</td>
+   <td>Trademark</td>
+   <td>Registration pending</td>
+   <td>We must use "(TM)", not "(R)"</td>
+  </tr>
+  <tr>
+   <td>Database</td>
+   <td>VENDOR</td>
+   <td>Commercial license</td>
+   <td>In compliance, paid normal fee</td>
+   <td>Limits us to 2 CPUs/server</td>
+  </tr>
+  <tr>
+   <td>Encryption library</td>
+   <td>VENDOR</td>
+   <td>Commercial license</td>
+   <td>In compliance, signed partnership agreement</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>Clip-art graphics</td>
+   <td>None</td>
+   <td>Public Domain</td>
+   <td>In compliance</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>Sound driver library</td>
+   <td>OS Project</td>
+   <td>BSD</td>
+   <td>In compliance</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>Search engine indexer</td>
+   <td>OS Project</td>
+   <td>GPL</td>
+   <td>In compliance</td>
+   <td>Indexer runs in separate process, does not make our code GPL</td>
+  </tr>
+  <tr>
+   <td>Other library</td>
+   <td>OS Project</td>
+   <td>BSD</td>
+   <td>In compliance</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>Other data</td>
+   <td>Us</td>
+   <td>Copyrighted</td>
+   <td>In compliance</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>Special algorithm patent</td>
+   <td>Us</td>
+   <td>Patent pending</td>
+   <td>In compliance</td>
+   <td>Patent search done, patent application submitted</td>
+  </tr>
+ </table>
+ </div> <!-- /ip -->
+
+
+
+ <div id="compliance">
+ <h3>Regulatory Compliance</h3>
+
+ <table border="1" cellpadding="3" cellspacing="2" width="100%" class="sample1">
+  <tr>
+   <th>Type</th> 
+   <th>Regulation</th> 
+   <th>Status</th> 
+   <th>Comments</th> 
+  </tr>
+  <tr>
+   <td>Export</td>
+   <td>Strong encryption exports must be declared</td>
+   <td>In compliance</td>
+   <td>We will not distribute out of country</td>
+  </tr>
+  <tr>
+   <td>Privacy</td>
+   <td>Cannot collect personal information from minors</td>
+   <td>In compliance</td>
+   <td>We ask for user age before asking for other information</td>
+  </tr>
+  <tr>
+   <td>Industry certification</td>
+   <td>Game industry rating</td>
+   <td>In compliance</td>
+   <td>We follow guidelines for "Everyone" rating</td>
+  </tr>
+ </table>
+ </div> <!-- /compliance -->
+
+
+ 
+ <div class="tier2">
+ <h4>Possible Status Values</h4>
+ <ul>
+  <li>In compliance: we are OK to go ahead with this release</li>
+  <li>Waived: we decided not to consider this aspect for this release</li>
+  <li>Violated: we are not conforming.  Comment should describe impact.</li>
+ </ul>
+ </div>
+
+
+
+ <div id="checklist">
+ <h3>Legal Issues Checklist</h3>
+
+ <p>The goal of this checklist is to help expose legal issues that
+ might otherwise be missed.  It does not help with the actual
+ management of legal issues.</p>
+
+ <div class="todo">
+  TODO: Answer the questions below.  If multiple sample answers are
+  provided, delete the ones that do not apply.  Edit any provided
+  answers as needed.
+ </div>
+
+
+ <dl>
+
+  <dt>Does the development organization hold trademarks on the product name
+      and any other names used in marketing the product?</dt>
+  <dd>Yes.  Make sure to defend your ownership.</dd>
+  <dd>No.  Make sure not to impinge on the trademarks of others.</dd>
+
+  <dt>Does the development organization hold or license patents on
+  intellectual property that is used in the product?</dt> 
+  <dd>Yes.  Make sure to defend your ownership.</dd>
+  <dd>No.  Make sure not to impinge on the patents of others.</dd>
+
+  <dt>Does the development organization hold or license copyrights on
+  source code that is used in the product?</dt> 
+  <dd>Yes.  Make sure to defend your ownership.</dd>
+  <dd>No.  Make sure not to impinge on the patents of others.</dd>
+
+  <dt>For each component in the product, is that component being used
+  in a way that complies with its license?</dt>
+  <dd>Fill in details in table above.</dd>
+
+  <dt>For each piece of copyrighted data in the product, is that data
+  being used in a way that complies with its license?</dt>
+  <dd>Fill in details in table above.</dd>
+
+  <dt>Was any component or data produced by another organization under
+  contract?</dt>
+  <dd>Yes.  Review the contract details for ownership and licensing.</dd>
+  <dd>No.  No action required.</dd>
+
+  <dt>Does the product use technologies that are under export control?</dt>
+  <dd>Yes.  But, we have no plans to export.</dd>
+  <dd>Yes.  Take steps to obtain needed export permissions.</dd>
+  <dd>No.  No action required.</dd>
+
+  <dt>Does the product need to meet industry-specific regulations?</dt>
+  <dd>Yes. Take steps to meet them.  Specifically...</dd>
+  <dd>No. No action needed.</dd>
+
+  <dt>Does the product satisfy corporate policies (e.g., on privacy
+  and security)?</dt>
+  <dd>Yes.  Describe how each policy is satisfied..</dd>
+  <dd>No.  Describe steps to bring the product into compliance.</dd>
+  <dd>No.  No policies apply.</dd>
+
+ </dl>
+ </div> <!-- /checklist -->
+
+
+ </div>
+
+ <div class="todo">
+  TODO:  Check for <a
+  href="http://readyset.tigris.org/words-of-wisdom/legal.html">words
+  of wisdom</a> and discuss ways to improve this template.
+  Or, evaluate the ReadySET Pro <a title="pro use case template and sample test plan"
+  href="http://www.readysetpro.com/">professional legal issues template</a>.
+ </div>
+
+<div class="legal1">Company Proprietary</div>
+
+<div class="footnote">
+ Copyright &#169; 2003-2004 Jason Robbins.  All rights reserved. <a href="readyset-license.html">License terms</a>.
+ Retain this copyright statement whenever this file is used as a
+ template.
+</div>
+
+</div>
+</body>
+</html>

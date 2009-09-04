@@ -1,0 +1,51 @@
+<div id = "vp-user-opts">
+<% if (state == 'GAME_OVER') %>
+        <%=form_remote_tag(:update => "room-body", :url => { :action => :new_game })%>
+    <div class = "opt-element">
+        <%=image_submit_tag "web/newgame_button.gif"%>
+    </div>
+        <%= end_form_tag%>
+
+<% elsif (state == 'NEW_GAME')  %>
+
+    <%= flash[:errors] %>
+    <div class = "opt-element">
+        <input type="submit" value="Bet Max" onClick="bet_max()"/>
+    </div>
+
+    <div class = "opt-element">
+        <input type="submit" value="Bet One" onClick="bet_one()"/>
+    </div>
+    
+    <div class = "opt-element">
+        <input type="submit" value="Clear" onClick="clear_bets()"/>
+    </div>
+    
+
+
+        <%=form_remote_tag(:html => { :name => "bet" }, :update => "room-body", :url => { :action => :bet })%>
+        <%= hidden_field_tag "bet", 0 %>        
+        <%= hidden_field_tag "denomination", denomination %>
+    <div class = "opt-element">
+        <%= submit_tag "Draw"%>
+    </div>
+        <%= end_form_tag%>
+
+
+
+
+
+<% elsif (state == 'SELECT_HOLD_CARDS')  %>
+    <div class = "message">
+    Click on the cards you want to hold.
+    </div>
+    <div class = "opt-element">
+        <%=form_remote_tag(:html => { :name => "draw" }, :update => "room-body", :url => { :action => :"draw"})%>
+        <% for i in 0..4 %>
+            <%= hidden_field_tag "hold_#{i}", "false" %>            
+        <% end %>
+        <%= submit_tag "Draw"%>   
+        <%=end_form_tag%>
+    </div>
+<% end %>
+</div>

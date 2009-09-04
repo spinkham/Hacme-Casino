@@ -1,0 +1,65 @@
+<div id = "bj-user-opts">
+<% if (state == 'GAME_OVER') %>
+        <%=form_remote_tag(:update => "room-body", :url => { :action => :new_game })%>
+    <div class = "opt-element">
+        <%=image_submit_tag "web/newgame_button.gif"%>
+    </div>
+        <%= end_form_tag%>
+
+<% elsif (state == 'NEW_GAME')  %>
+        <%=form_remote_tag(:update => "room-body", :url => { :action => :bet })%>
+    <%= flash[:errors] %>
+    <div class = "opt-element">
+        <%=text_field_tag :bet%>
+    </div>
+    <div class = "opt-element">
+        <%=image_submit_tag "web/bet_button.gif"%>
+    </div>
+        <%= end_form_tag%>
+<% elsif (state == 'PLAYER_H_OR_S')  %>
+
+
+    <div class = "opt-element">
+        <%=form_remote_tag(:update => "room-body", :url => { :action => :"hit_or_stay"})%>
+
+        <%if @session['accessible']%>
+        <% for i in 0..cards - 1%>
+            <%=hidden_field_tag "card"+i.to_s, hand.cards[i] %>
+        <% end %>
+        <% end %>
+        <%=hidden_field_tag "act", "H" %>
+        <%= image_submit_tag "web/hit_button.gif"%>   
+        <%=end_form_tag%>  
+    </div>
+
+
+    <div class = "opt-element">
+        <%=form_remote_tag(:update => "room-body", :url => { :action => :"hit_or_stay"})%>
+
+        <%if @session['accessible']%>
+        <% for i in 0..cards - 1%>
+            <%=hidden_field_tag "card"+i.to_s, hand.cards[i] %>
+        <% end %>
+        <% end %>
+    
+            <%=hidden_field_tag "act", "S" %>
+        <%= image_submit_tag "web/stay_button.gif",  :name => "S"%>
+
+        <%=end_form_tag%>  
+    </div>
+
+    <% if cards == 2 %>           
+        <div class = "opt_element">
+        <%=form_remote_tag(:update => "room-body", :url => { :action => :"hit_or_stay" })%>
+
+        <%if @session['accessible']%>
+        <% for i in 0..cards - 1%>
+            <%=hidden_field_tag "card"+i.to_s, hand.cards[i] %>
+        <% end %>
+        <% end %>
+        <%=hidden_field_tag "act", "D" %>
+         <%=end_form_tag%>  
+        </div>      
+    <% end %>
+<% end %>
+</div>

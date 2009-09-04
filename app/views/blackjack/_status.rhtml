@@ -1,0 +1,25 @@
+<div id = "bj-status">
+<h3> Status </h3>
+    <div class="status-element">
+        Chips: <%= number_with_delimiter(chips, ",") %>
+    </div>
+    <div class="status-element">
+        Bet: <%= number_with_delimiter( current_bet, ",") %>
+     </div>
+    <%if (state == "GAME_OVER") %>
+        <div class = "status-element-result">
+        <%if (result == "PUSH") %>
+            <h1> PUSH </h1>
+        <%elsif (result == "PLAYER_WON")%>
+            <h1> PLAYER WON! </h1>
+        <%elsif (result == "PLAYER_LOST")%>
+            <h1> PLAYER LOST </h1>
+        <%elsif (result == "BLACKJACK")%>
+            <h1> BLACKJACK! </h1>
+        <%elsif (result == "DEALER_BLACKJACK") %> 
+            <h1> DEALER BLACKJACK </h1>
+        <%end%>       
+            <h1> <%=number_with_delimiter(chips_result,",")%> 
+        </div>
+    <%end%>
+</div>

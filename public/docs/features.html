@@ -1,0 +1,913 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//Tigris//DTD XHTML 1.0 Transitional//EN"
+"http://style.tigris.org/tigris_transitional.dtd">
+<html>
+<head>
+ <style type="text/css">
+/* <![CDATA[ */ 
+@import "css/readyset.css"; 
+@import "css/inst.css";
+/*  ]]> */
+ </style>
+
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+ <title>HacmeCasino - Features</title>
+</head>
+
+<body>
+<div class="app">
+<div class="readyset">
+
+
+<h2><a href="srs.html">SRS</a> &gt;
+    <a href="feature-set.html">Feature Set</a> &gt; Features</h2>
+
+ <div id="releaseinfo">
+ <h3>Release Information</h3>
+ <table border="1" cellpadding="3" cellspacing="2" class="axial">
+  <tr>
+   <th>Project:</th> 
+   <td><a href="index.html">HacmeCasino</a></td> 
+  </tr>
+  <tr>
+   <th>Internal Release Number:</th> 
+   <td>0.0.0</td> 
+  </tr>
+  <tr>
+   <th>Related Documents:</th> 
+   <td>
+    <div><a href="proposal.html">Project proposal</a> &gt;
+         <a href="user-needs.html">User needs</a></div>
+    <div><a href="srs.html">SRS</a> &gt;
+         <a href="use-case-suite.html">Use case suite</a></div>
+    <div><a href="feature-format.html">Feature format</a></div>
+    <div>LINKS TO RELEVANT STANDARDS</div>
+    <div>LINKS TO OTHER DOCUMENTS</div>
+   </td>
+  </tr>
+ </table>
+ </div> <!-- /releaseinfo -->
+
+
+ <div id="processimpact">
+  <b>Process impact:</b> This is a set of detailed
+  feature descriptions.
+ </div> <!-- /processimpact -->
+<!--
+<div class="todo">
+ TODO: For each feature listed in the <a
+ href="feature-set.html">feature set</a>, give a detailed description
+ of the feature here.  Describe each feature in enough detail that it
+ could be implemented by any member of the development team (not only
+ someone who already informally knows what to do).
+</div>
+-->
+
+<!--
+<div class="tip">
+ TIP: Start with a short textual description of each feature.  Then,
+ add more formal information as needed to make each
+ description precise and unambiguous.  E.g.,
+    <ul>
+     <li>Precisely define valid inputs, and error handling</li>
+     <li>Specify data structures with UML or logical schema</li>
+     <li>Specify UI aspects of features with tiny mock-ups</li>
+     <li>Specify key decisions with decision trees or tables</li>
+     <li>Specify key algorithms with pseudo-code or flow charts</li>
+     <li>Specify state-based behavior with state machines or tables</li>
+     <li>Specify sequences of events with scenario diagrams</li>
+    </ul>
+</div>
+
+-->
+
+
+
+<div class="sample1">
+<div id="F-00"> 
+<h3>F-00: gambling Room</h3>
+<table border="1" cellpadding="3" cellspacing="2" class="axial">
+ <tr>
+  <th>Priority:</th>
+  <td>Essential</td>
+ </tr>
+ <tr>
+  <th>Effort:</th>
+  <td>10 Days</td>
+ </tr>
+ <tr>
+  <th>Risk:</th>
+  <td>Safe</td>
+ </tr>
+ <tr>
+  <th>Functional area(s):</th>
+  <td>Main</td>
+ </tr>
+ <tr>
+  <th>Use case(s):</th>
+  <td><a href="use-cases.html#UC-00">UC-00</a> <a href="use-cases.html#UC-11">UC-11</a> </td>
+ </tr>
+ <tr>
+  <th>Description:</th>
+  <td>
+   	This will look like a regular online gambling room. A user can:
+   		<ul>
+   			<li>Join Room</li>
+				<li>Fold</li>
+				<li>Place Bet</li>
+				<li>Raise</li>
+				<li>All-in</li>
+				<li>Leave Room</li>
+				<li>Chat Box (?)</li>				
+			</ul>
+			The dealer must:
+			<ul>
+				<li>Shuffle Deck</li>
+				<li>Determine Blinds</li>				
+				<li>Ask Player for Bet</li>				
+				<li>Deal Flop</li>
+				<li>Deal Turn</li>
+				<li>Deal River</li>
+				<li>Determine Winner</li>
+				<li>Pay Winner</li>				
+			</ul>
+	  </td>
+ </tr>
+ <tr>
+  <th>Notes and Questions:</th>
+  <td>
+   <ul>
+    <li>This will have lots of AJAX goodies.</li>
+    <li></li>
+   </ul>
+  </td>
+ </tr>
+</table>
+</div>
+</div>
+
+
+<div class="sample1">
+<div id="F-01"> 
+<h3>F-01: Security Vulnerabilities</h3>
+<table border="1" cellpadding="3" cellspacing="2" class="axial">
+ <tr>
+  <th>Priority:</th>
+  <td>Essential</td>
+ </tr>
+ <tr>
+  <th>Effort:</th>
+  <td>10 Days</td>
+ </tr>
+ <tr>
+  <th>Risk:</th>
+  <td>Safe</td>
+ </tr>
+ <tr>
+  <th>Functional area(s):</th>
+  <td>Security</td>
+ </tr>
+ <tr>
+  <th>Use case(s):</th>
+  <td><a href="use-cases.html#UC-01">UC-01</a></td>
+ </tr>
+ <tr>
+  <th>Description:</th>
+  <td>
+   We need security vulnerabilities, but we don't know them yet. Please see the <a href="security_vulns_ideas.html">security vulnerabilities page</a>.
+   <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+   </ul>
+  
+  </td>
+ </tr>
+ <tr>
+  <th>Notes and Questions:</th>
+  <td>
+   <ul>
+    <li></li>
+    <li>Will this site be deployed on the internet for Foundstone?</li>
+   </ul>
+  </td>
+ </tr>
+</table>
+</div>
+</div>
+
+
+<div id="F-02"> 
+<h3>F-02: Account Management</h3>
+<table border="1" cellpadding="3" cellspacing="2" class="axial">
+ <tr>
+  <th>Priority:</th>
+  <td>Essential</td>
+ </tr>
+ <tr>
+  <th>Effort:</th>
+  <td>1 Week</td>
+ </tr>
+ <tr>
+  <th>Risk:</th>
+  <td>Safe</td>
+ </tr>
+ <tr>
+  <th>Functional area(s):</th>
+  <td>Adminstrative</td>
+ </tr>
+ <tr>
+  <th>Use case(s):</th>
+  <td><a href="use-cases.html#UC-01">UC-01</a></td>
+ </tr>
+ <tr>
+  <th>Description:</th>
+  <td>
+   <p>Account management should be similar to other account management schemes in HacmeInc applications, although we may need additional information.</p>
+   
+   <p>Precise Details:</p>
+   <ul>
+    <li>LOGICAL CONSTRAINT</li>
+    <li>LOGICAL CONSTRAINT</li>
+   </ul>
+
+  </td>
+ </tr>
+ <tr>
+  <th>Notes and Questions:</th>
+  <td>
+   <ul>
+    <li>NOTE</li>
+    <li>QUESTION</li>
+   </ul>
+  </td>
+ </tr>
+</table>
+</div>
+
+<div id="F-03"> 
+<h3>F-03: FEATURE NAME</h3>
+<table border="1" cellpadding="3" cellspacing="2" class="axial">
+ <tr>
+  <th>Priority:</th>
+  <td>Essential | Expected | Desired | Optional </td>
+ </tr>
+ <tr>
+  <th>Effort:</th>
+  <td>Months | Weeks | Days | Hours</td>
+ </tr>
+ <tr>
+  <th>Risk:</th>
+  <td>Dangerous | 3-Risks | 2-Risks | 1-Risk | Safe</td>
+ </tr>
+ <tr>
+  <th>Functional area(s):</th>
+  <td>WORD, WORD, WORD</td>
+ </tr>
+ <tr>
+  <th>Use case(s):</th>
+  <td><a href="use-cases.html#UC-01">UC-01</a></td>
+ </tr>
+ <tr>
+  <th>Description:</th>
+  <td>
+   <p>1-4 PARAGRAPHS.  USE BULLETS OR TABLES TO ORGANIZE INFORMATION.
+   LINK TO WORKSHEETS OR ADDITIONAL INFORMATION.</p>
+   
+   <p>Precise Details:</p>
+   <ul>
+    <li>LOGICAL CONSTRAINT</li>
+    <li>LOGICAL CONSTRAINT</li>
+   </ul>
+
+  </td>
+ </tr>
+ <tr>
+  <th>Notes and Questions:</th>
+  <td>
+   <ul>
+    <li>NOTE</li>
+    <li>QUESTION</li>
+   </ul>
+  </td>
+ </tr>
+</table>
+</div>
+
+<div id="F-10"> 
+<h3>F-10: FEATURE NAME</h3>
+<table border="1" cellpadding="3" cellspacing="2" class="axial">
+ <tr>
+  <th>Priority:</th>
+  <td>Essential | Expected | Desired | Optional </td>
+ </tr>
+ <tr>
+  <th>Effort:</th>
+  <td>Months | Weeks | Days | Hours</td>
+ </tr>
+ <tr>
+  <th>Risk:</th>
+  <td>Dangerous | 3-Risks | 2-Risks | 1-Risk | Safe</td>
+ </tr>
+ <tr>
+  <th>Functional area(s):</th>
+  <td>WORD, WORD, WORD</td>
+ </tr>
+ <tr>
+  <th>Use case(s):</th>
+  <td><a href="use-cases.html#UC-01">UC-01</a></td>
+ </tr>
+ <tr>
+  <th>Description:</th>
+  <td>
+   <p>1-4 PARAGRAPHS.  USE BULLETS OR TABLES TO ORGANIZE INFORMATION.
+   LINK TO WORKSHEETS OR ADDITIONAL INFORMATION.</p>
+   
+   <p>Precise Details:</p>
+   <ul>
+    <li>LOGICAL CONSTRAINT</li>
+    <li>LOGICAL CONSTRAINT</li>
+   </ul>
+
+  </td>
+ </tr>
+ <tr>
+  <th>Notes and Questions:</th>
+  <td>
+   <ul>
+    <li>NOTE</li>
+    <li>QUESTION</li>
+   </ul>
+  </td>
+ </tr>
+</table>
+</div>
+
+<div id="F-11"> 
+<h3>F-11: FEATURE NAME</h3>
+<table border="1" cellpadding="3" cellspacing="2" class="axial">
+ <tr>
+  <th>Priority:</th>
+  <td>Essential | Expected | Desired | Optional </td>
+ </tr>
+ <tr>
+  <th>Effort:</th>
+  <td>Months | Weeks | Days | Hours</td>
+ </tr>
+ <tr>
+  <th>Risk:</th>
+  <td>Dangerous | 3-Risks | 2-Risks | 1-Risk | Safe</td>
+ </tr>
+ <tr>
+  <th>Functional area(s):</th>
+  <td>WORD, WORD, WORD</td>
+ </tr>
+ <tr>
+  <th>Use case(s):</th>
+  <td><a href="use-cases.html#UC-01">UC-01</a></td>
+ </tr>
+ <tr>
+  <th>Description:</th>
+  <td>
+   <p>1-4 PARAGRAPHS.  USE BULLETS OR TABLES TO ORGANIZE INFORMATION.
+   LINK TO WORKSHEETS OR ADDITIONAL INFORMATION.</p>
+   
+   <p>Precise Details:</p>
+   <ul>
+    <li>LOGICAL CONSTRAINT</li>
+    <li>LOGICAL CONSTRAINT</li>
+   </ul>
+
+  </td>
+ </tr>
+ <tr>
+  <th>Notes and Questions:</th>
+  <td>
+   <ul>
+    <li>NOTE</li>
+    <li>QUESTION</li>
+   </ul>
+  </td>
+ </tr>
+</table>
+</div>
+
+<div id="F-12"> 
+<h3>F-12: FEATURE NAME</h3>
+<table border="1" cellpadding="3" cellspacing="2" class="axial">
+ <tr>
+  <th>Priority:</th>
+  <td>Essential | Expected | Desired | Optional </td>
+ </tr>
+ <tr>
+  <th>Effort:</th>
+  <td>Months | Weeks | Days | Hours</td>
+ </tr>
+ <tr>
+  <th>Risk:</th>
+  <td>Dangerous | 3-Risks | 2-Risks | 1-Risk | Safe</td>
+ </tr>
+ <tr>
+  <th>Functional area(s):</th>
+  <td>WORD, WORD, WORD</td>
+ </tr>
+ <tr>
+  <th>Use case(s):</th>
+  <td><a href="use-cases.html#UC-01">UC-01</a></td>
+ </tr>
+ <tr>
+  <th>Description:</th>
+  <td>
+   <p>1-4 PARAGRAPHS.  USE BULLETS OR TABLES TO ORGANIZE INFORMATION.
+   LINK TO WORKSHEETS OR ADDITIONAL INFORMATION.</p>
+   
+   <p>Precise Details:</p>
+   <ul>
+    <li>LOGICAL CONSTRAINT</li>
+    <li>LOGICAL CONSTRAINT</li>
+   </ul>
+
+  </td>
+ </tr>
+ <tr>
+  <th>Notes and Questions:</th>
+  <td>
+   <ul>
+    <li>NOTE</li>
+    <li>QUESTION</li>
+   </ul>
+  </td>
+ </tr>
+</table>
+</div>
+
+<div id="F-13"> 
+<h3>F-13: FEATURE NAME</h3>
+<table border="1" cellpadding="3" cellspacing="2" class="axial">
+ <tr>
+  <th>Priority:</th>
+  <td>Essential | Expected | Desired | Optional </td>
+ </tr>
+ <tr>
+  <th>Effort:</th>
+  <td>Months | Weeks | Days | Hours</td>
+ </tr>
+ <tr>
+  <th>Risk:</th>
+  <td>Dangerous | 3-Risks | 2-Risks | 1-Risk | Safe</td>
+ </tr>
+ <tr>
+  <th>Functional area(s):</th>
+  <td>WORD, WORD, WORD</td>
+ </tr>
+ <tr>
+  <th>Use case(s):</th>
+  <td><a href="use-cases.html#UC-01">UC-01</a></td>
+ </tr>
+ <tr>
+  <th>Description:</th>
+  <td>
+   <p>1-4 PARAGRAPHS.  USE BULLETS OR TABLES TO ORGANIZE INFORMATION.
+   LINK TO WORKSHEETS OR ADDITIONAL INFORMATION.</p>
+   
+   <p>Precise Details:</p>
+   <ul>
+    <li>LOGICAL CONSTRAINT</li>
+    <li>LOGICAL CONSTRAINT</li>
+   </ul>
+
+  </td>
+ </tr>
+ <tr>
+  <th>Notes and Questions:</th>
+  <td>
+   <ul>
+    <li>NOTE</li>
+    <li>QUESTION</li>
+   </ul>
+  </td>
+ </tr>
+</table>
+</div>
+
+
+<div id="F-20"> 
+<h3>F-20: FEATURE NAME</h3>
+<table border="1" cellpadding="3" cellspacing="2" class="axial">
+ <tr>
+  <th>Priority:</th>
+  <td>Essential | Expected | Desired | Optional </td>
+ </tr>
+ <tr>
+  <th>Effort:</th>
+  <td>Months | Weeks | Days | Hours</td>
+ </tr>
+ <tr>
+  <th>Risk:</th>
+  <td>Dangerous | 3-Risks | 2-Risks | 1-Risk | Safe</td>
+ </tr>
+ <tr>
+  <th>Functional area(s):</th>
+  <td>WORD, WORD, WORD</td>
+ </tr>
+ <tr>
+  <th>Use case(s):</th>
+  <td><a href="use-cases.html#UC-01">UC-01</a></td>
+ </tr>
+ <tr>
+  <th>Description:</th>
+  <td>
+   <p>1-4 PARAGRAPHS.  USE BULLETS OR TABLES TO ORGANIZE INFORMATION.
+   LINK TO WORKSHEETS OR ADDITIONAL INFORMATION.</p>
+   
+   <p>Precise Details:</p>
+   <ul>
+    <li>LOGICAL CONSTRAINT</li>
+    <li>LOGICAL CONSTRAINT</li>
+   </ul>
+
+  </td>
+ </tr>
+ <tr>
+  <th>Notes and Questions:</th>
+  <td>
+   <ul>
+    <li>NOTE</li>
+    <li>QUESTION</li>
+   </ul>
+  </td>
+ </tr>
+</table>
+</div>
+
+<div id="F-21"> 
+<h3>F-21: FEATURE NAME</h3>
+<table border="1" cellpadding="3" cellspacing="2" class="axial">
+ <tr>
+  <th>Priority:</th>
+  <td>Essential | Expected | Desired | Optional </td>
+ </tr>
+ <tr>
+  <th>Effort:</th>
+  <td>Months | Weeks | Days | Hours</td>
+ </tr>
+ <tr>
+  <th>Risk:</th>
+  <td>Dangerous | 3-Risks | 2-Risks | 1-Risk | Safe</td>
+ </tr>
+ <tr>
+  <th>Functional area(s):</th>
+  <td>WORD, WORD, WORD</td>
+ </tr>
+ <tr>
+  <th>Use case(s):</th>
+  <td><a href="use-cases.html#UC-01">UC-01</a></td>
+ </tr>
+ <tr>
+  <th>Description:</th>
+  <td>
+   <p>1-4 PARAGRAPHS.  USE BULLETS OR TABLES TO ORGANIZE INFORMATION.
+   LINK TO WORKSHEETS OR ADDITIONAL INFORMATION.</p>
+   
+   <p>Precise Details:</p>
+   <ul>
+    <li>LOGICAL CONSTRAINT</li>
+    <li>LOGICAL CONSTRAINT</li>
+   </ul>
+
+  </td>
+ </tr>
+ <tr>
+  <th>Notes and Questions:</th>
+  <td>
+   <ul>
+    <li>NOTE</li>
+    <li>QUESTION</li>
+   </ul>
+  </td>
+ </tr>
+</table>
+</div>
+
+<div id="F-22"> 
+<h3>F-22: FEATURE NAME</h3>
+<table border="1" cellpadding="3" cellspacing="2" class="axial">
+ <tr>
+  <th>Priority:</th>
+  <td>Essential | Expected | Desired | Optional </td>
+ </tr>
+ <tr>
+  <th>Effort:</th>
+  <td>Months | Weeks | Days | Hours</td>
+ </tr>
+ <tr>
+  <th>Risk:</th>
+  <td>Dangerous | 3-Risks | 2-Risks | 1-Risk | Safe</td>
+ </tr>
+ <tr>
+  <th>Functional area(s):</th>
+  <td>WORD, WORD, WORD</td>
+ </tr>
+ <tr>
+  <th>Use case(s):</th>
+  <td><a href="use-cases.html#UC-01">UC-01</a></td>
+ </tr>
+ <tr>
+  <th>Description:</th>
+  <td>
+   <p>1-4 PARAGRAPHS.  USE BULLETS OR TABLES TO ORGANIZE INFORMATION.
+   LINK TO WORKSHEETS OR ADDITIONAL INFORMATION.</p>
+   
+   <p>Precise Details:</p>
+   <ul>
+    <li>LOGICAL CONSTRAINT</li>
+    <li>LOGICAL CONSTRAINT</li>
+   </ul>
+
+  </td>
+ </tr>
+ <tr>
+  <th>Notes and Questions:</th>
+  <td>
+   <ul>
+    <li>NOTE</li>
+    <li>QUESTION</li>
+   </ul>
+  </td>
+ </tr>
+</table>
+</div>
+
+<div id="F-23"> 
+<h3>F-23: FEATURE NAME</h3>
+<table border="1" cellpadding="3" cellspacing="2" class="axial">
+ <tr>
+  <th>Priority:</th>
+  <td>Essential | Expected | Desired | Optional </td>
+ </tr>
+ <tr>
+  <th>Effort:</th>
+  <td>Months | Weeks | Days | Hours</td>
+ </tr>
+ <tr>
+  <th>Risk:</th>
+  <td>Dangerous | 3-Risks | 2-Risks | 1-Risk | Safe</td>
+ </tr>
+ <tr>
+  <th>Functional area(s):</th>
+  <td>WORD, WORD, WORD</td>
+ </tr>
+ <tr>
+  <th>Use case(s):</th>
+  <td><a href="use-cases.html#UC-01">UC-01</a></td>
+ </tr>
+ <tr>
+  <th>Description:</th>
+  <td>
+   <p>1-4 PARAGRAPHS.  USE BULLETS OR TABLES TO ORGANIZE INFORMATION.
+   LINK TO WORKSHEETS OR ADDITIONAL INFORMATION.</p>
+   
+   <p>Precise Details:</p>
+   <ul>
+    <li>LOGICAL CONSTRAINT</li>
+    <li>LOGICAL CONSTRAINT</li>
+   </ul>
+
+  </td>
+ </tr>
+ <tr>
+  <th>Notes and Questions:</th>
+  <td>
+   <ul>
+    <li>NOTE</li>
+    <li>QUESTION</li>
+   </ul>
+  </td>
+ </tr>
+</table>
+</div>
+
+
+<div id="F-30"> 
+<h3>F-30: FEATURE NAME</h3>
+<table border="1" cellpadding="3" cellspacing="2" class="axial">
+ <tr>
+  <th>Priority:</th>
+  <td>Essential | Expected | Desired | Optional </td>
+ </tr>
+ <tr>
+  <th>Effort:</th>
+  <td>Months | Weeks | Days | Hours</td>
+ </tr>
+ <tr>
+  <th>Risk:</th>
+  <td>Dangerous | 3-Risks | 2-Risks | 1-Risk | Safe</td>
+ </tr>
+ <tr>
+  <th>Functional area(s):</th>
+  <td>WORD, WORD, WORD</td>
+ </tr>
+ <tr>
+  <th>Use case(s):</th>
+  <td><a href="use-cases.html#UC-01">UC-01</a></td>
+ </tr>
+ <tr>
+  <th>Description:</th>
+  <td>
+   <p>1-4 PARAGRAPHS.  USE BULLETS OR TABLES TO ORGANIZE INFORMATION.
+   LINK TO WORKSHEETS OR ADDITIONAL INFORMATION.</p>
+   
+   <p>Precise Details:</p>
+   <ul>
+    <li>LOGICAL CONSTRAINT</li>
+    <li>LOGICAL CONSTRAINT</li>
+   </ul>
+
+  </td>
+ </tr>
+ <tr>
+  <th>Notes and Questions:</th>
+  <td>
+   <ul>
+    <li>NOTE</li>
+    <li>QUESTION</li>
+   </ul>
+  </td>
+ </tr>
+</table>
+</div>
+
+<div id="F-31"> 
+<h3>F-31: FEATURE NAME</h3>
+<table border="1" cellpadding="3" cellspacing="2" class="axial">
+ <tr>
+  <th>Priority:</th>
+  <td>Essential | Expected | Desired | Optional </td>
+ </tr>
+ <tr>
+  <th>Effort:</th>
+  <td>Months | Weeks | Days | Hours</td>
+ </tr>
+ <tr>
+  <th>Risk:</th>
+  <td>Dangerous | 3-Risks | 2-Risks | 1-Risk | Safe</td>
+ </tr>
+ <tr>
+  <th>Functional area(s):</th>
+  <td>WORD, WORD, WORD</td>
+ </tr>
+ <tr>
+  <th>Use case(s):</th>
+  <td><a href="use-cases.html#UC-01">UC-01</a></td>
+ </tr>
+ <tr>
+  <th>Description:</th>
+  <td>
+   <p>1-4 PARAGRAPHS.  USE BULLETS OR TABLES TO ORGANIZE INFORMATION.
+   LINK TO WORKSHEETS OR ADDITIONAL INFORMATION.</p>
+   
+   <p>Precise Details:</p>
+   <ul>
+    <li>LOGICAL CONSTRAINT</li>
+    <li>LOGICAL CONSTRAINT</li>
+   </ul>
+
+  </td>
+ </tr>
+ <tr>
+  <th>Notes and Questions:</th>
+  <td>
+   <ul>
+    <li>NOTE</li>
+    <li>QUESTION</li>
+   </ul>
+  </td>
+ </tr>
+</table>
+</div>
+
+<div id="F-32"> 
+<h3>F-32: FEATURE NAME</h3>
+<table border="1" cellpadding="3" cellspacing="2" class="axial">
+ <tr>
+  <th>Priority:</th>
+  <td>Essential | Expected | Desired | Optional </td>
+ </tr>
+ <tr>
+  <th>Effort:</th>
+  <td>Months | Weeks | Days | Hours</td>
+ </tr>
+ <tr>
+  <th>Risk:</th>
+  <td>Dangerous | 3-Risks | 2-Risks | 1-Risk | Safe</td>
+ </tr>
+ <tr>
+  <th>Functional area(s):</th>
+  <td>WORD, WORD, WORD</td>
+ </tr>
+ <tr>
+  <th>Use case(s):</th>
+  <td><a href="use-cases.html#UC-01">UC-01</a></td>
+ </tr>
+ <tr>
+  <th>Description:</th>
+  <td>
+   <p>1-4 PARAGRAPHS.  USE BULLETS OR TABLES TO ORGANIZE INFORMATION.
+   LINK TO WORKSHEETS OR ADDITIONAL INFORMATION.</p>
+   
+   <p>Precise Details:</p>
+   <ul>
+    <li>LOGICAL CONSTRAINT</li>
+    <li>LOGICAL CONSTRAINT</li>
+   </ul>
+
+  </td>
+ </tr>
+ <tr>
+  <th>Notes and Questions:</th>
+  <td>
+   <ul>
+    <li>NOTE</li>
+    <li>QUESTION</li>
+   </ul>
+  </td>
+ </tr>
+</table>
+</div>
+
+<div id="F-33"> 
+<h3>F-33: FEATURE NAME</h3>
+<table border="1" cellpadding="3" cellspacing="2" class="axial">
+ <tr>
+  <th>Priority:</th>
+  <td>Essential | Expected | Desired | Optional </td>
+ </tr>
+ <tr>
+  <th>Effort:</th>
+  <td>Months | Weeks | Days | Hours</td>
+ </tr>
+ <tr>
+  <th>Risk:</th>
+  <td>Dangerous | 3-Risks | 2-Risks | 1-Risk | Safe</td>
+ </tr>
+ <tr>
+  <th>Functional area(s):</th>
+  <td>WORD, WORD, WORD</td>
+ </tr>
+ <tr>
+  <th>Use case(s):</th>
+  <td><a href="use-cases.html#UC-01">UC-01</a></td>
+ </tr>
+ <tr>
+  <th>Description:</th>
+  <td>
+   <p>1-4 PARAGRAPHS.  USE BULLETS OR TABLES TO ORGANIZE INFORMATION.
+   LINK TO WORKSHEETS OR ADDITIONAL INFORMATION.</p>
+   
+   <p>Precise Details:</p>
+   <ul>
+    <li>LOGICAL CONSTRAINT</li>
+    <li>LOGICAL CONSTRAINT</li>
+   </ul>
+
+  </td>
+ </tr>
+ <tr>
+  <th>Notes and Questions:</th>
+  <td>
+   <ul>
+    <li>NOTE</li>
+    <li>QUESTION</li>
+   </ul>
+  </td>
+ </tr>
+</table>
+</div>
+
+
+
+
+
+
+</div>
+
+  <div class="todo">
+  TODO:  Check for <a
+  href="http://readyset.tigris.org/words-of-wisdom/features.html">words
+  of wisdom</a> and discuss ways to improve this template.
+  Or, evaluate the ReadySET Pro <a title="pro use case template and sample test plan"
+  href="http://www.readysetpro.com/">professional feature specification template</a>.
+  </div>
+
+<div class="legal1">Company Proprietary</div>
+
+<div class="footnote">
+ Copyright &#169; 2003-2004 Jason Robbins.  All rights reserved. <a href="readyset-license.html">License terms</a>.
+ Retain this copyright statement whenever this file is used as a
+ template.
+</div>
+
+</div>
+</body>
+
+</html>

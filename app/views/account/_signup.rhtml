@@ -1,0 +1,38 @@
+<div id="signup">
+
+    <div id="s_top">
+        <%= image_tag "web/round_div_top.gif" %>
+    </div>
+    <div id="signup_body">
+      <% if !flash[:errors].nil? %>
+        <% flash[:errors].each do |error| %>
+          <div id="message">
+            <%=h(error)%>
+          </div>
+        <%end%>
+      <%end%>
+    
+    <%= start_form_tag :controller => "account", :action=> "signup" %>    
+      <h3>Signup</h3>
+      <label for="user_login">Desired login:</label><br/>
+      <%= text_field "user", "login", :size => 30 %><br/>
+      <label for="user_password">Choose password:</label><br/>
+      <%= password_field "user", "password", :size => 30 %><br/>
+      <label for="user_password_confirmation">Confirm password:</label><br/>
+      <%= password_field "user", "password_confirmation", :size => 30 %><br/>
+      <label for="user_first_name">First name:</label><br/>
+      <%= text_field "user", "first_name", :size => 30 %><br/>
+      <label for="user_last_name">Last name:</label><br/>
+      <%= text_field "user", "last_name", :size => 30 %><br/>
+
+     <%= image_submit_tag "web/register_button.gif", :class => "submit" %>
+     <br>
+    <%= link_to_remote "<< Login", :update=>"sidebar", :url => {:controller=> "account", :action => "login_form"} %>
+
+    <%= end_form_tag %>
+
+    </div>
+    <div id="s_bottom">
+        <%= image_tag "web/round_div_bottom.gif" %>
+    </div>
+ </div>

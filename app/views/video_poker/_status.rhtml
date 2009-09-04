@@ -1,0 +1,29 @@
+
+<div id = "vp-status">
+<h3> Status </h3>
+    <div class="status-element">
+        Chips: <%= number_with_delimiter(chips, ",") %>
+    </div>
+    <div class="status-element">
+        <div id = "current-bet">
+                Current Credits: <%= current_bet%> Credits
+        </div>
+   </div>
+    
+    <div class="pay-schedule">
+
+    </div>
+    
+    <%if (state == "GAME_OVER") %>
+        <div class ="status-element-result">
+        <%if (result == "PLAYER_WON")%>
+            <h1> PLAYER WON! </h1>
+        <%elsif (result == "PLAYER_LOST")%>
+            <h1> PLAYER LOST </h1>
+        <%end%>       
+            <h1> <%= hand.rating %> </h1>
+            <h1> <%= number_with_delimiter(chips_result,",") %> </h1>
+        </div>
+    <%end%>
+    
+</div>

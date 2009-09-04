@@ -1,0 +1,334 @@
+body { background-color: black; color: #fff; }
+
+body, p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size:   13px;
+  line-height: 18px;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a { color: #fff;  }
+a:visited { color: #fff; }
+a:hover { color: #fff; background-color:#000; }
+
+
+#container
+{
+  width: 1000px;
+  margin: 10px auto;
+  background-color: #215E21;
+}
+
+#header 
+{
+  width: 1000px;
+  background-color:black;
+  border-bottom: 1px solid white;
+}
+#border-left
+{
+   float: left;
+   background: url(/images/web/border.gif);
+   width: 30px;
+   height: 800px;
+}
+
+#border-right
+{
+   float: left;
+   background: url(/images/web/border.gif) repeat;
+   width: 30px;
+   height: 800px;
+}
+
+#sidebar
+{
+  float: left;
+  background-color: #215E21;
+  width: 180px;
+  height: 780px;
+  padding: 10px 10px 10px 10px;
+}
+
+#content
+{
+  float: left;
+  background-color: #215E21;
+  width: 740px;
+  height: 800px;
+}
+
+#s_top
+{
+  width: 175px;
+  height: 25px;
+}
+
+#s_bottom
+{
+  width: 175px;
+  height: 25px;
+}
+
+#c_top
+{
+  width: 350px;
+  height: 25px;
+}
+
+#c_bottom
+{
+  width: 350px;
+  height: 25px;
+  border: 0px;
+}
+
+
+#login
+{ 
+  width: 175px;
+}
+
+#login_body
+{ 
+  padding: 10px;
+  background-color: #00260E;
+}
+
+
+#login_body input
+{
+  width: 150px;
+}
+
+#login_body input.submit
+{
+  float: none;
+  margin-top: 10px;
+  width: 100px;
+}
+
+#signup {
+  width: 175px;
+}
+
+#signup_body
+{ 
+  padding: 10px;
+  background-color: #00260E;
+}
+
+#signup input
+{
+  width: 150px;
+}
+
+#signup_body input.submit
+{
+  margin-top: 10px;
+  width: 100px;
+}
+
+
+#profile{
+  width: 175px;
+}
+#profile_body
+{
+  background-color: #00260E;
+  padding:  10px;
+}
+
+#profile_body td
+{
+  width: 75px;
+}
+
+#profile_body img
+{
+  width: 100px;
+  padding: 0px 0px 0px 20px;
+  
+}
+
+#nav {
+  margin-top: 20px;
+  width: 175px;
+}
+
+#nav-body {
+  background-color: #00260E;
+  padding:  10px;
+  
+}
+#nav-body table
+{
+  margin-left: 40px;
+}
+
+#nav-body td
+{
+  text-align: center;
+}
+
+#options
+{
+  margin-top: 10px;
+  width: 350px;
+
+}
+#options-body 
+{
+
+  padding:  10px;
+  background-color: #00260E;
+  height: 600px;
+}
+
+
+#opt
+{
+  padding:  0px;
+  width: 300px;
+  margin: 10px;
+}
+
+#opt input
+{
+  width: 200px;
+}
+
+#opt select
+{
+  width: 200px;
+}
+
+#opt input.submit {
+  width: 150px;
+  margin: 10px 0 0 110px;
+}
+
+
+#welcome-message {
+  float: left;
+  margin: 50px 0px 0px 30px;
+  width: 350px;  
+  height: 350px;
+}
+
+#welcome-message-body {
+  background-color: #00260E;
+  padding: 5px;
+  height: 250px;
+  font-size: x-small;
+  
+}
+
+#welcome-message-body p {
+ font-size: x-small;
+}
+#girl {
+  float: left;
+  margin: 30px 0px 0px 50px;  
+}
+
+#girl img{
+
+}
+
+
+#game-descr-list
+{
+  float: left;
+  width: 800px;
+  clear: left;
+  margin:10px 0px 0px 10px;
+}
+
+#game-descr
+{
+  float: left;
+  width: 175px;
+  margin: 0px 0px 0px 40px; 
+}
+#game-descr-img img
+{
+ height: 130px;
+ width: 175px;
+}
+#game-descr-body
+{
+  font-size: x-small; 
+  background-color: #00260E;
+  width: 175px;
+}
+
+#game-descr-body text
+{
+
+}
+#rooms
+{
+  padding: 5px;  
+}
+
+#game-pic
+{
+  float: left;
+  display: inline;
+  width: 200px;
+  height: 140px;
+  margin: 10px 10px 0px 0px;
+  padding: 5px;   
+}
+
+#game-pic p
+{
+  text-align: center;
+}
+
+
+#game-pic img
+{
+ width: 200px;
+ height: 140px;
+}
+
+
+#room-status {
+  margin: 30px 10px 10px 10px;
+  padding: 10px;  
+}
+
+#room-list {
+  float: left;
+  margin: 80px 0px 0px 8px;
+  width: 350px;
+}
+
+
+#room-list-body {
+  background-color: #00260E;
+  padding: 10px;
+}
+
+#cash_out_message
+{
+  margin: 10px 0px 0px 0px;
+  width: 350px;
+
+}
+#cash_out_message_body
+{
+
+  padding:  10px;
+  background-color: #00260E;
+  height: 500px;
+}
+
+/* GAME STUFF */

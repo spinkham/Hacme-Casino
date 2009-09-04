@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//Tigris//DTD XHTML 1.0 Transitional//EN"
+"http://style.tigris.org/tigris_transitional.dtd">
+<html>
+<head>
+ <style type="text/css">
+/* <![CDATA[ */ 
+@import "css/readyset.css"; 
+@import "css/inst.css";
+/*  ]]> */
+
+.drawtheline { border-bottom: solid 1px black; margin-bottom: 1em; }
+
+ </style>
+
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+ <title>HacmeCasino - Feature Set</title>
+</head>
+
+<body>
+<div class="app">
+<div class="readyset">
+
+
+<h2><a href="srs.html">SRS</a> &gt; Feature Set</h2>
+
+ <div id="releaseinfo">
+ <h3>Release Information</h3>
+ <table border="1" cellpadding="3" cellspacing="2" class="axial">
+  <tr>
+   <th>Project:</th> 
+   <td><a href="index.html">PROJECTNAME</a></td> 
+  </tr>
+  <tr>
+   <th>Internal Release Number:</th> 
+   <td>0.0.0</td> 
+  </tr>
+  <tr>
+   <th>Related Documents:</th> 
+   <td>
+    <div><a href="proposal.html">Project proposal</a> &gt;
+         <a href="user-needs.html">User needs</a></div>
+    <div><a href="srs.html">SRS</a> &gt;
+         <a href="use-case-suite.html">Use case suite</a></div>
+    <div><a href="feature-format.html">Feature format</a></div>
+    <div><a href="LINK-TO-DIAGRAM">Use case diagram</a></div>
+    <div>LINKS TO RELEVANT STANDARDS</div>
+    <div>LINKS TO OTHER DOCUMENTS</div>
+   </td>
+  </tr>
+ </table>
+ </div> <!-- /releaseinfo -->
+
+
+
+ <div id="processimpact">
+  <b>Process impact:</b> A feature set is simply a
+  table of contents for the individual feature descriptions.  Much like
+  a test suite, organizing the feature set by priority, functional area,
+  actor, business object, or release can help identify missing, extra,
+  or poorly motivated features early.
+ </div> <!-- /processimpact -->
+
+<!--<div class="todo"> TODO: Before writing individual feature
+  descriptions, list all the features that you think you will need.
+  Organize them so that missing features appear as blanks on this
+  page, and extra features will appear to be extras that don't
+  fit anywhere.  See the <a href="feature-format.html#checklist">feature
+  format</a> document for more tips on specifying features and feature
+  sets.
+</div>
+-->
+<!--
+<div class="tip"> 
+ TIP: Refer back to the user stories in your <a
+ href="user-needs.html">user needs</a> document and to the <a
+ href="use-case-suite.html">use case suite</a>.  Use them for ideas and
+ make sure that you cover all of them.
+</div>
+-->
+
+
+<div id="bypriority">
+<h3>Features by Release and Priority</h3>
+<!--
+<div class="todo"> 
+ TODO: Select subset of features can be implemented for a given
+ release.  When features are listed in priority order, choosing the
+ features to implement in a release simply becomes a matter of
+ "drawing a line": features below the line must wait for a later
+ release.  Make sure to also consider estimated effort and risk.
+</div>
+-->
+
+<ul>
+ <li class="drawtheline">Release 1.0
+ <ul>
+ <li>Essential
+  <ul>
+   <li><a href="features.html#F-00">F-00</a>gambling Room</li>
+	
+   <li><a href="features.html#F-01">F-01</a>Security Vulnerabilities</li>
+  </ul>
+ </li>
+
+ <li>Expected
+  <ul>
+   
+  </ul>
+ </li>
+ </ul>
+ </li>
+
+ <li class="drawtheline">Release 1.1
+ <ul>
+ <li>Expected
+  <ul>
+   <li><a href="features.html#F-02">F-02</a>Account Managemet</li>
+   <li><a href="features.html#F-03">F-03</a>Room Selection</li>
+ </ul>
+ </li>
+
+ <li>Desired
+  <ul>
+   <li><a href="features.html#F-04">F-04</a>Balance Transfers</li>
+   <li><a href="features.html#F-05">F-05</a>Automated Deployment</li>
+  </ul>
+ </li>
+ </ul>
+ </li>
+
+ <li>Later Releases
+ <ul>
+ <li>Optional
+  <ul>
+   <li><a href="features.html#F-30">F-30</a> Automated Play</li>   
+  </ul>
+ </li>
+ </ul>
+ </li>
+
+</ul>
+ </div> <!-- /bypriority -->
+
+
+
+<!--
+I don't think we need this - Alex
+
+<div id="byrisk">
+<h3>Features by Release and Risk</h3>
+
+<ul>
+ <li class="drawtheline">Release 1.0
+ <ul>
+   <li><a href="features.html#F-00">F-00</a> Safe : Site configuration</li>
+   <li><a href="features.html#F-01">F-01</a> Safe : User registration</li>
+   <li><a href="features.html#F-21">F-21</a> Safe : NAME OF FEATURE</li>
+   <li><a href="features.html#F-31">F-31</a> 1-Risk : NAME OF FEATURE</li>
+   <li><a href="features.html#F-02">F-02</a> 1-Risk : NAME OF FEATURE</li>
+   <li><a href="features.html#F-03">F-03</a> 2-Risks : NAME OF FEATURE</li>
+   <li><a href="features.html#F-20">F-20</a> 2-Risks : NAME OF FEATURE</li>
+   <li>Total unique risk factors: 4</li>
+ </ul>
+ </li>
+
+ <li class="drawtheline">Release 1.1
+ <ul>
+   <li><a href="features.html#F-22">F-22</a> Safe : NAME OF FEATURE</li>
+   <li><a href="features.html#F-23">F-23</a> Safe : NAME OF FEATURE</li>
+   <li><a href="features.html#F-33">F-33</a> Safe : NAME OF FEATURE</li>
+   <li><a href="features.html#F-10">F-10</a> 2-Risks : NAME OF FEATURE</li>
+   <li><a href="features.html#F-11">F-11</a> 2-Risks : NAME OF FEATURE</li>
+   <li><a href="features.html#F-12">F-12</a> 3-Risks : NAME OF FEATURE</li>
+   <li>Total unique risk factors: 5</li>
+ </ul>
+ </li>
+
+ <li>Later Releases
+ <ul>
+   <li><a href="features.html#F-30">F-30</a> Safe : NAME OF FEATURE</li>
+   <li><a href="features.html#F-32">F-32</a> 2-Risks : NAME OF FEATURE</li>
+   <li>Total unique risk factors: 2</li>
+ </ul>
+ </li>
+
+</ul>
+ </div> -->
+<!-- /byrisk -->
+
+<!-- 
+
+ Getting rid of this one too... - Alex
+
+
+<div id="byfunction">
+<h3>Features by Functional Area</h3>
+
+<ul>
+ <li>FUNCTIONAL AREA ONE
+  <ul>
+   <li><a href="features.html#F-00">F-00</a> Site configuration</li>
+   <li><a href="features.html#F-01">F-01</a> User registration</li>
+   <li><a href="features.html#F-02">F-02</a> NAME OF FEATURE</li>
+   <li><a href="features.html#F-03">F-03</a> NAME OF FEATURE</li>
+  </ul>
+ </li>
+
+ <li>FUNCTIONAL AREA TWO
+  <ul>
+   <li><a href="features.html#F-10">F-10</a> NAME OF FEATURE</li>
+   <li><a href="features.html#F-11">F-11</a> NAME OF FEATURE</li>
+   <li><a href="features.html#F-12">F-12</a> NAME OF FEATURE</li>
+   <li><a href="features.html#F-13">F-13</a> NAME OF FEATURE</li>
+  </ul>
+ </li>
+
+ <li>FUNCTIONAL AREA THREE
+  <ul>
+   <li><a href="features.html#F-20">F-20</a> NAME OF FEATURE</li>
+   <li><a href="features.html#F-21">F-21</a> NAME OF FEATURE</li>
+   <li><a href="features.html#F-22">F-22</a> NAME OF FEATURE</li>
+   <li><a href="features.html#F-23">F-23</a> NAME OF FEATURE</li>
+  </ul>
+ </li>
+
+ <li>FUNCTIONAL AREA FOUR
+  <ul>
+   <li>N/A: These features are completely automated and internal,
+   users never interact with them</li>
+  </ul>
+ </li>
+
+ <li>FUNCTIONAL AREA FIVE
+  <ul>
+   <li>TODO: need to write use cases here</li>
+  </ul>
+ </li>
+
+ <li>Other functional areas
+  <ul>
+   <li><a href="features.html#F-30">F-30</a> NAME OF FEATURE</li>
+   <li><a href="features.html#F-31">F-31</a> NAME OF FEATURE</li>
+   <li><a href="features.html#F-32">F-32</a> NAME OF FEATURE</li>
+   <li><a href="features.html#F-33">F-33</a> NAME OF FEATURE</li>
+  </ul>
+ </li>
+
+</ul>
+ </div> <!-- /byfunction -->
+-->
+
+
+</div>
+
+  <div class="todo">
+  TODO:  Check for <a
+  href="http://readyset.tigris.org/words-of-wisdom/feature-set.html">words
+  of wisdom</a> and discuss ways to improve this template.
+  Or, evaluate the ReadySET Pro <a title="pro use case template and sample test plan"
+  href="http://www.readysetpro.com/">professional feature set template</a>.
+  </div>
+
+<div class="legal1">Company Proprietary</div>
+
+<div class="footnote">
+ Copyright &#169; 2003-2004 Jason Robbins.  All rights reserved. <a href="readyset-license.html">License terms</a>.
+ Retain this copyright statement whenever this file is used as a
+ template.
+</div>
+
+</div>
+</body>
+</html>

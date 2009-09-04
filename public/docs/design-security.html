@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//Tigris//DTD XHTML 1.0 Transitional//EN"
+"http://style.tigris.org/tigris_transitional.dtd">
+<html>
+<head>
+ <style type="text/css">
+/* <![CDATA[ */ 
+@import "css/readyset.css"; 
+@import "css/inst.css";
+/*  ]]> */
+ </style>
+
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+ <title>Security</title>
+</head>
+
+<body>
+<div class="app">
+<div class="readyset">
+ <h2><a href="design.html">Design</a> &gt; Security</h2>
+
+ <div id="releaseinfo">
+ <h3>Release Information</h3>
+ <table border="1" cellpadding="3" cellspacing="2" class="axial">
+  <tr>
+   <th>Project:</th> 
+   <td><a href="index.html">PROJECTNAME</a></td> 
+  </tr>
+  <tr>
+   <th>Internal Release Number:</th> 
+   <td>X.Y.Z</td> 
+  </tr>
+  <tr>
+   <th>Related Documents:</th> 
+   <td>
+    <div>LINKS TO RELEVANT STANDARDS</div>
+    <div>LINKS TO OTHER DOCUMENTS</div>
+   </td>
+  </tr>
+ </table>
+ </div> <!-- /releaseinfo -->
+
+
+
+ <div id="overview">
+ <h3>Overview</h3>
+
+ <div class="todo">
+  TODO: Answer the questions below to help you design needed security
+  features.  Some example text is provided.  Add or delete text as
+  needed.
+ </div>
+
+ <dl>
+
+  <dt>What are the most important facts that a developer should know
+  about the security of this system?</dt>
+
+  <dd>PARAGRAPH OR BULLETS</dd>
+
+ 
+  <dt>What are the ranked goals for security in this system?</dt>
+
+  <dd>
+   <ol>
+    <li><a class="def" href="glossary-std.html#dg_data_security">Data security</a></li>
+
+    <li><a class="def" href="glossary-std.html#dg_no_intrusion">Intrusion prevention</a></li>
+
+    <li><a class="def" href="glossary-std.html#dg_no_abuse">Abuse prevention</a></li>
+
+    <li><a class="def" href="glossary-std.html#dg_auditability">Auditability</a></li>
+   </ol>
+  </dd>
+
+ </dl>
+ </div> <!-- /overview -->
+
+
+ <div id="mechanisms">
+ <h3>Security Mechanisms</h3>
+
+ <dl>
+  <dt>What physical security mechanisms will be used?</dt>
+
+  <dd class="sample1">
+   <ul>
+    <li>Servers will be kept in a locked room with door code known
+    only to administrators.</li>
+
+    <li>Servers will be kept in a locked equipment rack.</li>
+
+    <li>Server case itself has a security cable that prevents the case
+    from being opened (so the hard-disk with sensitive data cannot be
+    removed).</li>
+
+    <li>Backup tapes are stored in a locked cabinet in a locked room.</li>
+   </ul>
+  </dd>
+
+
+  <dt>What network security mechanisms will be used?</dt>
+
+  <dd class="sample1">
+   <ul>
+    <li>A firewall device limits access to specific network ports
+    (e.g., port 80 for web server access).</li>
+
+    <li>Firewall software limits access to specific network ports
+    (e.g., port 80 for web server access).</li>
+
+    <li>Only the front-end machines are accessible over the
+    Internet. Other machines in the server cluster communicate over a
+    private LAN only.</li>
+
+    <li>Users can only connect to the server from specific ranges of
+    IP-address (e.g., university-owned computers in networks on
+    campus).</li>
+
+    <li>Certain users (e.g., administrators) can only connect from
+    specific ranges of IP-addresses.</li>
+
+    <li>All network communication takes place over a virtual private
+    network (VPN) that is encrypted and not accessible to outsiders.</li>
+
+    <li>All network communication takes place over a LAN that does not
+    have any connections to the Internet.</li>
+   </ul>
+  </dd>
+
+
+  <dt>What operating system security will be used?</dt>
+
+  <dd class="sample1">
+   <ul>
+    <li>Operating system user accounts will never be created on the
+    servers, other than those needed by the application itself.</li>
+
+    <li>Different components in the application execute as different
+    operating system users, have only the least possible
+    privileges, and may only access the particular files needed by that
+    component.</li>
+
+    <li>Operating system permissions on files and directories are set
+    to prevent undesired access or modification.</li>
+
+    <li>Intrusion detection software will be used on the server to
+    detect any modifications made by hackers.</li>
+
+    <li>Administrators will monitor security mailing lists for
+    announcements of security holes in any components that we use and
+    security patches and upgrades will be applied quickly.</li>
+
+    <li>Data on disks and backup tapes is stored using an encrypted
+    file system so that the data is protected if the media itself is
+    stolen or somehow accessed.</li>
+   </ul>
+  </dd>
+
+  
+  <dt>What application security mechanisms will be used?</dt>
+
+  <dd class="sample1">
+   <ul>
+    <li>Values input into every field are validated before use</li>
+
+    <li>Usernames and passwords are required for access</li>
+
+    <li>Passwords are stored encrypted</li>
+
+    <li>Verification of user email address</li>
+
+    <li>The quality of passwords is checked</li>
+
+    <li>Users must have certificate files on their client machine
+    before they can connect to the server</li>
+
+    <li>Users must have physical security tokens (e.g., hasp, dongle,
+    smartcard, or fingerprint reader)</li>
+
+    <li>Users are given roles that define their permissions.  Those roles are:
+     <ul>
+      <li>Guest: Visitor to the site is not logged in, no permissions to change anything</li>
+      <li>Guest: Visitor to the site is not logged in, can post messages anonymously</li>
+      <li>RegisteredUser: User is logged in, has permissions for X, Y, and Z</li>
+      <li>Administrator: Permission to change anything, even on behalf of other regular users</li>
+     </ul>
+    </li>
+
+    <li>Each action (information display or change) requires that the
+    user has a role with proper permissions</li> 
+
+    <li>Compromised or abused accounts can be quickly disabled by administrators.</li>
+
+    <li>Administrators can review user permissions</li>
+
+    <li>Administrators can audit all accesses and changes</li>
+
+    <li>All communications with the user are encrypted (e.g., SSL)</li>
+
+    <li>Some communications with the user (e.g., the username and
+    password) are encrypted (e.g., SSL)</li>
+
+    <li>Sessions are tied to a particular client IP-address so that
+    stolen cookies cannot be used.</li>
+
+    <li>Session cookies are long random strings that cannot be
+    guessed.</li>
+
+    <li>Sessions time out so that unattended terminals cannot be
+    abused.</li>
+
+    <li>Actions that seem to destroy data actually move it to a place
+    where it can still be reviewed by administrators.</li>
+
+    <li>Sensitive data, such as credit card numbers, are processed
+    but not retained in any database or file</li>
+
+    <li>The data access layer will be responsible for preventing SQL
+    injection attacks (i.e., hackers attempting to enter SQL
+    statements through application UI fields).</li>
+
+    <li>The data access layer will allow read-only connections, which
+    will be used for most requests, as well as write connections for
+    requests that update the database.</li>
+
+    <li>The HTML generation layer will be responsible for preventing
+    cross-site-scripting (XSS) attacks.</li>
+
+    <li>The application will prevent CSRF attacks.  It will do this by
+    performing updates to the database only after a POST, and checking
+    that the referring page was served by the system for every POST.
+    Browsers that do not report HTTP-Referrer will not be
+    supported.</li>
+    
+   </ul>
+  </dd>
+
+ </dl>
+ </div> <!-- /mechanisms -->
+
+
+
+ <div id="checklist">
+ <h3>Security Checklist</h3>
+
+ <dl>
+  <dt>Protection of data: To what extent has this been achieved?</dt>
+
+  <dd>2-4 SENTENCES</dd>
+
+
+  <dt>Prevention of intrusion: To what extent has this been achieved?</dt>
+
+  <dd>2-4 SENTENCES</dd>
+
+
+  <dt>Prevention of abuse: To what extent has this been achieved?</dt>
+
+  <dd>2-4 SENTENCES</dd>
+
+
+  <dt>Accountability/auditing: To what extent has this been achieved?</dt>
+
+  <dd>2-4 SENTENCES</dd>
+
+
+  <dt>Have these security mechanisms been communicated to the
+  development team and other stakeholders?</dt>
+
+  <dd class="sample1">Yes, everyone understands.  Feedback is
+  welcome.</dd>
+
+  <dd class="sample1">No, this is a risk that is noted in the <a
+  href="plan.html#risks">Risk Management</a> section.</dd>
+
+
+ </dl>
+ </div> <!-- /checklist -->
+
+ 
+</div>
+
+
+ <div class="todo">
+  TODO:  Check for <a
+  href="http://readyset.tigris.org/words-of-wisdom/design-security.html">words
+  of wisdom</a> and discuss ways to improve this template.
+  Or, evaluate the ReadySET Pro <a title="pro use case template and sample test plan"
+  href="http://www.readysetpro.com/">professional security design template</a>.
+ </div>
+
+<div class="legal1">Company Proprietary</div>
+
+<div class="footnote">
+ Copyright &#169; 2003-2004 Jason Robbins.  All rights reserved. <a href="readyset-license.html">License terms</a>.
+ Retain this copyright statement whenever this file is used as a
+ template.
+</div>
+
+</div>
+</body>
+</html>

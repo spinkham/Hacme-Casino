@@ -1,0 +1,16 @@
+ <%= stylesheet_link_tag 'game' %>
+ <%= stylesheet_link_tag 'blackjack' %>
+ <div id="room">
+    <div id="game-top">
+        <%= image_tag "web/round_div_top_3.gif" %>
+    </div>
+    
+    <div id = "room-body">
+
+        <%= render_partial('game') %>
+    
+    </div>
+    <div id="game-bottom">
+        <%= image_tag "web/round_div_bottom_3.gif" %>
+    </div>
+</div>

@@ -1,0 +1,45 @@
+<div id = "profile">
+    <div id="s_top">
+        <%= image_tag "web/round_div_top.gif" %>
+    </div>
+    <div id="profile_body">
+        <h3>Player Profile</h3>
+        <table>
+        <tr>
+            <td colspan = 2>
+        <% if @session['photo']%>
+        <%= image_tag("profiles/#{@user.login}.jpg") %>
+        <%end%>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <i>Login:</i> 
+            </td>
+            <td>
+             <%=@user.login %>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <i>Name:</i>            </td>
+            <td> <%="#{@user.first_name} #{@user.last_name}" %>
+            </td>
+         </tr>
+        <% if (!@in_room) %>
+        <tr>
+            <td>
+               <i>Chips:</i>            </td>
+               
+               <td> <%=number_with_delimiter(@user.chips, ",") %>
+            </td>
+        </tr>
+        <%end%>
+        </table>
+   </div>
+   <div id="s_bottom">
+        <%= image_tag "web/round_div_bottom.gif" %>
+   </div>
+</div>
+
+        

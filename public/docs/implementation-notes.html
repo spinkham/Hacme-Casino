@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//Tigris//DTD XHTML 1.0 Transitional//EN"
+"http://style.tigris.org/tigris_transitional.dtd">
+<html>
+<head>
+ <style type="text/css">
+/* <![CDATA[ */ 
+@import "css/readyset.css"; 
+@import "css/inst.css";
+/*  ]]> */
+ </style>
+
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+ <title>Implementation Notes</title>
+</head>
+
+<body>
+<div class="app">
+<div class="readyset">
+ <h2>Implementation Notes</h2>
+
+ <div id="releaseinfo">
+ <h3>Product Release Information</h3>
+ <table border="1" cellpadding="3" cellspacing="2" class="axial">
+  <tr>
+   <th>Project:</th> 
+   <td><a href="index.html">PROJECTNAME</a></td> 
+  </tr>
+  <tr>
+   <th>Release(s)</th> 
+   <td>
+     X.Y.Z
+     <!-- if this document applies to multiple versions, you can list them one-per-line -->
+   </td> 
+  </tr>
+  <tr>
+   <th>Related Documents:</th> 
+   <td>
+    <div><a href="srs.html">Software Requirements Specification</a></div>
+    <div><a href="release-notes.html">Release notes</a></div>
+    <div><a href="faq.html">FAQ</a></div>
+    <div><a href="glossary.html">Glossary</a></div>
+   </td>
+  </tr>
+
+ </table>
+ </div> <!-- /releaseinfo -->
+
+ <div id="processimpact">
+  <strong>Process impact:</strong> This document is a brief and fairly
+  technical discussion of how the system works under ideal conditions.
+  It is also known as a "theory of operation" document.  It should
+  describe key algorithms, technology dependencies, and operational
+  issues.  Much of the content of this document can be drawn from
+  design documents.  This document will be used by the QA, technical
+  support, and operations groups.  The goal is to give those groups
+  the information they need to understand, manage, or begin to
+  troubleshoot the system (i.e., recognize certain behavior as normal
+  or abnormal).  If significantly more information is needed, it
+  should be organized into a larger "operations guide".
+ </div> <!-- /processimpact -->
+
+
+
+ <div id="typeofimplementation">
+ <h3>Type of Implementation</h3>
+
+ <div class="todo">
+  TODO: Fill in information that will help other engineers understand
+  this system at-a-glance.  Feel free to use relevant technical terms
+  and name specific technology platforms.
+ </div>
+
+ <div class="axial">
+ <table border="1" cellpadding="3" cellspacing="2">
+  <tr>
+   <th>Type of system:</th> 
+   <td>
+    <div class="sample1">Desktop GUI application</div>
+    <div class="sample2">Unix-style command</div>
+    <div class="sample3">Server-side web application</div>
+    <div class="sample4">Web service</div>
+    <div class="sample1">Client-side applet</div>
+    <div class="sample2">Embedded application</div>
+    <div class="sample3">Reusable library</div>
+    <div class="sample4">Reusable class framework</div>
+    <div class="sample1">Browser Plug-in</div>
+   </td> 
+  </tr>
+  <tr>
+   <th>Programming Language(s):</th> 
+   <td>
+    <div class="sample1">Java</div>
+    <div class="sample2">Perl, Unix shell scripts</div>
+   </td> 
+  </tr>
+  <tr>
+   <th>Data Storage:</th> 
+   <td>
+    <div class="sample1">Flat files using XML</div>
+    <div class="sample2">Flat files using Java properties file format</div>
+    <div class="sample3">Flat files using Java object serialization format</div>
+    <div class="sample4">SQL database: MySQL</div>
+   </td> 
+  </tr>
+  <tr>
+   <th>UI Technologies:</th> 
+   <td>
+    <div class="sample1">Java Swing</div>
+    <div class="sample2">XHTML, CSS, JavaScript</div>
+   </td> 
+  </tr>
+  <tr>
+   <th>Security Technologies:</th> 
+   <td>
+    <div class="sample1">Authentication: None needed</div>
+    <div class="sample2">Authentication: Local username and password file</div>
+    <div class="sample3">Authentication: LDAP</div>
+    <div class="sample4">Authorization: Operating system file ownership and
+    read-write-execute flags</div> 
+    <div class="sample1">Authorization: Access control lists</div> 
+    <div class="sample2">Encryption: None needed</div> 
+    <div class="sample3">Encryption: SSL</div> 
+   </td>
+  </tr>
+ </table>
+ </div>
+
+ </div> <!-- /typeofimplementation -->
+
+
+
+ <div id="runtime">
+ <h3>Runtime Environment</h3>
+
+ <div class="todo">
+  TODO: List and describe runtime objects that make up a running system.
+  These objects may be referred to by name in the sections below.
+ </div>
+
+ <div class="axial">
+ <table border="1" cellpadding="3" cellspacing="2">
+  <tr>
+   <th>Processes:</th> 
+   <td>
+    <div class="sample1">Main application process</div>
+    <div class="sample2">Client and server processes</div>
+    <div class="sample3">Cron tasks</div>
+    <div class="sample4">Operating system services or drivers</div>
+   </td> 
+  </tr>
+  <tr>
+   <th>Configuration Files:</th> 
+   <td class="sample1">
+
+    <div>PRODUCTNAME.conf: stores application configuration in Java
+    properties file format.</div>
+
+    <div>Section of httpd.conf: configures components of the Apache
+    webserver</div>
+
+   </td> 
+  </tr>
+  <tr>
+   <th>Database Tables:</th> 
+   <td class="sample1">
+    <div>TABLE_ONE: Each row represents a ...</div>
+    <div>TABLE_TWO: Each row represents a ...</div>
+    <div>TABLE_THREE: Each row represents a ...</div>
+    <div>See the <a
+  href="design-persistence.html">persistence design document</a>.</div>
+   </td> 
+  </tr>
+
+  <tr>
+   <th>Data files:</th> 
+   <td class="sample1">
+    <div>*.ext: Data files saved by the user on their local hard disk.</div>
+
+    <div>/var/PRODUCTNAME/upload-XXXX.dat: Files uploaded to the
+    server.</div>
+   </td>
+  </tr>
+
+  <tr>
+   <th>Temporary files:</th> 
+   <td class="sample1">
+    <div>/tmp/PRODUCTNAME.pid: Process ID of the currently running
+    server process.</div>
+    <div>/tmp/upload-XXXX.dat: Files uploaded to the server before
+    they are processed.</div>
+   </td>
+  </tr>
+
+  <tr>
+   <th>Log files:</th> 
+   <td class="sample1">
+    <div>error.log: Serious errors are put in the normal Apache error
+    log.  Must be writable by Unix user <tt>httpd</tt>.</div>
+
+    <div>PRODUCTNAME.log: Messages indicating the progress of normal
+    operations and some errors.  Must be writable by Unix user
+    <tt>httpd</tt>.</div>
+
+    <div>Log files are rotated nightly.  Old logs are archived in
+    ANOTHER LOCATION.</div>
+   </td>
+  </tr>
+
+ </table>
+ </div>
+ </div> <!-- /runtime -->
+
+
+
+ <div id="specificfeatures">
+ <h3>Implementation of Specific Features</h3>
+
+ <div class="todo">
+  TODO: Write short descriptions of interesting
+  or unexpected algorithms, limiting assumptions, or any other
+  implementation detail that will impact the work of other groups.
+  E.g., long-running operations that must not be interrupted.   E.g.,
+  start up or shutdown scripts that are automatically run by the
+  operating system.
+ </div>
+ 
+ <ul class="sample1">
+  <li><strong>Feature name:</strong> 1-3 SENTENCE DESCRIPTION </li>
+
+  <li><strong>Feature name:</strong> 1-3 SENTENCE DESCRIPTION </li>
+
+  <li><strong>Feature name:</strong> 1-3 SENTENCE DESCRIPTION 
+   <ul>
+    <li>DETAILS</li>
+    <li>DETAILS</li>
+    <li>DETAILS</li>
+   </ul>
+  </li>
+
+  <li><strong>Feature name:</strong> 1-3 SENTENCE DESCRIPTION 
+   <ul>
+    <li>DETAILS</li>
+    <li>DETAILS</li>
+    <li>DETAILS</li>
+   </ul>
+  </li>
+
+ </ul>
+ </div> <!-- /specificfeatures -->
+
+
+
+
+ <div id="operationalprocedures">
+ <h3>Operational Procedures</h3>
+ 
+ <div class="todo">
+   TODO: Briefly describe procedures that should be followed by
+   operations engineers when the system is being run in an ASP production
+   environment.
+ </div>
+ 
+ <div class="axial">
+ <table border="1" cellpadding="3" cellspacing="2">
+  <tr>
+   <th>Install:</th> 
+   <td class="sample1">See the <a href="install.html">Installation guide</a></td> 
+  </tr>
+  <tr>
+   <th>Upgrade:</th> 
+   <td class="sample1">See the <a href="install.html">Installation guide</a></td> 
+  </tr>
+  <tr>
+   <th>Start Server:</th> 
+   <td class="sample1">
+    <ol>
+     <li>STEP</li>
+     <li>STEP</li>
+     <li>STEP</li>
+    </ol>
+   </td> 
+  </tr>
+  <tr>
+   <th>Stop Server:</th> 
+   <td class="sample1">
+    <ol>
+     <li>STEP</li>
+     <li>STEP</li>
+     <li>STEP</li>
+    </ol>
+   </td> 
+  </tr>
+  <tr>
+   <th>Reload Config Files:</th> 
+   <td class="sample1">
+    <ol>
+     <li>STEP</li>
+     <li>STEP</li>
+     <li>STEP</li>
+    </ol>
+   </td> 
+  </tr>
+  <tr>
+   <th>Monitor Activity:</th> 
+   <td class="sample1">Watch the PRODUCTNAME.log and error.log.</td> 
+  </tr>
+  <tr>
+   <th>Periodic Cleanup:</th> 
+   <td class="sample1">
+    On rare occasion, /tmp/upload-XXXX.dat files can be left behind.
+    Any such files that are more than a day old can safely be
+    removed.
+   </td>
+  </tr>
+ </table>
+ </div>
+ </div> <!-- /operationalprocedures -->
+
+
+
+ <div id="security">
+ <h3>Security</h3>
+
+ <div class="todo">
+   TODO: Write notes on security to help operations engineers keep the
+   system secure while it is in operation. 
+ </div>
+ 
+ <p>We take the following precautions to make the system secure:</p>
+ 
+ <ul class="sample1">
+  <li>STEP</li>
+  <li>STEP</li>
+  <li>STEP</li>
+ </ul>
+
+ <p>The security of the system depends on the following external
+ factors:</p>
+
+ <ul class="sample1">
+  <li>STEP</li>
+  <li>STEP</li>
+  <li>STEP</li>
+ </ul>
+ </div> <!-- /security -->
+
+
+
+ <div id="performance">
+ <div id="scalability">
+ <h3>Performance and Scalability</h3>
+
+ <div class="todo">
+   TODO:  Write notes on performance and scalability to help
+   operations engineers operate the system efficiently.
+ </div>
+ 
+ <p class="sample1">NOTES ON PERFORMANCE.</p>
+
+ <p class="sample1">NOTES ON SCALABILITY.</p>
+
+ </div> <!-- /scalability -->
+ </div> <!-- /performance -->
+
+
+ <div id="checklist">
+ <h3>Implementation Notes Checklist</h3>
+
+ <dl>
+
+  <dt>Do these implementation notes provide enough information for
+  operations engineers?</dt>
+
+  <dd>Yes, these notes have been reviewed by the operations team and
+  requested changes have been incorporated.</dd>
+
+  <dd>No, these notes only summarize parts of a larger <a
+  href="LINK-TO-OPERTIONS-MANUAL">operations manual</a>.</dd>
+
+  <dd>No, a member of the development team is available on-call
+  whenever the operations team may need help.  This is listed in the
+  <a href="resource-needs.html">Resource Needs</a> document and in the
+  <a href="LINK-TO-ON-CALL-SCHEDULE">on-call schedule</a>.</dd>
+
+
+  <dt>Have these implementation notes been communicated to the
+  operations and development teams and other stakeholders?</dt>
+
+  <dd>Yes, everyone has had a chance to review them.  Feedback is
+  welcome.</dd>
+
+  <dd>Yes, it has been posted to the project website.</dd>
+
+  <dd>No, some developers or operations engineers are not aware of
+  this document.  This is a risk that is noted in the <a
+  href="plan.html#risks">Risk Management</a> section of the <a
+  href="plan.html">Project Plan</a>.</dd>
+  
+ </dl>
+ </div> <!-- /checklist -->
+ 
+
+ <div class="todo">
+  TODO:  Check for <a
+  href="http://readyset.tigris.org/words-of-wisdom/implementation-notes.html">words
+  of wisdom</a> and discuss ways to improve this template.
+  Or, evaluate the ReadySET Pro <a title="pro use case template and sample test plan"
+  href="http://www.readysetpro.com/">professional implementation notes template</a>.
+ </div>
+
+</div>
+
+<div class="legal1">Company Proprietary</div>
+
+<div class="footnote">
+ Copyright &#169; 2003-2004 Jason Robbins.  All rights reserved. <a href="readyset-license.html">License terms</a>.
+ Retain this copyright statement whenever this file is used as a
+ template.
+</div>
+
+</div>
+</body>
+</html>

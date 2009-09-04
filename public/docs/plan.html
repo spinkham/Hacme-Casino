@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//Tigris//DTD XHTML 1.0 Transitional//EN"
+"http://style.tigris.org/tigris_transitional.dtd">
+<html>
+<head>
+ <style type="text/css">
+/* <![CDATA[ */ 
+@import "css/readyset.css"; 
+@import "css/inst.css";
+/*  ]]> */
+ </style>
+
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+ <title>HacmeCasino - Project Plan</title>
+</head>
+
+<body>
+<div class="app">
+<div class="readyset">
+ <h2>HacmeCasino - Project Plan</h2>
+
+ <div id="projectinfo">
+ <h3>Project Information</h3>
+ <table border="1" cellpadding="3" cellspacing="2" class="axial">
+  <tr>
+   <th>Project:</th> 
+   <td><a href="index.html">HacmeCasino</a></td>
+  </tr>
+  <tr>
+   <th>Project Time-frame:</th> 
+   <td>4/26/06 - 5/10/06 - beyond</td>
+  </tr>
+  <tr>
+   <th>Attached worksheets:</th> 
+   <td>
+    <div>Plan &gt; <a href="resource-needs.html">Resource needs</a></div>
+   </td>
+  </tr>
+  <tr>
+   <th>Related Documents:</th> 
+   <td>
+    <div><a href="proposal.html">Project proposal</a> &gt;
+         <a href="target-and-benefits.html">Target audience and benefits</a></div>
+    <div><a href="sdm.html">Software development methodology</a></div>
+    <div><a href="glossary.html">Glossary</a></div>
+   </td>
+  </tr>
+ </table>
+ </div> <!-- /projectinfo -->
+
+ <div id="processimpact">
+  <strong>Process impact:</strong> This plan will
+  be used to evaluate and manage the project.  Key assumptions that
+  affect the plan should be documented here.  The project plan should
+  be updated throughout the life-time of the project.
+ </div> <!-- /processimpact -->
+
+ 
+
+
+ <div id="summary">
+ <h3>Summary of Project</h3>
+
+ <div class="sample1">
+ <p>This project is a Hacme application for online gambling based on Ruby on Rails and AJAX with multiple security vulnerabilties.  For more information see the <a
+ href="proposal.html">Project proposal</a>.</p>
+
+ 
+ </div>
+ </div> <!-- /summary -->
+
+
+ <div id="methodology">
+ <h3>Summary of Methodology</h3>
+ <dl>
+  <dt>What general development approach will be used?</dt> 
+
+  <dd class="sample1"> The key ideas are to maintain nightly buildability (?), use source control, and maintain a test suite.  For more information see the <a
+  href="sdm.html">Software Development Methodology</a>.</dd>
+
+
+  <dt>How will the project team be organized?</dt> 
+ 
+  <dd class="sample1">The development team will consist of Alex Smolen, Juan Bocanegra, and Jeremy Allen, and possibly others.</dd>
+
+  <dd class="sample2">The change control board will consist of Alex Smolen, Juan Bocanegra, and Jeremy Allen, and Mark Curphey</dd>
+
+  <dt>What development and collaboration tools will be use?</dt> 
+
+  <dd>We plan to use the following tools
+ extensively through out the project:
+   <ul>
+    <li>Project website: <a href="">Undetermined</a></li>
+    <li>Project mailing lists: <a href="">Undetermined</a></li>
+    <li>Issue tracking system: <a href="">Undetermined</a></li>
+    <li>Version control system: <a href="">Undetermined</a></li>
+    <li>Automated build system: <a href="">Undetermined</a></li>
+    <li>Automated unit test system: <a href="">Undetermined</a></li>
+   </ul>
+  </dd>
+
+
+  <dt>How will changes be controlled?</dt> 
+
+  <dd class="sample1">
+   <ul>
+    <li>Requests for requirements changes will be tracked in the issue
+    tracker</li>
+    
+    <li>The change control board (<a class="def"
+    href="glossary-std.html#ccb">CCB</a>) will review requested
+    changes and authorize work on them as appropriate</li>
+    
+    <li>After the <a class="def"
+    href="glossary-std.html#featurecomplete">feature complete</a>
+    milestone, no new features will be added to this release.</li>
+    
+    <li>After the <a class="def"
+    href="glossary-std.html#codecomplete">code complete</a> milestone,
+    no entirely new product source code will be added to this
+    release.</li>
+    
+    <li>All source code commit log messages must refer to a specific
+    issue ID, after the feature complete milestone.</li>
+    
+   </ul>
+  </dd>
+
+  
+  <dt>How will this plan be updated?</dt> 
+
+  <dd>This project plan will be updated as needed throughout the
+  project.  It will be placed under version control and instructions
+  for accessing it will be on the <a href="index.html">project
+  website</a>.  Any change to the plan will cause an automatic
+  notification to be sent to a project mailing list.</dd>
+ </dl>
+ </div> <!-- /methodology -->
+
+
+
+ <div id="wbs">
+ <h3>Work Breakdown Structure and Estimates</h3>
+
+ <div class="sample1">
+ <table border="1" cellpadding="3" cellspacing="2">
+ <tr><th>Step</th><th>Description</th><th>Estimate</th></tr>
+
+ <tr><th>1.</th><td>Preparation</td><td></td></tr>
+
+ <tr><th>1.1.</th><td class="level2">Developer training</td><td>30h</td></tr>
+
+
+ <tr><th>2.</th><td>Inception</td><td></td></tr>
+
+ <tr><th>2.1.</th><td class="level2">Requirements gathering</td><td>30h</td></tr>
+
+ <tr><th>2.2.</th><td class="level2">Requirements specification</td><td>20h</td></tr>
+
+ <tr><th>2.3.</th><td class="level2">Requirements validation</td><td>10h</td></tr>
+
+
+ <tr><th>3.</th><td>Elaboration</td><td></td></tr>
+
+ <tr><th>3.1.</th><td class="level2">High-level design</td><td>5h</td></tr>
+
+ <tr><th>3.2.</th><td class="level3">Low-level design (break down by component)</td><td></td></tr>
+
+ <tr><th>3.2.A.</th><td class="level4">Object design</td><td>10h</td></tr>
+
+ <tr><th>3.2.B.</th><td class="level4">User interface design</td><td>10h</td></tr>
+
+ <tr><th id="TASK-3.2.C">3.2.C.</th><td class="level4">Database design</td><td>3h</td></tr>
+
+ <tr><th>3.3.</th><td class="level3">Design review and evaluation</td><td>5h</td></tr>
+
+
+ <tr><th>4.</th><td>Construction</td><td></td></tr>
+
+ <tr><th>4.1.A.</th><td class="level2">System implementation</td><td></td></tr>
+
+ <tr><th>4.1.A.1.</th><td class="level3">Implement gambling Room</td><td>25h</td></tr>
+
+ <tr><th>4.1.A.2.</th><td class="level3">Implement Account Management</td><td>25h</td></tr>
+
+
+ <tr><th>4.1.A.5.</th><td class="level3">
+  <div>Integrate Components</div>
+  <div>(mostly done during component implementation)</div>
+ </td><td>5h</td></tr>
+
+ <tr><th>4.1.B.</th><td class="level2">Technical documentation (break down by component)</td><td>10h</td></tr>
+
+ <tr><th>4.1.C.</th><td class="level2">User documentation (break down by component)</td><td>10h</td></tr>
+
+ <tr><th>4.1.D.</th><td class="level2">Testing</td><td></td></tr>
+
+ <tr><th>4.1.D.1.</th><td class="level3">Test planning</td><td>10h</td></tr>
+
+ <tr><th>4.1.D.2.</th><td class="level3">Test code implementation (break down by component)</td><td>30h</td></tr>
+
+ <tr><th>4.1.D.3.</th><td class="level3">Test execution</td><td>10h</td></tr>
+
+ <tr><th>4.2.</th><td class="level2">Implementation review and evaluation</td><td>15h</td></tr>
+
+
+ <tr><th>5.</th><td>Transition</td><td></td></tr>
+
+ <tr><th>5.A.</th><td class="level2">Release packaging</td><td>3h</td></tr>
+ 
+ <tr><th>5.B.</th><td class="level2">Documentation for other groups</td><td>3h</td></tr>
+
+
+ <tr><th>6.</th><td>Reflection</td><td></td></tr>
+
+ <tr><th>6.1. </th><td class="level2">Postmortem report</td><td>10h</td></tr>
+
+
+ <tr><th></th><th>Total</th><th>329 hours</th></tr>
+ </table>
+ </div>
+ </div> <!-- /wbs -->
+
+
+ <div id="deliverables">
+ <h3>Deliverables in this Release</h3>
+
+ <table border="1" cellpadding="3" cellspacing="2" width="100%">
+ <tr>
+  <th>Deliverable Name</th><td>HacmeCasino Demo</td>
+  <th>Description</th><td>This will be a demo of HacmeCasino. It will allow users to play the game against a semi-skilled computer opponent. It will demonstrate the "look and feel" of the application and have some of the security vulnerabilities built in.</td>
+  <th>Delivery Date</th><td>5/10/06</td>
+ </tr>
+ <tr>
+  <td>Deliverable Name</td><td>HacmeCasino Distributable</td>
+  <td>Description</td><td>Full-featured HacmeCasino implementation with deployment support, training guides, etc. </td>
+  <td>Delivery Date</td><td>7/1/06</td>
+ </tr>
+ </table>
+ </div> <!-- /deliverables -->
+
+
+ <div id="schedule">
+ <h3>Schedule for this Release</h3>
+ <div class="todo">
+  TODO: Make the rows in this table match the steps in your WBS
+  above.  If you have a large number of detailed steps, you can skip
+  the most detailed ones.  The columns of the table represent weeks
+  of calendar time.  For each cell in the table, enter the number of
+  hours ideal engineering time that the team will spend on that task that week.
+  Total your hours across and down.
+ </div>
+ <div class="tip">
+  TIP: These hours should total to the same as the total of the
+  hours listed in your <a href="resource-needs.html">resource
+  needs</a> document.  And, the hours for each type of effort
+  resources needed should correspond to the sum for each type of
+  task.
+ </div>
+
+ <table border="1" cellpadding="3" cellspacing="2" width="100%">
+  <tr>
+   <th>Task \ Week</th>
+   <th>W-01</th>
+   <th>W-02</th>
+   <th>W-03</th>
+   <th>W-04</th>
+   <th rowspan="100"> </th>
+   <th>W-05</th>
+   <th>W-06</th>
+   <th>W-07</th>
+   <th>W-08</th>
+   <th rowspan="100"> </th>
+   <th>W-09</th>
+   <th>W-10</th>
+   <th>W-11</th>
+   <th>W-12</th>
+   <th>Task Total </th>
+  </tr>
+
+  <tr>
+   <th>1.</th>
+   <td>00</td>  <!-- Week 01 -->
+   <td>00</td>  <!-- Week 02 -->
+   <td>00</td>  <!-- Week 03 -->
+   <td>00</td>  <!-- Week 04 -->
+   <td>00</td>  <!-- Week 05 -->
+   <td>00</td>  <!-- Week 06 -->
+   <td>00</td>  <!-- Week 07 -->
+   <td>00</td>  <!-- Week 08 -->
+   <td>00</td>  <!-- Week 09 -->
+   <td>00</td>  <!-- Week 10 -->
+   <td>00</td>  <!-- Week 11 -->
+   <td>00</td>  <!-- Week 12 -->
+   <th>00</th>  <!-- Task Total -->
+  </tr>
+
+  <tr>
+   <th>2.</th>
+   <td>00</td>  <!-- Week 01 -->
+   <td>00</td>  <!-- Week 02 -->
+   <td>00</td>  <!-- Week 03 -->
+   <td>00</td>  <!-- Week 04 -->
+   <td>00</td>  <!-- Week 05 -->
+   <td>00</td>  <!-- Week 06 -->
+   <td>00</td>  <!-- Week 07 -->
+   <td>00</td>  <!-- Week 08 -->
+   <td>00</td>  <!-- Week 09 -->
+   <td>00</td>  <!-- Week 10 -->
+   <td>00</td>  <!-- Week 11 -->
+   <td>00</td>  <!-- Week 12 -->
+   <th>00</th>  <!-- Task Total -->
+  </tr>
+
+  <tr>
+   <th>3.</th>
+   <td>00</td>  <!-- Week 01 -->
+   <td>00</td>  <!-- Week 02 -->
+   <td>00</td>  <!-- Week 03 -->
+   <td>00</td>  <!-- Week 04 -->
+   <td>00</td>  <!-- Week 05 -->
+   <td>00</td>  <!-- Week 06 -->
+   <td>00</td>  <!-- Week 07 -->
+   <td>00</td>  <!-- Week 08 -->
+   <td>00</td>  <!-- Week 09 -->
+   <td>00</td>  <!-- Week 10 -->
+   <td>00</td>  <!-- Week 11 -->
+   <td>00</td>  <!-- Week 12 -->
+   <th>00</th>  <!-- Task Total -->
+  </tr>
+
+  <tr>
+   <th>4.1.A.</th>
+   <td>00</td>  <!-- Week 01 -->
+   <td>00</td>  <!-- Week 02 -->
+   <td>00</td>  <!-- Week 03 -->
+   <td>00</td>  <!-- Week 04 -->
+   <td>00</td>  <!-- Week 05 -->
+   <td>00</td>  <!-- Week 06 -->
+   <td>00</td>  <!-- Week 07 -->
+   <td>00</td>  <!-- Week 08 -->
+   <td>00</td>  <!-- Week 09 -->
+   <td>00</td>  <!-- Week 10 -->
+   <td>00</td>  <!-- Week 11 -->
+   <td>00</td>  <!-- Week 12 -->
+   <th>00</th>  <!-- Task Total -->
+  </tr>
+
+  <tr>
+   <th>4.1.B.</th>
+   <td>00</td>  <!-- Week 01 -->
+   <td>00</td>  <!-- Week 02 -->
+   <td>00</td>  <!-- Week 03 -->
+   <td>00</td>  <!-- Week 04 -->
+   <td>00</td>  <!-- Week 05 -->
+   <td>00</td>  <!-- Week 06 -->
+   <td>00</td>  <!-- Week 07 -->
+   <td>00</td>  <!-- Week 08 -->
+   <td>00</td>  <!-- Week 09 -->
+   <td>00</td>  <!-- Week 10 -->
+   <td>00</td>  <!-- Week 11 -->
+   <td>00</td>  <!-- Week 12 -->
+   <th>00</th>  <!-- Task Total -->
+  </tr>
+
+  <tr>
+   <th>4.1.C.</th>
+   <td>00</td>  <!-- Week 01 -->
+   <td>00</td>  <!-- Week 02 -->
+   <td>00</td>  <!-- Week 03 -->
+   <td>00</td>  <!-- Week 04 -->
+   <td>00</td>  <!-- Week 05 -->
+   <td>00</td>  <!-- Week 06 -->
+   <td>00</td>  <!-- Week 07 -->
+   <td>00</td>  <!-- Week 08 -->
+   <td>00</td>  <!-- Week 09 -->
+   <td>00</td>  <!-- Week 10 -->
+   <td>00</td>  <!-- Week 11 -->
+   <td>00</td>  <!-- Week 12 -->
+   <th>00</th>  <!-- Task Total -->
+  </tr>
+
+  <tr>
+   <th>4.1.D.</th>
+   <td>00</td>  <!-- Week 01 -->
+   <td>00</td>  <!-- Week 02 -->
+   <td>00</td>  <!-- Week 03 -->
+   <td>00</td>  <!-- Week 04 -->
+   <td>00</td>  <!-- Week 05 -->
+   <td>00</td>  <!-- Week 06 -->
+   <td>00</td>  <!-- Week 07 -->
+   <td>00</td>  <!-- Week 08 -->
+   <td>00</td>  <!-- Week 09 -->
+   <td>00</td>  <!-- Week 10 -->
+   <td>00</td>  <!-- Week 11 -->
+   <td>00</td>  <!-- Week 12 -->
+   <th>00</th>  <!-- Task Total -->
+  </tr>
+
+  <tr>
+   <th>4.2.</th>
+   <td>00</td>  <!-- Week 01 -->
+   <td>00</td>  <!-- Week 02 -->
+   <td>00</td>  <!-- Week 03 -->
+   <td>00</td>  <!-- Week 04 -->
+   <td>00</td>  <!-- Week 05 -->
+   <td>00</td>  <!-- Week 06 -->
+   <td>00</td>  <!-- Week 07 -->
+   <td>00</td>  <!-- Week 08 -->
+   <td>00</td>  <!-- Week 09 -->
+   <td>00</td>  <!-- Week 10 -->
+   <td>00</td>  <!-- Week 11 -->
+   <td>00</td>  <!-- Week 12 -->
+   <th>00</th>  <!-- Task Total -->
+  </tr>
+
+  <tr>
+   <th>5.</th>
+   <td>00</td>  <!-- Week 01 -->
+   <td>00</td>  <!-- Week 02 -->
+   <td>00</td>  <!-- Week 03 -->
+   <td>00</td>  <!-- Week 04 -->
+   <td>00</td>  <!-- Week 05 -->
+   <td>00</td>  <!-- Week 06 -->
+   <td>00</td>  <!-- Week 07 -->
+   <td>00</td>  <!-- Week 08 -->
+   <td>00</td>  <!-- Week 09 -->
+   <td>00</td>  <!-- Week 10 -->
+   <td>00</td>  <!-- Week 11 -->
+   <td>00</td>  <!-- Week 12 -->
+   <th>00</th>  <!-- Task Total -->
+  </tr>
+
+
+  <tr>
+   <th>6.</th>
+   <td>00</td>  <!-- Week 01 -->
+   <td>00</td>  <!-- Week 02 -->
+   <td>00</td>  <!-- Week 03 -->
+   <td>00</td>  <!-- Week 04 -->
+   <td>00</td>  <!-- Week 05 -->
+   <td>00</td>  <!-- Week 06 -->
+   <td>00</td>  <!-- Week 07 -->
+   <td>00</td>  <!-- Week 08 -->
+   <td>00</td>  <!-- Week 09 -->
+   <td>00</td>  <!-- Week 10 -->
+   <td>00</td>  <!-- Week 11 -->
+   <td>00</td>  <!-- Week 12 -->
+   <th>00</th>  <!-- Task Total -->
+  </tr>
+
+
+  <tr>
+   <th>Weekly Totals</th>
+   <th>00</th>  <!-- Week 01 -->
+   <th>00</th>  <!-- Week 02 -->
+   <th>00</th>  <!-- Week 03 -->
+   <th>00</th>  <!-- Week 04 -->
+   <th>00</th>  <!-- Week 05 -->
+   <th>00</th>  <!-- Week 06 -->
+   <th>00</th>  <!-- Week 07 -->
+   <th>00</th>  <!-- Week 08 -->
+   <th>00</th>  <!-- Week 09 -->
+   <th>00</th>  <!-- Week 10 -->
+   <th>00</th>  <!-- Week 11 -->
+   <th>00</th>  <!-- Week 12 -->
+   <th>00</th>  <!-- Project Total -->
+  </tr>
+
+ 
+ </table>
+ </div> <!-- /schedule -->
+
+
+ <div id="risks">
+ <h3>Risk Management</h3>
+ <div class="todo">
+  TODO: List and rank the major risks of this project, and what you plan to
+  do to mitigate each risk.  If you don't plan to do anything to
+  mitigate the risk, state that.  Use the risk list below, or the <a
+  href="risks.html">risks worksheet</a>.
+ </div>
+
+ <p>Please see the <a href="risks.html">risks worksheet</a>.</p>
+
+ <p>The main risks of this project are:</p>
+ <ol class="sample1">
+  <li>It may prove difficult to "ramp up" the application demo in the short time frame. Also, the application will actually be "demoed", which means that stability is key. If it appears that the demo cannot be completed in time in a sufficient way, key stakeholders will be notified.</li>
+
+  <li>There may be problems with using new, unproven technologies. We will mitigate these problems by identifying limitations as early as possible, and hoping and praying for the best :)</li>
+
+  <li>We could be underestimating known tasks. This project schedule will be updated as often as possible to reflect any new understanding of the project climate.</li>
+
+  <li>The requirements may change. They almost undoubtedly will. We will deal with it.</li>
+
+  <li>We could lose resources.  E.g., team members could get sick,
+  spend time on other projects, or quit. Project Manager will be responsible for allocating new resources.</li>
+
+  <li>There may be a mis-alignment of stakeholder goals or expectations. We will work closely with key stakeholders to make sure we are "on the right track".</li>
+ 
+ </ol>
+ </div> <!-- /risks -->
+
+
+
+ <div id="dependencies"> 
+ <h3>Project Planning Dependencies</h3>
+
+ <dl>
+
+  <dt>Does this project conflict or compete for resources with any
+  other project?</dt>
+
+  
+  <dd class="sample2">Yes, and we have determined how many hours each
+  person can actually dedicate to this project.</dd>
+
+
+  <dt>Are the same human or machine resources allocated to maintenance
+  of past versions and/or planning of future versions during this
+  release time period?</dt>
+
+  <dd class="sample2">Yes, we predict that team members
+  will spend an average of 20% of their time maintaining
+  previous releases and planning future releases during this release
+  time frame.  Some weeks may be higher if an urgent patch to a
+  previous release is needed.</dd>
+
+
+
+  <dt>Does this project depend on the success of any other
+  project?</dt>
+
+  <dd class="sample2">Yes, HacmeBank must provide a valid web service interface.</dd>
+
+  
+  <dt>Does any other project depend on this project?</dt>
+
+  <dd class="sample1">No, project is not producing any components that
+  will be used in other current projects. Although additional online gambling applications may be in the works :)</dd>
+
+
+  <dt>Are there any other important dependencies that will affect this project?</dt>
+
+  <dd class="sample1">No, everything is covered above.</dd>
+
+ </dl>
+ </div> <!-- /depenencies -->
+ 
+
+</div>
+
+ <div class="todo">
+  TODO:  Check for <a
+  href="http://readyset.tigris.org/words-of-wisdom/plan.html">words
+  of wisdom</a> and discuss ways to improve this template.
+  Or, evaluate the ReadySET Pro <a title="pro use case template and sample test plan"
+  href="http://www.readysetpro.com/">professional project plan template</a>.
+ </div>
+
+<div class="legal1">Company Proprietary</div>
+
+<div class="footnote">
+ Copyright &#169; 2003-2004 Jason Robbins.  All rights reserved. <a href="readyset-license.html">License terms</a>.
+ Retain this copyright statement whenever this file is used as a
+ template.
+</div>
+
+</div>
+</body>
+</html>

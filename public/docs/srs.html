@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//Tigris//DTD XHTML 1.0 Transitional//EN"
+"http://style.tigris.org/tigris_transitional.dtd">
+<html>
+<head>
+ <style type="text/css">
+/* <![CDATA[ */ 
+@import "css/readyset.css"; 
+@import "css/inst.css";
+/*  ]]> */
+ </style>
+
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+ <title>HacmeCasino - SRS</title>
+</head>
+
+<body>
+<div class="app">
+<div class="readyset">
+ <h2>HacmeCasino - Software Requirements Specification</h2>
+
+ <div id="releaseinfo">
+ <h3>Release Information</h3>
+ <table border="1" cellpadding="3" cellspacing="2" class="axial">
+  <tr>
+   <th>Project:</th> 
+   <td><a href="index.html">HacmeCasino</a></td> 
+  </tr>
+  <tr>
+   <th>Internal Release Number:</th> 
+   <td>0.0.0</td> 
+  </tr>
+  <tr>
+   <th>Attached worksheets:</th> 
+   <td>
+    <div>SRS &gt; <a href="use-case-suite.html">Use case suite</a></div>
+    <div>SRS &gt; <a href="feature-set.html">Feature set</a></div>
+   </td>
+  </tr>
+  <tr>
+   <th>Related Documents:</th> 
+   <td>
+    <div><a href="proposal.html">Project proposal</a> &gt;
+         <a href="user-needs.html">User needs</a></div>
+    <div>LINKS TO RELEVANT STANDARDS</div>
+    <div>LINKS TO OTHER DOCUMENTS</div>
+    <div><a href="glossary.html">Glossary</a></div>
+   </td>
+  </tr>
+ </table>
+ </div> <!-- /releaseinfo -->
+
+
+ <div id="processimpact">
+  <strong>Process impact:</strong> The SRS
+  precisely defines the software product that will be built.  Decisions
+  made in writing the SRS are based on information in the <a
+  href="proposal.html">project proposal</a> and <a
+  href="user-needs.html">user needs</a> documents.  The SRS sets
+  requirements that must be satisfied by the <a
+  href="design.html">system design</a>.  The SRS is verified and
+  validated by activities outlined in the <a href="qa-plan">QA
+  plan</a>.
+ </div> <!-- /processimpact -->
+
+ <div id="introduction">
+ <h3>Introduction</h3>
+
+
+ <p>HacmeCasino is an online gambling site with multiple introduced security vulnerabilites. It is based on the Ruby on Rails framework and features AJAX support. It is part of the HacmeInc application portfolio from Foundstone.</p>
+
+
+ <p>For more information, see the project <a
+ href="proposal.html">proposal</a>.</p>
+ </div> <!-- /introduction -->
+
+
+
+ <div id="usecases">
+ <h3>Use Cases</h3>
+
+ <p>The main functionality of HacmeCasino should be to allow multiple users to partcipate in an online gambling game, either against real or automated opponents. Rather than go into the specifics of how the gambling room will work, we will say that generally it should look like other gambling sites, like PartyPoker. The use case is that the user goes to the website and signs in, and is allowed to choose a "room", where they can play gambling, until they decide to leave. Their balance, user name, etc, should be persisted.</p>
+
+	<p>Also, users should be able to transfer money to HacmeBank. The use case would be that the user registers their HacmeBank account (not quite sure how), and then can place money in to and took money out of the account for use in HacmeCasino.
+	</p>
+<p>Let's not forget this is a Hacme app! It needs to have security vulnerabilites. Please see the <a href="security_vulns_ideas.html">security vulnerability ideas page</a> for inspirations.
+	</p>
+
+ <p>Details:</p>
+ <ul>
+  <li>Actors are described in the <a href="user-needs.html">user
+  needs</a> document.</li>
+  
+  <li>The <a href="use-case-suite.html">use case suite</a> lists all
+  use cases in an organized way.</li>
+
+ </ul>
+ 
+ 
+ 
+ 
+  
+ </div> <!-- /usecases -->
+
+
+
+ <div id="functional">
+ <h3>Functional Requirements</h3>
+
+ <p>The functional requirements for this are as follows:
+ 		<ul>
+ 			<li>Login and Account Management: The login functionality should be simple, but allow users to be register and be tied to an account which contains the necessary information (balance, name, avatar, whatever). </li>
+ 			<li>Room Selection: All of the available gambling rooms should be listed here. This should include how many are in their, what the name is, what the game is, etc. <i>This may be an extension point for HacmeCasino</i></li>
+ 			<li>Gambling Rooms: This is the big one, where most of the AJAX and security vulnerabilties will sit. Again, the functional requiements are similar to PokerRoom.com application. Generally, you need to be able to see the cards being dealt, place bets, chat (perhaps), and leave the room. Steal, ahem... borrow the sequence of operations from PokerRoom. A big function requirement here (perhaps it should be listed separately) is the possiblity of using automated players (so that a single user can use the app).</li>
+ 			<li>Balance Transfer: Users should be able to transfer funds to HacmeBank. They would have to be able register their account somehow, and the just transfer balances back and forth.</li>
+ 			<li>Security Vulnerabilites: These will be ratified, and then the functional requirements will be defined. See <a href="security_vulns_ideas.html">security vulnerability ideas page</a>.
+ 	</p>
+
+ <p>Details:</p>
+ <ul>
+  <li>The <a href="feature-set.html">feature set</a> lists all
+   features in an organized way.</li>
+ </ul>
+ </div> <!-- /functional -->
+
+ <div id="nonfunctional">
+ <h3>Non-Functional Requirements</h3>
+
+ <dl>
+
+  <dt>What are the usability requirements?</dt>
+
+  <dd class="sample1">
+   <p>The site should look <i>slick</i>, with all sorts of AJAX coolness and eye candy. Think of a casino...they don't have drywall and shop lights.</p>
+  
+   <p>The site should emulate PokerRoom, PartyPoker, etc, so users immediately "get" how to play. Usability concerns should be tested on beginner and advanced poker players.
+   </p>
+
+   <p>Site should fail gracefully, if at all.</p>
+
+   <p>Details:</p>
+
+   <ul>
+    <li>Usability is tricky. We will continue to fill out this section.</li>
+   </ul>
+  </dd>
+
+
+  <dt>What are the reliability and up-time requirements?</dt>
+
+  <dd class="sample1">
+   <p>We won't be putting this on a public site, so it doesn't have to deal with large amounts of users. However, it will need to support multiple users. So we will look into it.</p>
+
+  
+
+   <p>Details:</p>
+
+   <ul>
+    <li>In other words, we're not quite sure yet. Probably, reliability/scalability is not that key to the sucess of this project.</li>
+   </ul>
+  </dd>
+
+
+
+  <dt>What are the security requirements?</dt>
+
+  <dd class="sample1">
+   <p>Access will be controlled with usernames and passwords.</p>
+
+   <p>Details:</p>
+
+   <ul>
+    <li></li>
+   </ul>
+  </dd>
+
+
+  <dt>What are the performance and scalability requirements requirements?</dt>
+
+  <dd class="sample1">
+   <p>See above for "reliability"</p>
+
+ 
+   <p>Details:</p>
+
+   <ul>
+    <li></li>
+    
+   </ul>
+  </dd>
+
+
+  <dt>What are the maintainability and upgradability requirements?</dt>
+
+  <dd class="sample1">
+   <p>Maintainability is our ability to make changes to the product
+   over time.  We should definitely keep this applicaiton maintainable.</p>
+
+   <p>Upgradability is probably not a core concern, as this application will require a more experienced adminstrator to install, and they will be able to delete files, etc. We will consider this as the requirements are approved.</p>
+
+   <p>Details:</p>
+
+   <ul>
+    <li></li>
+
+   </ul>
+  </dd>
+
+
+  <dt>What are the supportability and operability requirements?</dt>
+
+  <dd class="sample1">
+
+   <p>We don't need to provide support directly...maybe a FAQ. This is kind of a HacmeInc problem.</p>
+
+   <p>Operability, this thing should work. That's good enough.</p>
+
+   <p>Details:</p>
+
+   <ul> <li>DETAIL</li>
+    
+   </ul>
+  </dd>
+
+
+  <dt>What are the business life-cycle requirements?</dt>
+
+  <dd class="sample1">
+
+   <p>This application will probably continue to be available and maintained. It's open source, so it won't ever die, just fade away :).</p>
+
+   <p>Details:</p>
+
+   <ul>
+    <li></li>
+   </ul>
+  </dd>
+
+ </dl>
+ </div> <!-- /nonfunctional -->
+
+
+ <div id="environmental">
+ <h3>Environmental Requirements</h3>
+
+ 
+
+ <dl>
+
+  <dt>What are the system hardware requirements?</dt>
+
+  <dd class="sample1">
+   <p>This will initally be supported on only Windows (I think).</p>
+
+   <p>The user needs a suitably beefy system</p>
+
+   <p>Details:</p>
+
+   <ul>
+    <li></li>
+   </ul>
+
+  </dd>
+
+
+  <dt>What are the system software requirements?</dt>
+
+  <dd class="sample1">
+   <p>This system in question will need MySQL and Ruby on Rails. We will investigate frameworks that support these types of deployment.</p>
+
+	 <p>Also, we may run into browser compatibility issues (wrt to AJAX). Not sure what these may be yet.</p>
+   
+
+   <p>Details:</p>
+
+   <ul>
+    <li>MySQL Version:</li>
+    <li>Ruby Version:</li>
+    <li>Deployment Platforms: See <a href="http://instantrails.rubyforge.org/">InstantRails</a> for ideas.</li>
+   </ul>
+  </dd>
+
+
+  <dt>What application program interfaces (<a
+  href="glossary-std.html#api" class="def">APIs</a>) must be provided?</dt>
+
+  <dd class="sample1">
+   <p>Ruby stuff. We will fill this out</p>
+
+   <p></p>
+
+   <p></p>
+
+   <ul>
+    <li></li>
+   </ul>
+  </dd>
+
+
+  <dt>What are the data import and export requirements?</dt>
+
+  <dd class="sample1">
+   <p>We will let the user figure this out. We can have a mysql script that creates the database with some preconfigured data. Then the user can do what they want with it.</p>
+
+   
+
+   <p>Details:</p>
+
+   <ul>
+    <li></li>
+   </ul>
+  </dd>
+
+ </dl>
+
+ </div> <!-- /environmental -->
+ 
+</div>
+
+
+ <div class="todo">
+  TODO:  Check for <a
+  href="http://readyset.tigris.org/words-of-wisdom/srs.html">words
+  of wisdom</a> and discuss ways to improve this template.
+  Or, evaluate the ReadySET Pro <a title="pro use case template and sample test plan"
+  href="http://www.readysetpro.com/">professional software requirements specification template</a>.
+ </div>
+
+<div class="legal1">Company Proprietary</div>
+
+<div class="footnote">
+ Copyright &#169; 2003-2004 Jason Robbins.  All rights reserved. <a href="readyset-license.html">License terms</a>.
+ Retain this copyright statement whenever this file is used as a
+ template.
+</div>
+
+</div>
+</body>
+</html>

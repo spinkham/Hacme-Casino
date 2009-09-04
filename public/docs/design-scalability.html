@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//Tigris//DTD XHTML 1.0 Transitional//EN"
+"http://style.tigris.org/tigris_transitional.dtd">
+<html>
+<head>
+ <style type="text/css">
+/* <![CDATA[ */ 
+@import "css/readyset.css"; 
+@import "css/inst.css";
+/*  ]]> */
+ </style>
+
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+ <title>Scalability</title>
+</head>
+
+<body>
+<div class="app">
+<div class="readyset">
+ <h2><a href="design.html">Design</a> &gt; Scalability</h2>
+
+ <div id="releaseinfo">
+ <h3>Release Information</h3>
+ <table border="1" cellpadding="3" cellspacing="2" class="axial">
+  <tr>
+   <th>Project:</th> 
+   <td><a href="index.html">PROJECTNAME</a></td> 
+  </tr>
+  <tr>
+   <th>Internal Release Number:</th> 
+   <td>X.Y.Z</td> 
+  </tr>
+  <tr>
+   <th>Related Documents:</th> 
+   <td>
+    <div>LINKS TO RELEVANT STANDARDS</div>
+    <div>LINKS TO OTHER DOCUMENTS</div>
+   </td>
+  </tr>
+ </table>
+ </div> <!-- /releaseinfo -->
+
+
+
+ <div id="overview">
+ <h3>Overview</h3>
+
+ <div class="todo">
+  TODO: Briefly describe the approach to scalability.
+  Rank your scalability goals for this design.
+ </div>
+
+ <p>2-4 SENTENCES.</p>
+ 
+ </div> <!-- /overview -->
+
+
+ <div id="parameters">
+ <h3>Relevant parameters</h3>
+ 
+ <table border="1" cellpadding="3" cellspacing="2" width="100%">
+  <tr>
+   <th>Parameter</th>
+   <th>Description</th>
+  </tr>
+  <tr>
+   <td>registered_users</td>
+   <td>Number of registered users in the database.</td>
+  </tr>
+  <tr>
+   <td>concurrent_users</td>
+   <td>Number of users logged into the system at a given time.</td>
+  </tr>
+  <tr>
+   <td>map_size</td>
+   <td>Number of game squares in the playing area.  
+    E.g., a 10 x 25 map would be 250 squares.</td>
+  </tr>
+  <tr>
+   <td>game_pieces</td>
+   <td>Number of game pieces on the playing area at a given time.</td>
+  </tr>
+ </table>
+ </div> <!-- /parameters -->
+
+
+ <div id="mechanisms">
+ <h3>Scalability Mechanisms</h3>
+
+
+ </div> <!-- /mechanisms -->
+
+ <div id="estimates">
+ <h3>Performance Goals and Estimates</h3>
+
+ <table border="1" cellpadding="3" cellspacing="2" width="100%">
+  <tr>
+   <th>Action</th>
+   <th>Goal</th>
+   <th>Time Formula</th>
+   <th>Description</th>
+  </tr>
+  <tr>
+   <td>login</td>
+   <td>1 second</td>
+   <td>O(Log(registered_users))</td>
+   <td>Time that it takes to look up a user by their login name in the database.</td>
+  </tr>
+  <tr>
+   <td>display_map</td>
+   <td>1/5 second</td>
+   <td>O(map_size + game_pieces)</td>
+   <td>Time that it takes to redraw the game map and all game pieces.</td>
+  </tr>
+ </table>
+ </div> <!-- /estimates -->
+
+
+
+ <div id="checklist">
+ <h3>System Scalability Checklist</h3>
+
+ <dl>
+ 
+  <dt>How well do these mechanisms support the achievement of your
+  goals?</dt>
+
+  <dd>2-4 SENTENCES</dd>
+
+   
+  <dt>Have these scalability mechanisms been communicated to the
+  development team and other stakeholders?</dt>
+
+  <dd class="sample1">Yes, everyone understands.  Feedback is
+  welcome.</dd>
+
+  <dd class="sample1">No, this is a risk that is noted in the <a
+  href="plan.html#risks">Risk Management</a> section.</dd>
+
+ </dl>   
+
+ </div> <!-- /checklist -->
+
+ 
+</div>
+
+
+ <div class="todo">
+  TODO:  Check for <a
+  href="http://readyset.tigris.org/words-of-wisdom/design-scalability.html">words
+  of wisdom</a> and discuss ways to improve this template.
+ </div>
+
+<div class="legal1">Company Proprietary</div>
+
+<div class="footnote">
+ Copyright &#169; 2003-2004 Jason Robbins.  All rights reserved. <a href="readyset-license.html">License terms</a>.
+ Retain this copyright statement whenever this file is used as a
+ template.
+</div>
+
+</div>
+</body>
+</html>

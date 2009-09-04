@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//Tigris//DTD XHTML 1.0 Transitional//EN"
+"http://style.tigris.org/tigris_transitional.dtd">
+<html>
+<head>
+ <style type="text/css">
+/* <![CDATA[ */ 
+@import "css/readyset.css"; 
+@import "css/inst.css";
+/*  ]]> */
+ </style>
+
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+ <title>Test Cases</title>
+</head>
+
+<body>
+<div class="app">
+<div class="readyset">
+
+<h2><a href="qa-plan.html">QA Plan</a> &gt;
+    <a href="test-suite.html">Test Suite</a> &gt; Test Cases</h2>
+
+ <div id="releaseinfo">
+ <h3>Release Information</h3>
+  <table border="1" cellpadding="3" cellspacing="2" class="axial">
+  <tr>
+   <th>Project:</th> 
+   <td><a href="index.html">PROJECTNAME</a></td> 
+  </tr>
+  <tr>
+   <th>Internal Release Number:</th> 
+   <td>X.Y.Z</td> 
+  </tr>
+  <tr>
+   <th>Related Documents:</th> 
+   <td>
+    <div><a href="test-case-format.html">System test case format</a></div>
+    <div>LINKS TO RELEVANT STANDARDS</div>
+    <div>LINKS TO OTHER DOCUMENTS</div>
+   </td>
+  </tr>
+ </table>
+ </div> <!-- /releaseinfo -->
+
+
+<div class="sample1">
+<div id="login-1">
+<h3>login-1: Normal User Login</h3>
+<table border="1" cellpadding="3" cellspacing="2" class="axial">
+ <tr>
+  <th>Purpose:</th>
+  <td>
+   Test that users can log in with the proper username or email
+   address and their password.
+  </td>
+ </tr>
+
+ <tr>
+  <th>Prereq:</th>
+  <td>
+   <div>User is not already logged in.</div>
+   <div>User testuser exists, and account is in good standing.</div>
+  </td>
+ </tr>
+
+ <tr>
+  <th>Test Data:</th>
+  <td>
+   <div>usernameOrEmail = {testuser, bogususer, testuser@nospam.com, test@user@nospam.com, empty}</div> 
+   <div>password = {valid, invalid, empty}</div>
+  </td>
+ </tr>
+
+ <tr>
+  <th>Steps:</th>
+  <td>
+   <ol>
+    <li>visit LoginPage</li>
+    <li>enter usernameOrEmail</li>
+    <li>enter password</li>
+    <li>click Login</li>
+    <li>see the terms-of-use page</li>
+    <li>click Agree at page bottom</li>
+    <li>click Submit</li>
+    <li>see PersonalPage</li>
+    <li>verify welcome message is correct username</li>
+   </ol>
+  </td>
+ </tr>
+
+ <tr>
+  <th>Notes and Questions:</th>
+  <td>
+   <ul>
+    <li>This assumes that user has not agreed to terms-of-use already.</li>
+    <li>Does this work without browser cookies?</li>
+   </ul>
+  </td>
+ </tr>
+
+</table>
+</div>
+</div>
+
+
+<div class="sample1">
+<div id="login-2">
+<h3>login-2: Locked-out User Login</h3>
+<table border="1" cellpadding="3" cellspacing="2" class="axial">
+ <tr>
+  <th>Purpose:</th>
+  <td>
+   Test that a user who has been locked out by a moderator, cannot
+   log in,  They should see a message indicating that they were locked out.
+  </td>
+ </tr>
+
+ <tr>
+  <th>Prereq:</th>
+  <td>
+   <div>User is not already logged in.</div>
+   <div>User testuser2 exists, and has been locked out</div>
+  </td>
+ </tr>
+
+ <tr>
+  <th>Test Data:</th>
+  <td>
+   <div>usernameOrEmail = {testuser2, testuser2@nospam.com}</div> 
+   <div>password = {valid}</div>
+  </td>
+ </tr>
+
+ <tr>
+  <th>Steps:</th>
+  <td>
+   <ol>
+    <li>visit LoginPage</li>
+    <li>enter usernameOrEmail</li>
+    <li>enter password</li>
+    <li>click Login</li>
+    <li>see LoginPage</li>
+    <li>verify warning message is the locked-out message</li>
+   </ol>
+  </td>
+ </tr>
+
+ <tr>
+  <th>Notes and Questions:</th>
+  <td>
+   <ul>
+    <li>Does this work without browser cookies?</li>
+   </ul>
+  </td>
+ </tr>
+
+</table>
+</div>
+</div>
+
+
+<div id="unique-test-case-id1">
+<h3>unique-test-case-id1: Test Case Title</h3>
+
+<table border="1" cellpadding="3" cellspacing="2" class="axial">
+ <tr>
+  <th>Purpose:</th>
+  <td>
+   
+  </td>
+ </tr>
+
+ <tr>
+  <th>Prereq:</th>
+  <td>
+   
+  </td>
+ </tr>
+
+ <tr>
+  <th>Test Data:</th>
+  <td>
+   <div>VAR = {VALUES}</div> 
+   <div>VAR = {VALUES}</div> 
+  </td>
+ </tr>
+
+ <tr>
+  <th>Steps:</th>
+  <td>
+   <ol>
+    <li>STEP</li>
+    <li>STEP</li>
+    <li>STEP</li>
+    <li>verify ...</li>
+   </ol>
+  </td>
+ </tr>
+
+ <tr>
+  <th>Notes and Questions:</th>
+  <td>
+   <ul>
+    <li>NOTE</li>
+    <li>QUESTION</li>
+   </ul>
+  </td>
+ </tr>
+
+</table>
+</div>
+
+
+
+<div id="unique-test-case-id2">
+<h3>unique-test-case-id2: Test Case Title</h3>
+
+<table border="1" cellpadding="3" cellspacing="2" class="axial">
+ <tr>
+  <th>Purpose:</th>
+  <td>
+   SENTENCES
+  </td>
+ </tr>
+
+ <tr>
+  <th>Prereq:</th>
+  <td>
+   SENTENCES
+  </td>
+ </tr>
+
+ <tr>
+  <th>Test Data:</th>
+  <td>
+   <div>VAR = {VALUES}</div> 
+   <div>VAR = {VALUES}</div> 
+  </td>
+ </tr>
+
+ <tr>
+  <th>Steps:</th>
+  <td>
+   <ol>
+    <li>STEP</li>
+    <li>STEP</li>
+    <li>STEP</li>
+    <li>verify ...</li>
+   </ol>
+  </td>
+ </tr>
+
+ <tr>
+  <th>Notes and Questions:</th>
+  <td>
+   <ul>
+    <li>NOTE</li>
+    <li>QUESTION</li>
+   </ul>
+  </td>
+ </tr>
+
+</table>
+</div>
+
+
+
+<div id="unique-test-case-id3">
+<h3>unique-test-case-id3: Test Case Title</h3>
+
+<table border="1" cellpadding="3" cellspacing="2" class="axial">
+ <tr>
+  <th>Purpose:</th>
+  <td>
+   SENTENCES
+  </td>
+ </tr>
+
+ <tr>
+  <th>Prereq:</th>
+  <td>
+   SENTENCES
+  </td>
+ </tr>
+
+ <tr>
+  <th>Test Data:</th>
+  <td>
+   <div>VAR = {VALUES}</div> 
+   <div>VAR = {VALUES}</div> 
+  </td>
+ </tr>
+
+ <tr>
+  <th>Steps:</th>
+  <td>
+   <ol>
+    <li>STEP</li>
+    <li>STEP</li>
+    <li>STEP</li>
+    <li>verify ...</li>
+   </ol>
+  </td>
+ </tr>
+
+ <tr>
+  <th>Notes and Questions:</th>
+  <td>
+   <ul>
+    <li>NOTE</li>
+    <li>QUESTION</li>
+   </ul>
+  </td>
+ </tr>
+
+</table>
+</div>
+
+
+
+<div id="unique-test-case-id4">
+<h3>unique-test-case-id4: Test Case Title</h3>
+
+<table border="1" cellpadding="3" cellspacing="2" class="axial">
+ <tr>
+  <th>Purpose:</th>
+  <td>
+   SENTENCES
+  </td>
+ </tr>
+
+ <tr>
+  <th>Prereq:</th>
+  <td>
+   SENTENCES
+  </td>
+ </tr>
+
+ <tr>
+  <th>Test Data:</th>
+  <td>
+   <div>VAR = {VALUES}</div> 
+   <div>VAR = {VALUES}</div> 
+  </td>
+ </tr>
+
+ <tr>
+  <th>Steps:</th>
+  <td>
+   <ol>
+    <li>STEP</li>
+    <li>STEP</li>
+    <li>STEP</li>
+    <li>verify ...</li>
+   </ol>
+  </td>
+ </tr>
+
+ <tr>
+  <th>Notes and Questions:</th>
+  <td>
+   <ul>
+    <li>NOTE</li>
+    <li>QUESTION</li>
+   </ul>
+  </td>
+ </tr>
+
+</table>
+</div>
+
+
+
+<div id="unique-test-case-id5">
+<h3>unique-test-case-id5: Test Case Title</h3>
+
+<table border="1" cellpadding="3" cellspacing="2" class="axial">
+ <tr>
+  <th>Purpose:</th>
+  <td>
+   SENTENCES
+  </td>
+ </tr>
+
+ <tr>
+  <th>Prereq:</th>
+  <td>
+   SENTENCES
+  </td>
+ </tr>
+
+ <tr>
+  <th>Test Data:</th>
+  <td>
+   <div>VAR = {VALUES}</div> 
+   <div>VAR = {VALUES}</div> 
+  </td>
+ </tr>
+
+ <tr>
+  <th>Steps:</th>
+  <td>
+   <ol>
+    <li>STEP</li>
+    <li>STEP</li>
+    <li>STEP</li>
+    <li>verify ...</li>
+   </ol>
+  </td>
+ </tr>
+
+ <tr>
+  <th>Notes and Questions:</th>
+  <td>
+   <ul>
+    <li>NOTE</li>
+    <li>QUESTION</li>
+   </ul>
+  </td>
+ </tr>
+
+</table>
+</div>
+
+
+
+<div id="unique-test-case-id6">
+<h3>unique-test-case-id6: Test Case Title</h3>
+
+<table border="1" cellpadding="3" cellspacing="2" class="axial">
+ <tr>
+  <th>Purpose:</th>
+  <td>
+   SENTENCES
+  </td>
+ </tr>
+
+ <tr>
+  <th>Prereq:</th>
+  <td>
+   SENTENCES
+  </td>
+ </tr>
+
+ <tr>
+  <th>Test Data:</th>
+  <td>
+   <div>VAR = {VALUES}</div> 
+   <div>VAR = {VALUES}</div> 
+  </td>
+ </tr>
+
+ <tr>
+  <th>Steps:</th>
+  <td>
+   <ol>
+    <li>STEP</li>
+    <li>STEP</li>
+    <li>STEP</li>
+    <li>verify ...</li>
+   </ol>
+  </td>
+ </tr>
+
+ <tr>
+  <th>Notes and Questions:</th>
+  <td>
+   <ul>
+    <li>NOTE</li>
+    <li>QUESTION</li>
+   </ul>
+  </td>
+ </tr>
+
+</table>
+</div>
+
+
+<div class="todo">
+  TODO:  Check for <a
+  href="http://readyset.tigris.org/words-of-wisdom/test-runs.html">words
+  of wisdom</a> and discuss ways to improve this template.
+  Or, evaluate the ReadySET Pro <a title="pro use case template and sample test plan"
+  href="http://www.readysetpro.com/">professional test case template</a>.
+</div> <!-- /todo -->
+
+  </div>
+
+</div>
+
+<div class="legal1">Company Proprietary</div>
+
+<div class="footnote">
+ Copyright &#169; 2003-2004 Jason Robbins.  All rights reserved. <a href="readyset-license.html">License terms</a>.
+ Retain this copyright statement whenever this file is used as a
+ template.
+</div>
+
+</div>
+</body>
+</html>

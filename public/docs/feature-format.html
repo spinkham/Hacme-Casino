@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//Tigris//DTD XHTML 1.0 Transitional//EN"
+"http://style.tigris.org/tigris_transitional.dtd">
+<html>
+<head>
+ <style type="text/css">
+/* <![CDATA[ */ 
+@import "css/readyset.css"; 
+@import "css/inst.css";
+/*  ]]> */
+ </style>
+
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+ <title>Feature Format</title>
+</head>
+
+<body>
+<div class="app">
+<div class="readyset">
+
+
+<h2><a href="srs.html">SRS</a> &gt;
+    <a href="feature-set.html">Feature Set</a> &gt; Feature Specification Format</h2>
+
+ <div id="processimpact">
+  <b>Process impact:</b> This reference page
+  documents the format of feature descriptions and gives tips on
+  writing them.  You can copy and paste the feature specification
+  template into your <a href="features.html">Features</a> document.
+  This file itself should not be edited to hold specific features.
+ </div> <!-- /processimpact -->
+
+
+<div class="todo">
+ TODO: Copy and paste this feature specification template as many times as needed
+ in your <a href="features.html">Features</a> document.
+</div>
+
+<div id="F-00"> 
+<h3>F-00: FEATURE NAME</h3>
+<table border="1" cellpadding="3" cellspacing="2" class="axial">
+ <tr>
+  <th>Priority:</th>
+  <td>Essential | Expected | Desired | Optional </td>
+ </tr>
+ <tr>
+  <th>Effort:</th>
+  <td>Months | Weeks | Days | Hours</td>
+ </tr>
+ <tr>
+  <th>Risk:</th>
+  <td>Dangerous | 3-Risk | 2-Risk | 1-Risk | Safe</td>
+ </tr>
+ <tr>
+  <th>Functional area(s):</th>
+  <td>WORD, WORD, WORD</td>
+ </tr>
+ <tr>
+  <th>Use case(s):</th>
+  <td><a href="use-cases.html#UC-01">UC-01</a></td>
+ </tr>
+ <tr>
+  <th>Description:</th>
+  <td>
+   <p>1-4 PARAGRAPHS.  USE BULLETS OR TABLES TO ORGANIZE INFORMATION.
+   LINK TO WORKSHEETS OR ADDITIONAL INFORMATION.</p>
+   
+   <p>Precise Details:</p>
+   <ul>
+    <li>LOGICAL CONSTRAINT</li>
+    <li>LOGICAL CONSTRAINT</li>
+   </ul>
+
+  </td>
+ </tr>
+ <tr>
+  <th>Notes and Questions:</th>
+  <td>
+   <ul>
+    <li>NOTE</li>
+    <li>NOTE</li>
+    <li>QUESTION</li>
+    <li>QUESTION</li>
+   </ul>
+  </td>
+ </tr>
+</table>
+</div>
+
+
+<div id="attributes">
+<h3>Feature Attribute Values</h3>
+
+<ul>
+ <li>Priority
+  <ul>
+
+   <li>Essential: The system could not or would never be used without
+   this feature.  It would be much harder to test, document, or
+   package the product without this feature.</li>
+
+   <li>Expected: Key stakeholders strongly desire and expect this
+   feature.  It may have been promised to them in a certain release.
+   It's absence would substantially reduce the success of the
+   project.</li>
+
+   <li>Desired: Stakeholders desire this feature.  It's absence would
+   reduce the success of the project.</li>
+
+   <li>Optional: This feature would be nice to have.  Adding it could
+   have some advantage, but delaying it would not have a big effect on
+   the success of the project.</li>
+  </ul>
+ </li>
+
+ <li>Effort
+  <ul>
+   <li>Months: A very large feature that is too big to estimate and
+   should be broken in to smaller, better-defined features.</li>
+
+   <li>Weeks: A large feature that will take 40 to 160 hours to add.</li>
+
+   <li>Days: An average or easy feature that would take less than 40 hours to add.</li>
+
+   <li>Hours: A very easy feature that would take less than 8 hours to add</li>
+
+   <li>Note that "adding" a feature means doing all of it's design,
+   implementation, technical documentation, user documentation, and
+   testing.  Even the easiest feature takes hours to add.</li>
+
+  </ul>
+ </li>
+
+ <li>Risk
+  <ul>
+   <li>Dangerous: Implementing this feature successfully would require
+   overcoming risk factors that are more than three or unknown in
+   number. It should be broken down into parts, better specified, or
+   risk factors should be eliminated prior to implementation.</li>
+
+   <li>3-Risks: Implementing this feature would require three risk
+   factors to be overcome.  Any single release should contain at most
+   a few such high-risk features, and contingency plans should be
+   considered. You should be able to list the risks.</li>
+
+   <li>2-Risks: Implementing this feature would require two risk
+   factors to be overcome. This is normal for challenging
+   features. You should be able to list the risks.</li>
+
+   <li>1-Risk: Implementing this feature as specified would require
+   one risk factor to be overcome.  This is normal for many features.
+   You should be able to describe the risk.</li>
+
+   <li>Safe: Implementing this feature as specified is just a matter
+   of time and effort, there is no real risk of failure.</li>
+
+   <li>A "risk factor" is a task or fact that is currently in doubt,
+   but that must turn out well in order for the feature to be
+   successfully implemented.  See tips on managing risk below. </li>
+  </ul>
+ </li>
+
+</ul>
+ </div> <!-- /attributes -->
+
+
+<div id="furtherinfo">
+<h3>Further Information</h3>
+
+<p>For more information on advice, see:</p>
+
+<ul>
+ <li>Words of wisdom on <a
+ href="http://readyset.tigris.org/words-of-wisdom/feature-set.html">feature sets</a>.</li>
+
+ <li>Words of wisdom on <a
+ href="http://readyset.tigris.org/words-of-wisdom/features.html">feature specifications</a>.</li>
+</ul>
+
+</div> <!-- /furtherinfo -->
+
+
+<div class="legal1">Company Proprietary</div>
+
+<div class="footnote">
+ Copyright &#169; 2003-2004 Jason Robbins.  All rights reserved. <a href="readyset-license.html">License terms</a>.
+ Retain this copyright statement whenever this file is used as a
+ template.
+</div>
+
+</div>
+</div>
+</body>
+</html>

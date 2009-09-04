@@ -1,0 +1,28 @@
+	<div id="games-message">
+	<h3>Click on a picture to see a room list</h3>
+	</div>
+	
+	<div id="game-pic">
+ 	   <p>Blackjack</p>
+       <!-- <%= link_to_remote image_tag("web/blackjack.jpg"), :update => "room-list", :url => {:controller=> "room", :action => "list", :game => "blackjack"}%> -->
+       <%= link_to image_tag("web/blackjack.jpg"),  {:controller => "blackjack", :action => "show"} %>
+	</div>
+	
+	<div id="game-pic">
+ 	   <p>Roulette</p>
+	   <%= link_to_remote image_tag("web/roulette.jpg"), :update => "room-list", :url => {:controller=> "lobby", :action => "not_yet", :game => "roulette"} %>	   
+	</div>
+	
+	<div id="game-pic">
+   	   <p>Poker</p>
+
+       <%= link_to image_tag("web/poker.jpg"),  {:controller => "video_poker", :action => "show"} %>
+	</div>	
+
+	
+	<!--	   <%= link_to_remote image_tag("web/craps"), :update => "room-list", :url => {:controller=> "room", :action => "list"},  :game => "craps" %>	    -->
+	
+	<div id="room-list">
+        
+	</div>
+

@@ -1,0 +1,26 @@
+#room {
+  float: left;
+  margin: 10px 0px 0px 10px;
+  height: 500px;
+  width: 700px;
+}
+
+#game-top
+{
+
+}
+
+#game-bottom
+{
+  width: 700px;
+  height: 25px;
+  position: relative; bottom: 170px;
+
+}
+
+#room-body
+{
+  background-color: #00260E;
+  width: 700px;
+  height: 500px;
+}

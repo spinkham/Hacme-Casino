@@ -1,0 +1,35 @@
+<div id = "vp-screen">
+
+    <div class="cards">
+    <%if (@game.state == 'NEW_GAME')%>
+        <%5.times do %>
+            <a href="">
+            <div class="card">
+                <%=card_img(nil)%>
+             </div>
+            </a>
+            <div id="hold_label">
+            </div>
+
+        <% end %>
+    <%else
+        @id = 0
+        @game.player.hand.cards.each do |card| %>     
+        <div class="card">
+            <%if (@game.state == 'SELECT_HOLD_CARDS')%>
+                <a href="javascript:toggle_hold_card(<%=@id%>)">
+            <% else %>
+                <a>
+            <% end %>
+                <%= card_img(card) %>
+                </a>                                  
+            <div id="hold_label_<%= @id %>">
+            </div>
+            <% @id = @id + 1 %>
+         </div>
+        <%end%>        
+
+    <%end%>    
+    
+    </div>
+</div>

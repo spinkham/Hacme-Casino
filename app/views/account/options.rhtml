@@ -1,0 +1,117 @@
+<div id = "options">
+    <div id="c_top">
+            <%= image_tag "web/round_div_top_2.gif" %>
+    </div>
+    <div id="options-body">
+        <div id = "opt">
+  <%= flash[:transfer_error] %>
+  <%= start_form_tag :controller => "account", :action => "transfer_chips" %>
+<h3>Transfer chips to another player: </h3>
+  <table>
+  <tr>
+    <td>
+        Amount
+    </td>
+    <td>
+    <%= text_field_tag "transfer"%>
+    </td>
+  </tr>
+  <tr>
+    <td>
+       Recipient 
+    </td>
+    <td>
+     <%= select('login', nil, @users.map {|user| [user.first_name + ' ' + user.last_name, user.login]})%>
+    </td>
+  </tr>
+  <tr>
+    <td colspan = "2" >
+      <%= submit_tag "Transfer Chips", :class => "submit"%>  
+    </td>
+  </tr>
+  </table>
+<%= end_form_tag %>
+</table>
+</div>
+
+<div id="opt">
+<%=flash[:cash_out_error]%>
+<h3>Cash out: </h3>
+  <%= start_form_tag :controller => "account", :action => "cash_out" %>
+  <table>
+  <tr>
+    <td>
+        Amount
+    </td>
+    <td>
+    <%= text_field_tag "amount"%>
+    </td>
+  </tr>
+  <tr>
+    <td>
+       Account
+    </td>
+    <td>
+        <select name = "account">
+            <option value="1234-99920-3013">HacmeBank Acct No: xxxx-99920-3013</option>
+            <option value="123-345-22-043">Offshore Bermuda Acct No: xxx-xxx-xx-xxx</option>
+        </select>
+    </td>
+  </tr>
+  <tr>
+    <td colspan = "2" >
+      <%= submit_tag "Cash Out", :class => "submit"%>  
+    </td>
+  </tr>
+  </table>
+<%= end_form_tag %>
+</table>
+</div>
+
+<div id="opt">
+
+<h3> Session Options</h3>
+  <%= start_form_tag :controller => "account", :action => "update_options" %>
+  <table>
+    <tr>
+        <td>
+            Accessiblity Module? (On/Off)
+        </td>
+        <td>
+           <%= %>
+           <input type='checkbox' name='accessible'
+           <% if (@session["accessible"]) %>
+           checked = 'true'
+           <% end %>
+           />
+           </td>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Show Photo? (On/Off)
+        </td>
+        <td>
+           <%= %>
+           <input type='checkbox' name='photo'
+           <% if (@session["photo"]) %>
+           checked = 'true'
+           <% end %>
+           />
+           </td>
+        </td>
+    </tr>  
+    <tr>
+    <td colspan = "2">
+       <%= submit_tag "Update Profile", :class => "submit"%>
+    </td>
+   </table>
+
+   <%= end_form_tag %>
+ </div>
+ </div>
+    <div id="c_bottom">
+            <%= image_tag "web/round_div_bottom_2.gif" %>
+    </div>
+ </div>
+ 

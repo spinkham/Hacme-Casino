@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//Tigris//DTD XHTML 1.0 Transitional//EN"
+"http://style.tigris.org/tigris_transitional.dtd">
+<html>
+<head>
+ <style type="text/css">
+/* <![CDATA[ */
+@import "css/readyset.css";
+@import "css/inst.css";
+/*  ]]> */
+ </style>
+
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+ <title>Risk List</title>
+</head>
+
+<body>
+<div class="app">
+<div class="readyset">
+
+ <h2><a href="plan.html">Project Plan</a> &gt; Risk List</h2>
+
+
+ <div id="releaseinfo">
+ <h3>Release Information</h3>
+ <table border="1" cellpadding="3" cellspacing="2" class="axial">
+  <tr>
+   <th>Project:</th>
+   <td><a href="index.html">PROJECTNAME</a></td>
+  </tr>
+  <tr>
+   <th>Internal Release Number:</th>
+   <td>X.Y.Z</td>
+  </tr>
+
+
+  <tr>
+   <th>Related Documents:</th>
+   <td>
+    <div><a href="plan.html">Project plan</a></div>
+    <div><a href="sdm.html">Software development methodology</a></div>
+    </td>
+  </tr>
+
+  <tr>
+   <th>References:</th>
+   <td>
+    <div><a href="http://www.systemsguild.com/pdfs/s5req.lo%201.pdf">
+    Risk Management during Requirements</a> by Tom DeMarco and Tim Lister</div>
+    <div><a href="http://www.sei.cmu.edu/pub/documents/93.reports/pdf/tr06.93.pdf">
+        Taxonomy-Based Risk Identification
+    </a> by Carr, Konda, Monarch, Ulrich, and Walker (SEI)</div>
+   </td>
+  </tr>
+ </table>
+ </div> <!-- /releaseinfo -->
+
+ <div id="processimpact">
+  <strong>Process impact:</strong> This document
+  records the major project risks, and plans to control them.
+  For each risk the plan should include:<dl>
+      <dt>Mitigation plan</dt><dd>Measures you will carry out now,
+      to reduce the likelihood and/or impact of the risk.
+      Alternatively, you can decide to accept the risk.</dd>
+      <dt>Indicator</dt><dd>
+      A sign you will monitor to determine if the risk is beginning to have an impact on the project.
+      </dd>
+      <dt>Contingency plan</dt><dd>
+      What you will do if the risk does arise.
+      You can specify some general contingency plans.
+      In this case you only need to give a contingency plan
+      if you have a special one for the particular risk.
+      </dd>
+  </dl>
+  The severity of a risk is its likelihood multiplied by its impact.
+  Risks are classified as minor if they have low likelihood, negligible impact,
+  or medium likelihood and marginal impact.
+ </div> <!-- /processimpact -->
+
+ <div class="todo">
+  TODO: You should update these lists regularly.
+  They should be reviewed by customers and developers from time to time.
+ </div>
+
+ <div id="continency">
+    <h3>General contingency plans</h3>
+    <dl>
+    <dt>Catastrophic risks</dt>
+    
+    <dd class="sample1">If a catastrophic risk occurs we will make an
+    honest reassessment of the viability of the project and involve
+    the relevant project stakeholders.</dd>
+
+    <dd class="sample2">If a catastrophic risk occurs we will cancel
+    the project.  We will take away our lessons learned and any
+    valuable project bi-products.</dd>
+
+    <dd class="sample3">We do not recognize any catastrophic risks.
+    If one occurs we will pretend everything is fine and hope that
+    none of the stakeholders notice.</dd>
+
+
+    <dt>Risks that consume development resources.</dt>
+    
+    <dd class="sample1">The project has a fixed deadline.  The
+    requirements are prioritized.  If we lose time, we will reduce
+    project scope.</dd>
+
+    <dd class="sample2">The features specified are all essential
+    If we lose time, we will delay delivery.</dd>
+
+    <dd class="sample3">If we lose time, we will make time estimates
+    for the remaining features, and meet with the customers to
+    reconsider scope and delivery date.</dd>
+
+    <dt>OTHER RISK TYPE</dt>
+    <dd>OTHER CONTINGENCY PLAN</dd>
+
+    </dl>
+ </div> <!-- /contingency -->
+
+ <div id="risks">
+ <h3>Major risks</h3>
+ <table border="1" cellpadding="3" cellspacing="2" width="100%"  class="sample1">
+  <tr>
+  <th>Name</th>
+   <th>Description</th>
+   <th>Likelihood</th>
+   <th>Impact</th>
+   <th>Plan</th>
+   <th>Status</th>
+   <th>Owner</th>
+  </tr>
+
+  <tr>
+   <td>Requirements</td>
+   <td>Requirements are only partly known at project start.
+   Customers may not allocate sufficient resources to exploring requirements.
+   </td>
+   <td>Medium </td>
+   <td>Critical to Catastrophic</td>
+   <td>
+   Requirements will be detailed first for the
+   top priority goals.
+   Indicator:
+   Track the rate at which requirements are discovered.
+   Contingency: request more customer effort.
+   </td>
+   <td>Amber</td>
+   <td>Requirements Lead</td>
+  </tr>
+
+  <tr>
+   <td>Goals</td>
+   <td>Stakeholders goals may conflict.
+   </td>
+   <td>Medium</td>
+   <td>Critical</td>
+   <td>Keep an explicit list of stakeholders goals.
+   The project manager will report progress to each declared goal.
+   </td>
+   <td>Green</td>
+   <td>Customers</td>
+  </tr>
+
+  <tr>
+   <td>Communication</td>
+   <td>Communication problems in development team.
+   They are dispersed among several sites,
+   and have not worked together before.
+   </td>
+   <td>Medium</td>
+   <td>Critical</td>
+   <td>Use these <a href="sdm.html#communication">tools</a> to help communication.
+   The main indicator of miscommunication will be software defects
+   detected by our <a href="qa-plan.html">QA activity</a>.
+   </td>
+   <td>Green</td>
+   <td>QA lead</td>
+  </tr>
+
+  <tr >
+   <td>Acceptance</td>
+   <td>Customer may accept delivery of the system
+   although it does not really meet their goals.</td>
+   <td>Medium</td>
+   <td>Critical</td>
+   <td>Customers are asked to declare acceptance criteria as each release is planned.</td>
+   <td>Green</td>
+   <td>Customers</td>
+  </tr>
+
+  <tr>
+   <td>Scope</td>
+   <td>The total features requested may be beyond
+   what the development team can deliver in the time available.</td>
+   <td>High</td>
+   <td>Marginal</td>
+   <td>Assign levels of important to the use cases.
+   Make the first review of project scope after 12 months.
+   </td>
+   <td>Green</td>
+   <td>Customers</td>
+  </tr>
+
+
+  </table>
+
+  <h3>Minor risks</h3>
+
+
+  <div class="todo">
+  TODO: Review this list regularly,
+  to decide whether the likelihood or impact of a risk
+  has increased to make it a "major" risk.
+ </div>
+ <table border="1" cellpadding="3" cellspacing="2" width="100%"  class="sample1">
+  <tr>
+  <th>Name</th>
+   <th>Description</th>
+   <th>Likelihood</th>
+   <th>Impact</th>
+   <th>Mitigation Strategy</th>
+   <th>Status</th>
+   <th>Owner</th>
+  </tr>
+
+  <tr>
+   <td>Estimate</td>
+   <td>The development team might not be able to estimate the work time,
+    preventing customers from deciding priorities effectively.</td>
+   <td>Medium</td>
+   <td>Marginal</td>
+   <td>
+   The development team will gain experience in estimating the work,
+   and deliver the first estimates after 12 months.
+   We will compare estimated work to actual work.
+
+   <!-- The development team have worked together on comparable projectws before.
+   We are confident in their time estimates. -->
+   </td>
+   <td>Green</td>
+   <td>Project Manager</td>
+  </tr>
+
+  <tr >
+   <td>Retention</td>
+   <td>Some developers may leave the project before it is finished.</td>
+   <td>Medium</td>
+   <td>Marginal</td>
+   <td>Employing locations should provide support for continuing professional development.
+   The project manager will discuss career goals with each developer,
+   and try to assign tasks appropriately.
+   </td>
+   <td>Green</td>
+   <td>Project Manager</td>
+  </tr>
+
+
+  <tr>
+   <td>Correctness</td>
+   <td>The system as delivered may have low take-up because of a lack of confidence in its correctness.</td>
+   <td>Low</td>
+   <td>Catastrophic</td>
+   <td>State of the art <a href="qa-plan.html">QA activity</a>.
+   Contingency: stop development of new facilities until the quality of the existing code
+   is assured.
+   </td>
+   <td>Green</td>
+   <td>QA Lead</td>
+  </tr>
+
+  <tr>
+   <td>Usability</td>
+   <td>The system as delivered may have low take-up because of poor usability.</td>
+   <td>Low</td>
+   <td>Critical</td>
+   <td>We will have a UI style guide.
+   Most of the development of the front end will be in close contact with customers.
+   We will review usability later in the project.
+   </td>
+   <td>Green</td>
+   <td>UI design lead</td>
+  </tr>
+
+  <tr>
+   <td>Desire</td>
+   <td>The stated requirements might not match the customers' desires and ambitions for the system.</td>
+   <td>Low</td>
+   <td>Critical</td>
+   <td>Incremental delivery of versions will provide experience of using the system,
+   which will help the customers to identify the real requirements.
+   Indicator:
+   a developer saying "I think they mean ...",
+   a customer saying "They know what I mean".
+   Contingency: request customer review of requirements.
+   </td>
+   <td>Green</td>
+   <td>Customers</td>
+  </tr>
+
+
+ <tr >
+   <td>Changes</td>
+   <td>After requirements have been documented and agreed,
+   development activities begin to based on them,
+   first design then implementation.
+   If the requirements change later then effort is wasted.</td>
+   <td>Low</td>
+   <td>Critical</td>
+   <td>A change control procedure is required,
+   so changes are only made when the cost is worthwhile.
+   Indicator: compare cost of change to new development.
+   Contingency: request customer review of requirements.</td>
+   <td>Green</td>
+   <td>Project Manager</td>
+  </tr>
+
+
+  <tr>
+   <td>Process</td>
+   <td>Some developers may not cooperate in common standards and processes.</td>
+   <td>Low</td>
+   <td>Critical</td>
+   <td>QA to check conformance, then discussions in development team meetings
+   to change the standard or the actual practice as appropriate.
+   </td>
+   <td>Green</td>
+   <td>QA Lead</td>
+  </tr>
+
+
+  <tr>
+   <td>Maintainability</td>
+   <td>The system as delivered might be hard to maintain.</td>
+   <td>Low</td>
+   <td>Marginal</td>
+   <td>We will review the code for maintainability.</td>
+   <td>Green</td>
+   <td>Lead Developer</td>
+  </tr>
+
+
+
+  <tr class="sample1">
+   <td>RISKNAME</td>
+   <td>ONE-TO-THREE-SENTENCES</td>
+   <td>Low | Medium | High</td>
+   <td>Negligible | Marginal | Critical | Catastrophic</td>
+   <td>ONE-TO-THREE-SENTENCES</td>
+   <td>Red | Amber | Green</td>
+   <td>PERSONNAME</td>
+  </tr>
+
+  </table>
+
+  <div class="tier2">
+   <h4>Possible risk status values:</h4>
+   <dl>
+    <dt>Red</dt><dd>Active &amp; impacting project</dd>
+    <dt>Amber</dt><dd>Active but contained without impact to scope or delivery time.</dd>
+    <dt>Green</dt><dd>not yet active</dd>
+   </dl>
+  </div>
+
+ </div> <!-- /strategy -->
+
+
+ <div id="checklist">
+ <h3>Risk Checklist</h3>
+
+ <dl>
+
+  <dt>Do the plans provide an indicator to detect each of the risks becoming active?</dt>
+
+  <dd class="sample1">Yes, if all activies are carried out as planned,
+  we will know if any of the risks is becoming troublesome.</dd>
+
+  <dd class="sample2">No, some risks could creep up on us.</dd>
+
+  
+  <dt>Are the right "risk owners" assigned to monitor the risks?</dt>
+
+  <dd class="sample1">Yes, for each risk the assigned owner can detect
+  the indicator, can launch the contingency plan, and is the person
+  who will suffer by the risk.</dd>
+
+  <dd class="sample2">No, in some cases the assigned owner may not
+  notice or care, or does not have sufficient authority.</dd>
+
+
+  <dt>Does each risk have a mitigation strategy,
+  or is the risk acceptable?</dt>
+
+  <dd class="sample1">Yes, we have plans to control each risk.</dd>
+
+  <dd class="sample2">Yes, we have plans to control some risks, and
+  have accepted others.</dd>
+
+  <dd class="sample3">No, this plan leaves open several risks.</dd>
+
+  
+  <dt>Does each risk have a contingency plan?</dt>
+
+  <dd class="sample1">Yes, most risks cost development time and the
+  general plan applies, and for each of the others there is a
+  contingency plan above. </dd>
+
+  <dd class="sample2">No, there are some risks we still have to plan for.</dd>
+
+
+  <dt>Has this Risk Control Plan been communicated to the development team and
+  other stakeholders?</dt>
+
+
+  <dd class="sample1">Yes, this document is being posted to the
+  project website.  It will also be discussed at an early team
+  meeting, and discussed with the customers before the commit to the
+  project.  Comments are welcome.</dd>
+
+  <dd class="sample2">No, our culture does not allow discussion of risks.</dd>
+
+  
+  <dt>Is there a procedure in place for identifying new risks and
+  reviewing the existing ones?</dt>
+
+  <dd class="sample1">TBD</dd>
+
+  
+  <dt>In the light of these risks, is the project worth carrying out?</dt>
+
+  <dd class="sample1">Yes, it is a low risk project</dd>
+
+  <dd class="sample2">No, other projects can deliver as much value at lower risk.</dd>
+
+  <dd class="sample3">Yes. It is an unusually risky project by
+  commercial standards, but we believe we have adequate plans here,
+  considering the value that the project could deliver.</dd>
+
+  
+  <dt>Is there an anonymous reporting channel,
+  to allow developers to communicate concerns to senior management?</dt>
+
+  <dd class="sample1">Yes</dd>
+
+  <dd class="sample2"> No, everything depends on the alertness and
+  strength of character of the project manager.</dd>
+
+ </dl>
+ </div> <!-- /checklist -->
+
+
+
+</div>
+
+<div class="todo">
+  TODO:  Check for <a
+  href="http://readyset.tigris.org/words-of-wisdom/risks.html">words
+  of wisdom</a> and discuss ways to improve this template.
+  Or, evaluate the ReadySET Pro <a title="pro use case template and sample test plan"
+  href="http://www.readysetpro.com/">professional risk management template</a>.
+</div> <!-- /todo -->
+
+
+<div class="legal1">Company Proprietary</div>
+
+
+</div>
+</body>
+</html>
+

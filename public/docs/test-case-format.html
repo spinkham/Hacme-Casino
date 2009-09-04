@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//Tigris//DTD XHTML 1.0 Transitional//EN"
+"http://style.tigris.org/tigris_transitional.dtd">
+<html>
+<head>
+ <style type="text/css">
+/* <![CDATA[ */ 
+@import "css/readyset.css"; 
+@import "css/inst.css";
+/*  ]]> */
+ </style>
+
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+ <title>Test Case Format</title>
+</head>
+
+<body>
+<div class="app">
+<div class="readyset">
+
+<h2><a href="qa-plan.html">QA Plan</a> &gt;
+    <a href="test-suite.html">Test Suite</a> &gt; Test Case Format</h2>
+
+
+ <div id="processimpact"> 
+  <b>Process impact:</b> This reference page documents the format of
+  test cases and gives tips on writing test cases.  You can copy and
+  paste the sample test case into your test-cases.html file.  This file
+  itself should not be edited to hold specific test cases.
+
+  <p>This test case format is suitable for manual system test
+  cases.</p>
+
+  The test cases should be written in enough detail that they could
+  be given to a new team member who would be able to quickly start to
+  carry out the tests and find defects.
+ </div> <!-- /processimpact -->
+
+<div id="unique-test-case-id">
+<h3>unique-test-case-id: Test Case Title</h3>
+
+<table border="0" cellspacing="2" cellpadding="3" width="100%" class="axial">
+ <tr>
+  <th>Purpose:</th>
+  <td>
+   Short sentence or two about the aspect of the system is being
+   tested. If this gets too long, break the test case up or put more
+   information into the feature descriptions.
+  </td>
+ </tr>
+
+ <tr>
+  <th>Prereq:</th>
+  <td>
+   Assumptions that must be met before the test case can be run. E.g.,
+   &quot;logged in&quot;, &quot;guest login allowed&quot;, &quot;user
+   testuser exists&quot;.
+  </td>
+ </tr>
+
+ <tr>
+  <th>Test Data:</th>
+  <td>
+   List of variables and their possible values used in the test case.
+   You can list specific values or describe value ranges. The test
+   case should be performed once for each <em>combination</em> of
+   values.  These values are written in set notation, one per
+   line. E.g.:
+   <div>loginID = {Valid loginID, invalid loginID, valid email, invalid email, empty}</div> 
+   <div>password = {valid, invalid, empty}</div>
+  </td>
+ </tr>
+
+ <tr>
+  <th>Steps:</th>
+  <td>
+   Steps to carry out the test. See step formating rules below.
+   <ol>
+    <li>visit LoginPage</li>
+    <li>enter userID</li>
+    <li>enter password</li>
+    <li>click login</li>
+    <li>see the terms of use page</li>
+    <li>click agree radio button at page bottom</li>
+    <li>click submit button</li>
+    <li>see PersonalPage</li>
+    <li>verify that welcome message is correct username</li>
+   </ol>
+  </td>
+ </tr>
+
+ <tr>
+  <th>Notes and Questions:</th>
+  <td>
+   <ul>
+    <li>NOTE</li>
+    <li>QUESTION</li>
+   </ul>
+  </td>
+ </tr>
+
+</table>
+</div>
+
+
+
+<div id="steps">
+<h3>Format of test steps</h3>
+
+<p>Each step can be written very tersely using the following keywords:</p>
+
+<dl>
+ <dt>login [as ROLE-OR-USER]</dt>
+
+ <dd>Log into the system with a given user or a user of the given
+ type. Usually only stated explicitly when the test case depends on
+ the permissions of a particular role or involves a workflow between
+ different users.</dd>
+
+ <dt>visit LOCATION</dt>
+
+ <dd>Visit a page or screen. For web applications, LOCATION may be a
+ hyperlink. The location should be a well-known starting point (e.g.,
+ the Login screen), drilling down to specific pages should be part of
+ the test.</dd>
+
+ <dt>enter FIELD-NAME [as VALUE] [in SCREEN-LOCATION]</dt>
+
+ <dd>Fill in a named form field.  VALUE can be a literal value or the
+ name of a variable defined in the "Test Data" section.  The
+ FIELD-NAME itself can be a variable name when the UI field for that
+ value is clear from context, e.g., "enter password". </dd>
+
+ <dt>enter FIELDS</dt>
+
+ <dd>Fill in all fields in a form when their values are clear from
+ context or when their specific values are not important in this test
+ case.</dd>
+
+ <dt>click &quot;LINK-LABEL&quot; [in SCREEN-LOCATION]</dt>
+
+ <dd>Follow a labeled link or press a button.  The screen location can
+ be a predefined panel name or English phrase. Predefined panel names
+ are based on GUI class names, master template names, or titles of
+ boxes on the page.</dd>
+
+ <dt>click BUTTON-NAME [in SCREEN-LOCATION]</dt>
+
+ <dd>Press a named button. This step should always be followed by
+ a &quot;see&quot; step to check the results.</dd>
+
+ <dt>see SCREEN-OR-PAGE</dt>
+
+ <dd>The tester should see the named GUI screen or web page.  The
+ general correctness of the page should be testable based on the
+ feature description.</dd>
+
+ <dt>verify CONDITION</dt>
+
+ <dd>The tester should see that the condition has been satisfied. This
+ type of step usually follows a &quot;see&quot; step at the end of the
+ test case.</dd>
+
+ <dt>verify CONTENT [is VALUE]</dt>
+
+ <dd>The tester should see the named content on the current page, the
+ correct values should be clear from the test data, or given
+ explicitly. This type of step usually follows a &quot;see&quot; step
+ at the end of the test case.</dd>
+
+ <dt>perform TEST-CASE-NAME</dt>
+
+ <dd>This is like a subroutine call.  The tester should perform all
+ the steps of the named test case and then continue on to the next
+ step of this test case.</dd>
+</dl>
+
+
+<p>Every test case must include a verify step at the end so that the
+expected output is very clear.  A test case can have multiple verify
+steps in the middle or at the end.  Having multiple verify steps can
+be useful if you want a smaller number of long tests rather than a
+large number of short tests.</p>
+
+</div> <!-- /steps -->
+
+
+
+<div id="furtherinfo">
+<h3>Further Information</h3>
+
+<p>For more information on advice, see:</p>
+
+<ul>
+ <li>Words of wisdom on <a
+ href="http://readyset.tigris.org/words-of-wisdom/test-case-suites.html">test
+ case suites</a>.</li>
+
+ <li>Words of wisdom on <a
+ href="http://readyset.tigris.org/words-of-wisdom/test-cases.html">test
+ cases</a>.</li>
+ 
+</ul>
+
+</div> <!-- /furtherinfo -->
+
+
+<div class="legal1">Company Proprietary</div>
+
+<div class="footnote">
+ Copyright &#169; 2003-2004 Jason Robbins.  All rights reserved. <a href="readyset-license.html">License terms</a>.
+ Retain this copyright statement whenever this file is used as a
+ template.
+</div>
+
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<div id="nav">
+    <div id="s_top">
+            <%= image_tag "web/round_div_top.gif" %>
+    </div>
+    <div id="nav-body">
+    <table>
+    <tr>
+    <td>
+    <%= link_to "Lobby", :controller => "lobby", :action => "games" %>
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <%= link_to "Options", :controller => "account", :action => "options" %>
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <%= link_to "Logout", :controller=> "account", :action => "logout" %>
+    </td>
+    </tr>
+    </table>
+    </div>
+    <div id="s_bottom">
+        <%= image_tag "web/round_div_bottom.gif" %>
+    </div>
+</div>

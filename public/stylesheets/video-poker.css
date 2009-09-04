@@ -1,0 +1,99 @@
+#vp-screen
+{
+  float: left;
+  position: relative; top: 10px; left: 10px;   
+  margin: 10px;
+}
+div.cards
+{
+  float: left;
+  height: 100px;
+}
+div.card 
+{
+  float: left;
+  display: inline;
+  margin: 0px 0px 0px 5px;
+  position: relative;  z-index: 1;
+}
+div.card img
+{
+    border: 0px;
+    width: 57px;
+}
+#vp-user-opts 
+{
+  float: left;
+  display: inline;
+  margin: 10px;
+  width: 100px; 
+  padding: 10px;  
+  position: relative; right: 0px; bottom: 0px; z-index: 1;
+  height: 120px;
+}
+#vp-status 
+{
+  float: left;
+  display: inline;
+  margin: 10px;
+  padding: 5px; 
+  width: 160px; 
+  position: relative; left: 20px;  bottom: 80px; z-index: 1; 
+  height: 130px; 
+}
+div.opt-element
+{ 
+  margin: 5px; 
+  width: 100px;
+  border: 0px;
+}
+
+div.opt-element input
+{ 
+  width: 100px;
+}
+
+div.status-element
+{
+  margin: 5px;
+  width: 200px;
+}
+div.status-element-result
+{
+  position: relative; right: 0px; top: 0px;
+}
+div.status-element-result h1
+{
+   line-height: 32px;
+   text-align: center;
+}
+#pay-schedule
+{
+ float: left;
+ font-size: xx-small;
+ margin: 25px;
+}
+#pay-schedule table
+{
+  border: solid white 1px;
+}
+#pay-schedule tr
+{
+  border: solid white 1px;
+}
+#pay-schedule td
+{
+  font-size: xx-small;
+  width: 50px;  
+}
+
+#pay-schedule td.hand
+{
+  width: 150px;
+}
+
+#denominations
+{
+  margin: 25px;
+  float:left;
+}

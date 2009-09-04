@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+  <title>Hacme Casino</title>
+  <%= stylesheet_link_tag 'standard' %>
+  <%= javascript_include_tag :defaults %>
+</head>
+<body>
+
+<div id="container">
+    <div id="header">
+        <%= image_tag "web/banner_2.gif" %>
+        
+    </div>
+    <div id = "border-left">
+
+    </div>
+    <div id="sidebar">
+        <% if @user = @session['user'] %>
+            <% @in_room = (@params[:action]=='show') %>
+            <%= render_partial "account/profile" %>
+            <%= render_partial "account/nav" %>
+        <% else%> 
+          <%if @params['signup'] == "true" %>
+            <%= render_partial "account/signup" %>
+          <% else %>
+            <%= render_partial "account/login" %>
+          <% end %>
+        <%end%>        
+    </div>    
+
+    <div id="content">
+        <%= @content_for_layout %>
+    </div>
+    
+    <div id = "border-right">
+
+    </div>
+    
+ </div>
+</body>
+</html>

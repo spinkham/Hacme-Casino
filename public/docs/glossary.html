@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//Tigris//DTD XHTML 1.0 Transitional//EN"
+"http://style.tigris.org/tigris_transitional.dtd">
+<html>
+<head>
+ <style type="text/css">
+/* <![CDATA[ */ 
+@import "css/readyset.css"; 
+@import "css/inst.css";
+/*  ]]> */
+ </style>
+
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+ <title>Project terms</title>
+</head>
+
+<body>
+<div class="app">
+<div class="readyset">
+ <h2>Glossary</h2>
+
+ <div class="tabs">
+ <table border="0" cellspacing="0" cellpadding="0"><tr>
+  <th>Project terms</th>
+  <td><a href="glossary-std.html">Standard terms</a></td>
+ </tr></table>
+ </div>
+
+ <div id="processimpact">
+  <strong>Process impact:</strong> This file as a
+  dictionary of terms defined as they are used during the project.
+  Writing out the definitions of terms and acronyms here helps keep
+  other documents more concise and precise.  A shared glossary helps
+  prevent misunderstandings and makes it easier for new team members to
+  be productive.
+ </div> <!-- /processimpact -->
+
+ <div>Jump to: <a href="#A">A</a> | <a href="#B">B</a> | <a
+ href="#C">C</a> | <a href="#D">D</a> | <a href="#E">E</a> | <a
+ href="#F">F</a> | <a href="#G">G</a> | <a href="#H">H</a> | <a
+ href="#I">I</a> | <a href="#J">J</a> | <a href="#K">K</a> | <a
+ href="#L">L</a> | <a href="#M">M</a> | <a href="#N">N</a> | <a
+ href="#O">O</a> | <a href="#P">P</a> | <a href="#Q">Q</a> | <a
+ href="#R">R</a> | <a href="#S">S</a> | <a href="#T">T</a> | <a
+ href="#U">U</a> | <a href="#V">V</a> | <a href="#W">W</a> | <a
+ href="#X">X</a> | <a href="#Y">Y</a> | <a href="#Z">Z</a> | <a
+ href="#Other">Other</a> </div>
+
+
+
+
+ <h3>Project-specific Terms</h3>
+
+ <div class="tip">
+  TIPs: 
+  <ul>
+   <li>Define HTML anchors on your terms with id="TERMNAME" so that
+   other documents can link to the definition of specific terms.</li>
+
+   <li>If there is any question about the meaning of a term, note it
+   here.  If someone (e.g., the customer) gave you a definition to
+   use, note that here too.  If something is best defined by using a
+   hyperlink to another document or website, include a hyperlink in
+   the definition.</li>
+
+   <li>If a term was used in the past, but is no longer going to be
+   used, you should keep it in the list, mark it as "deprecated", and
+   link to the term or terms that replace it.  E.g., deprecated
+   standard term <a href="glossary-std.html#bug">bug</a>.</li>
+
+   <li>Define only project-specific terms, or ones that a new team
+   member would not know.  Don't define standard textbook terms that
+   can be easily found elsewhere.</li>
+
+   <li>This glossary can serve as simple domain model or data
+   dictionary.  You can define important data objects by describing
+   their meaning and key attributes. For example, see <a
+   href="#student">student</a> and <a href="#gpa">GPA</a>.</li>
+   
+  </ul>
+ </div>
+
+
+ <dl>
+
+<a name="A"></a>
+
+<a name="B"></a>
+
+
+<a name="C"></a>
+
+  <dt id="class-standing">Class standing</dt>
+
+  <dd>Computed attribute of <a href="#student">student</a> based on
+  number of academic units completed.  Used to determine priority in
+  course enrollment.</dd>
+  
+  <dd>Real-world meaning of values:
+  <table>
+   <tr><th>Freshman</th><td>Less than 90 units</td></tr>
+   <tr><th>Sophomore</th><td>Between 90 and 180 units</td></tr>
+   <tr><th>Junior</th><td>Between 180 and 270 units</td></tr>
+   <tr><th>Senior</th><td>More than 270 units completed</td></tr>
+  </table></dd>
+
+<a name="D"></a>
+
+
+<a name="E"></a>
+
+<a name="F"></a>
+
+
+<a name="G"></a>
+
+  <dt id="gef">GEF</dt>
+
+  <dd class="sample1"><i>n.</i> The <a
+  href="http://gef.tigris.org/">Graph Editing Framework</a>.  An open
+  source library for editing diagrams (boxes and arrows).</dd>
+
+  <dt id="gpa">GPA</dt>
+
+  <dd class="sample1"><i>n.</i> Grade Point Average. GPA is a float
+  between 0.00 and 4.00, accurate to 2 decimal places.  Computed from
+  average of completed course grades in transcript weighted by course
+  units.  Used to determine student ranking, and to trigger Dean's
+  List and academic probation.</dd>
+  
+
+<a name="H"></a>
+
+<a name="I"></a>
+
+  <dt id="ics">ICS</dt>
+
+  <dd class="sample1"><i>n.</i> Acronym for the <a
+  href="http://www.ics.uci.edu/">School of Information and Computer
+  Science</a> at <a href="http://www.uci.edu/">UC Irvine</a>. </dd>
+
+<a name="J"></a>
+
+<a name="K"></a>
+
+<a name="L"></a>
+
+<a name="M"></a>
+
+<a name="N"></a>
+
+<a name="O"></a>
+
+<a name="P"></a>
+
+<a name="Q"></a>
+
+<a name="R"></a>
+
+<a name="S"></a>
+
+  <dt id="student">Student</dt>
+
+  <dd class="sample1"><i>n.</i> A person who attends a school to earn
+  a degree.  Persistent attributes include: student_id_number (primary key), GPA,
+  major, and years_at_school.</dd>
+
+  <dt id="senior">Senior</dt>
+
+  <dd class="sample1"><i>n.</i> A senior is special type of <a
+  href="#undergraduate">undergraduate</a> who has a certain number of
+  course credits on his or her transcript. Years_at_school does not
+  determine senior standing.  TODO: how many credits needed?</dd>
+
+<a name="T"></a>
+
+  <dt id="term1">Term1</dt>
+
+  <dd>Definition1</dd>
+
+  <dt id="term2">Term2</dt>
+
+  <dd>Definition2a</dd>
+
+  <dd>Definition2b</dd>
+
+
+  <dt id="term3">Term3</dt>
+
+  <dd>Definition3</dd>
+
+  <dt id="term4">Term4</dt>
+
+  <dd>Definition4</dd>
+
+  <dt id="term5">Term5</dt>
+
+  <dd>Definition5</dd>
+
+  <dt id="term6">Term6</dt>
+
+  <dd>Definition6</dd>
+
+<a name="U"></a>
+
+
+  <dt id="undergraduate">Undergraduate</dt>
+
+  <dd class="sample1">A type of <a href="#student">student</a>. TODO:
+  add more detail.</dd>
+
+<a name="V"></a>
+
+<a name="W"></a>
+
+<a name="X"></a>
+
+<a name="Y"></a>
+
+<a name="Z"></a>
+
+<a name="Other"></a>
+
+
+
+
+
+ </dl>
+
+
+ 
+
+ <div class="todo">
+  TODO:  Check for <a
+  href="http://readyset.tigris.org/words-of-wisdom/glossary.html">words
+  of wisdom</a> and discuss ways to improve this template.
+  Or, evaluate the ReadySET Pro <a title="pro use case template and sample test plan"
+  href="http://www.readysetpro.com/">professional project glossary template</a>.
+ </div>
+
+
+</div>
+
+<div class="legal1">Company Proprietary</div>
+
+<div class="footnote">
+ Copyright &#169; 2003-2004 Jason Robbins.  All rights reserved. <a href="readyset-license.html">License terms</a>.
+ Retain this copyright statement whenever this file is used as a
+ template.
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<% if state == 'NEW_GAME'%>
+<div id = "denominations">
+    <div id = "current-denomination">
+        Denomination: <%= denomination %> Chips
+    </div>
+    <div class = "opt-element">
+        <a href="javascript:up_denomination()">
+        + Raise Denomination
+        </a>
+    </div>
+    <div class = "opt-element">
+        <a href="javascript:down_denomination()">
+        - Lower Denomination
+        </a>
+    </div>
+</div>
+<% end %>

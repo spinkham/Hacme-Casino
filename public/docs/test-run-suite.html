@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//Tigris//DTD XHTML 1.0 Transitional//EN"
+"http://style.tigris.org/tigris_transitional.dtd">
+<html>
+<head>
+ <style type="text/css">
+/* <![CDATA[ */ 
+@import "css/readyset.css"; 
+@import "css/inst.css";
+/*  ]]> */
+ </style>
+
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+ <title>Test Run Suite</title>
+</head>
+
+<body>
+<div class="app">
+<div class="readyset">
+
+
+<h2><a href="qa-plan.html">QA Plan</a> &gt; Test Run Suite</h2>
+
+ <div id="releaseinfo">
+ <h3>Release Information</h3>
+ <table border="1" cellpadding="3" cellspacing="2" class="axial">
+  <tr>
+   <th>Project:</th> 
+   <td><a href="index.html">PROJECTNAME</a></td> 
+  </tr>
+  <tr>
+   <th>Internal Release Number:</th> 
+   <td>X.Y.Z</td> 
+  </tr>
+  <tr>
+   <th>Related Documents:</th> 
+   <td>
+    <div><a href="test-suite.html">Test suite</a></div>
+    <div>LINKS TO RELEVANT STANDARDS</div>
+    <div>LINKS TO OTHER DOCUMENTS</div>
+   </td>
+  </tr>
+ </table>
+ </div> <!-- /releaseinfo -->
+
+<div id="processimpact">
+ <b>Process impact:</b> This is a test run log for
+ manual system testing.  A test run is logged whenever the manual
+ system test suite is carried out.  The log overview helps visualize
+ the set of system configurations that have been tested and those that
+ have not.  Clearly understanding the degree to which the system has
+ been tested helps to assess progress, assess risk, and focus ongoing
+ testing efforts.
+</div> <!-- /processimpact -->
+
+<div class="todo"> 
+  TODO:
+  <ul>
+  
+   <li>Review the <a href="target-and-benefits.html">target
+       audience</a>, <a href="srs.html#environmental">environmental
+       requirements</a>, and <a
+       href="design-architecture.html#deployment">possible
+       deployments</a> to understand the set of possible system
+       configurations that could be tested.</li>
+  
+   <li>Use a table or list to describe that set of possible
+       configurations.  Mark each possibility with Pending, N/A, or
+       Waived.</li>
+
+   <li>Track each test run with an issue in the issue tracker or an
+       item in the <a href="test-runs.html">test-runs</a> document.</li>
+       
+   <li>Periodically review the set of possible system configurations
+       to identify any additional needed test runs.</li>
+  </ul>
+</div>
+
+
+
+<div id="byosbrowser">
+<h3>Test Runs by Operating System and Browser</h3>
+
+<div class="sample1">
+<table border="1" cellpadding="3" cellspacing="2">	
+ <tr>
+  <th>OS \ Browser</th>
+  <th>IE</th>
+  <th>Netscape/Mozilla</th>
+  <th>Konqueror/Safari</th>
+  <th>other</th>
+ </tr>
+	
+ <tr>
+  <th>Windows</th>
+  <td><a href="test-runs.html#TR-01">Passed</a></td>
+  <td><a href="test-runs.html#TR-02">Passed</a></td>
+  <td>N/A</td>
+  <td>N/A</td>
+ </tr>
+
+ <tr>
+  <th>Linux</th>
+  <td>N/A</td>
+  <td><a href="test-runs.html#TR-03">Passed</a></td>
+  <td>Pending</td>
+  <td>N/A</td>
+ </tr>
+
+ <tr>
+  <th>Mac</th>
+  <td><a href="test-runs.html#TR-10">FAILED</a></td>
+  <td>Pending</td>
+  <td><a href="test-runs.html#TR-11">Passed</a></td>
+  <td>N/A</td>
+ </tr>
+
+ <tr>
+  <th>Palm</th>
+  <td>N/A</td>
+  <td>N/A</td>
+  <td>N/A</td>
+  <td>Pending</td>
+ </tr>
+
+</table>
+
+</div>
+</div> <!-- /bybusinessobject -->
+
+
+
+<div id="bylocale">
+<h3>Test Runs by Locale</h3>
+
+<div class="tip">
+ TIP: Use this outline to guide the testing of internationalized
+ applications.  Each locale indicates a native language as well as
+ formats for presenting money, dates, times, etc.
+</div>
+
+<div class="sample1">
+<ul>
+ <li>English US:  <a href="test-runs.html#TR-00">Passed</a></li>
+ <li>English UK:  <a href="test-runs.html#TR-01">Passed</a></li>
+ <li>English CA:  <a href="test-runs.html#TR-02">Passed</a></li>
+ <li>Japanese:    <a href="test-runs.html#TR-10">Passed</a></li>
+ <li>Spanish:     Pending</li>
+ <li>Russian:     Pending</li>
+ <li>German:      Pending</li>
+ <li>French:      Pending</li>
+ <li>French CA:   Waived, French + English Canadian is good enough</li>
+</ul>
+</div>
+</div> <!-- /bylocale -->
+
+
+
+
+<div id="byhardware">
+<h3>Test Runs by Hardware Configuration</h3>
+
+<div class="tip">
+ TIP: Use this outline for products that depend on specific hardware.
+ E.g., a disk crash recovery product would depend on the type of
+ drive, a game might depend on processor speed and graphics cards,
+ other products might depend on memory or other hardware specs.
+</div>
+
+<div class="sample1">
+<ul>
+ <li>PCs
+  <ul>
+   <li>IDE drive:   Pending</li>
+   <li>EIDE drive:  Waived because we only use IDE features</li>
+   <li>ATA drive:   <a href="test-runs.html#TR-00">Passed</a></li>
+   <li>SCSI drive:  <a href="test-runs.html#TR-01">Passed</a></li>
+   <li>SATA drive:  <a href="test-runs.html#TR-02">Passed</a></li>
+   <li>USB drive:   <a href="test-runs.html#TR-03">FAILED</a></li>
+  </ul>
+ </li>
+
+ <li>Macs
+  <ul>
+   <li>EIDE drive:     <a href="test-runs.html#TR-10">Passed</a></li>
+   <li>SCSI drive:     <a href="test-runs.html#TR-11">Passed</a></li>
+   <li>Firewire drive: Pending</li>
+   <li>USB drive:      <a href="test-runs.html#TR-12">FAILED</a></li>
+  </ul>
+ </li>
+
+</ul>
+</div>
+</div> <!-- /byhardware -->
+
+
+
+</div>
+
+<div class="todo">
+  TODO:  Check for <a
+  href="http://readyset.tigris.org/words-of-wisdom/test-runs.html">words
+  of wisdom</a> and discuss ways to improve this template.
+  Or, evaluate the ReadySET Pro <a title="pro use case template and sample test plan"
+  href="http://www.readysetpro.com/">professional test runs template</a>.
+</div> <!-- /todo -->
+
+<div class="legal1">Company Proprietary</div>
+
+<div class="footnote">
+ Copyright &#169; 2003-2004 Jason Robbins.  All rights reserved. <a href="readyset-license.html">License terms</a>.
+ Retain this copyright statement whenever this file is used as a
+ template.
+</div>
+
+</div>
+</body>
+</html>

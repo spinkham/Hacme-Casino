@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//Tigris//DTD XHTML 1.0 Transitional//EN"
+"http://style.tigris.org/tigris_transitional.dtd">
+<html>
+<head>
+ <style type="text/css">
+/* <![CDATA[ */ 
+@import "css/readyset.css"; 
+@import "css/inst.css";
+/*  ]]> */
+ </style>
+
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+ <title>Use Case Suite</title>
+</head>
+
+<body>
+<div class="app">
+<div class="readyset">
+
+
+<h2><a href="srs.html">SRS</a> &gt; Use Case Suite</h2>
+
+ <div id="releaseinfo">
+ <h3>Release Information</h3>
+ <div class="axial">
+ <table border="1" cellpadding="3" cellspacing="2">
+  <tr>
+   <th>Project:</th> 
+   <td><a href="index.html">PROJECTNAME</a></td> 
+  </tr>
+  <tr>
+   <th>Internal Release Number:</th> 
+   <td>X.Y.Z</td> 
+  </tr>
+  <tr>
+   <th>Related Documents:</th> 
+   <td>
+    <div><a href="proposal.html">Project proposal</a> &gt;
+         <a href="user-needs.html">User needs</a></div>
+    <div><a href="srs.html">SRS</a> &gt;
+         <a href="feature-set.html">Feature set</a></div>
+    <div><a href="use-case-format.html">Use case format</a></div>
+    <div><a href="LINK-TO-DIAGRAM">Use case diagram</a></div>
+    <div>LINKS TO RELEVANT STANDARDS</div>
+    <div>LINKS TO OTHER DOCUMENTS</div>
+   </td>
+  </tr>
+ </table>
+ </div>
+ </div> <!-- /releaseinfo -->
+
+<div id="processimpact">
+ <b>Process impact:</b> A use case suite is simply
+ a table of contents for the individual use cases.  Much like a test
+ suite, organizing the suite of use cases by priority, functional area,
+ actor, business object, or release can help identify parts of the
+ system that need additional use cases.
+</div> <!-- /processimpact -->
+
+<div class="todo"> 
+  TODO: Before writing individual use cases, list the use cases
+  that you think you will need.  Organize them in a way that will
+  purposely leave visible blanks on this page if you are missing use
+  cases.  E.g., see "Scalability and availability". Choose one or more of the
+  organizations show below.
+</div>
+
+<div class="tip"> 
+  TIP: Refer back to the user stories in your <a
+  href="user-needs.html">user needs</a> document.  Use them for ideas
+  and make sure that you cover all of them.  Remember that use cases
+  are more precise than user stories, and there may be several use
+  cases for a given user story.
+</div>
+
+<div class="tip"> 
+  TIP: The use case suite can be organized into nested lists
+  according to other coverage criteria, e.g., by actor.  Or, it
+  can be organized into tables that consider two aspects at a time,
+  e.g., business objects vs. actor.  If a certain section of the
+  tree or table does not need use cases, explicitly mark it "N/A".
+  Otherwise, mark it "TODO".
+</div>
+
+
+
+<div id="byfunction">
+<h3>Use Cases by Functional Area</h3>
+
+<ul>
+ <li>User account management
+  <ul>
+   <li><a href="use-cases.html#UC-00">UC-00</a> Configure the site</li>
+   <li><a href="use-cases.html#UC-01">UC-01</a> Register as a new user</li>
+   <li><a href="use-cases.html#UC-02">UC-02</a> Request new password</li>
+   <li><a href="use-cases.html#UC-03">UC-03</a> Edit user profile</li>
+   <li><a href="use-cases.html#UC-04">UC-04</a> View user profile</li>
+  </ul>
+ </li>
+
+ <li>Course management
+  <ul>
+   <li><a href="use-cases.html#UC-10">UC-10</a> Create course</li>
+   <li><a href="use-cases.html#UC-11">UC-11</a> View catalog description</li>
+   <li><a href="use-cases.html#UC-31">UC-31</a> Assign course to room</li>
+  </ul>
+ </li>
+
+ <li>Course enrollment
+  <ul>
+   <li><a href="use-cases.html#UC-20">UC-20</a> Enroll in course</li>
+   <li><a href="use-cases.html#UC-21">UC-21</a> Drop course</li>
+  </ul>
+ </li>
+
+
+ <li>Scalability and availability
+  <ul>
+   <li>N/A: These features are completely automated and internal,
+   users never interact with them</li>
+  </ul>
+ </li>
+
+ <li>Facilities management
+  <ul>
+   <li><a href="use-cases.html#UC-30">UC-30</a> View room description</li>
+   <li><a href="use-cases.html#UC-31">UC-31</a> Assign course to room</li>
+  </ul>
+ </li>
+
+ <li>Grading and transcripts
+  <ul>
+   <li>TODO: need to write use cases here</li>
+  </ul>
+ </li>
+
+ <li>FUNCTIONAL AREA SEVEN
+  <ul>
+   <li><a href="use-cases.html#UC-70">UC-70</a> NAME OF USE CASE</li>
+   <li><a href="use-cases.html#UC-71">UC-71</a> NAME OF USE CASE</li>
+  </ul>
+ </li>
+
+ <li>FUNCTIONAL AREA EIGHT
+  <ul>
+   <li><a href="use-cases.html#UC-80">UC-80</a> NAME OF USE CASE</li>
+   <li><a href="use-cases.html#UC-81">UC-81</a> NAME OF USE CASE</li>
+  </ul>
+ </li>
+
+ <li>FUNCTIONAL AREA NINE
+  <ul>
+   <li><a href="use-cases.html#UC-90">UC-90</a> NAME OF USE CASE</li>
+   <li><a href="use-cases.html#UC-91">UC-91</a> NAME OF USE CASE</li>
+  </ul>
+ </li>
+
+</ul>
+
+ </div> <!-- /byfunction -->
+
+
+
+<div id="bystakeholder">
+<h3>Use Cases by Stakeholder</h3>
+
+<p>This information is shown in the <a href="LINK-TO-DIAGRAM">use case
+diagram</a>, but it is shown here as a list or table so that missing
+use cases are more noticeable.</p>
+
+
+<ul>
+ <li>All Stakeholders
+  <ul>
+   <li><a href="use-cases.html#UC-11">UC-11</a> View catalog description</li>
+   <li><a href="use-cases.html#UC-30">UC-30</a> View room description</li>
+  </ul>
+ </li>
+
+ <li>Students
+  <ul>
+   <li><a href="use-cases.html#UC-01">UC-01</a> Register as a new user</li>
+   <li><a href="use-cases.html#UC-02">UC-02</a> Request new password</li>
+   <li><a href="use-cases.html#UC-03">UC-03</a> Edit user profile</li>
+   <li><a href="use-cases.html#UC-20">UC-20</a> Enroll in course</li>
+   <li><a href="use-cases.html#UC-21">UC-21</a> Drop course</li>
+  </ul>
+ </li>
+
+ <li>Instructors
+  <ul>
+   <li><a href="use-cases.html#UC-04">UC-04</a> View user profile</li>
+  </ul>
+ </li>
+
+ <li>Administrators
+  <ul>
+   <li><a href="use-cases.html#UC-00">UC-00</a> Configure the site</li>
+   <li><a href="use-cases.html#UC-10">UC-10</a> Create course</li>
+   <li><a href="use-cases.html#UC-31">UC-31</a> Assign course to room</li>
+  </ul>
+ </li>
+
+ <li>Executives
+  <ul>
+   <li>N/A: this stakeholder never directly interacts with the system</li>
+  </ul>
+ </li>
+
+ <li>Vendors
+  <ul>
+   <li>TODO: need to write use cases here</li>
+  </ul>
+ </li>
+
+ <li>STAKEHOLDER
+  <ul>
+   <li><a href="use-cases.html#UC-70">UC-70</a> NAME OF USE CASE</li>
+   <li><a href="use-cases.html#UC-71">UC-71</a> NAME OF USE CASE</li>
+  </ul>
+ </li>
+
+ <li>STAKEHOLDER
+  <ul>
+   <li><a href="use-cases.html#UC-80">UC-80</a> NAME OF USE CASE</li>
+   <li><a href="use-cases.html#UC-81">UC-81</a> NAME OF USE CASE</li>
+  </ul>
+ </li>
+
+ <li>STAKEHOLDER
+  <ul>
+   <li><a href="use-cases.html#UC-90">UC-90</a> NAME OF USE CASE</li>
+   <li><a href="use-cases.html#UC-91">UC-91</a> NAME OF USE CASE</li>
+  </ul>
+ </li>
+
+
+</ul>
+ </div> <!-- /bystakeholder -->
+
+
+
+<div id="bypriority">
+<h3>Use Cases by Priority</h3>
+
+<ul>
+ <li>Essential
+  <ul>
+   <li><a href="use-cases.html#UC-00">UC-00</a> Configure the site</li>
+   <li><a href="use-cases.html#UC-01">UC-01</a> Register as a new user</li>
+   <li><a href="use-cases.html#UC-10">UC-10</a> Create course</li>
+   <li><a href="use-cases.html#UC-11">UC-11</a> View catalog description</li>
+   <li><a href="use-cases.html#UC-20">UC-20</a> Enroll in course</li>
+   <li><a href="use-cases.html#UC-21">UC-21</a> Drop course</li>
+   <li><a href="use-cases.html#UC-30">UC-30</a> Assign course to room</li>
+   <li><a href="use-cases.html#UC-31">UC-31</a> Assign course to room</li>
+
+  </ul>
+ </li>
+
+ <li>Expected
+  <ul>
+   <li><a href="use-cases.html#UC-02">UC-02</a> Request new password</li>
+   <li><a href="use-cases.html#UC-03">UC-03</a> Edit user profile</li>
+   <li><a href="use-cases.html#UC-04">UC-04</a> View user profile</li>
+   <li><a href="use-cases.html#UC-70">UC-70</a> NAME OF USE CASE</li>
+   <li><a href="use-cases.html#UC-71">UC-71</a> NAME OF USE CASE</li>
+   <li><a href="use-cases.html#UC-80">UC-80</a> NAME OF USE CASE</li>
+   <li><a href="use-cases.html#UC-81">UC-81</a> NAME OF USE CASE</li>
+  </ul>
+ </li>
+
+ <li>Desired
+  <ul>
+   <li>N/A: There are no use cases with Priority = Desired</li>
+  </ul>
+ </li>
+
+ <li>Optional
+  <ul>
+   <li><a href="use-cases.html#UC-30">UC-30</a> View room description</li>
+   <li><a href="use-cases.html#UC-90">UC-90</a> NAME OF USE CASE</li>
+   <li><a href="use-cases.html#UC-91">UC-91</a> NAME OF USE CASE</li>
+  </ul>
+ </li>
+
+</ul>
+ </div> <!-- /bypriority -->
+
+
+
+<div id="bybusinessobject">
+<h3>Use Cases by Business Object and Actor</h3>
+
+<table border="1" cellpadding="3" cellspacing="2" class="linklist">
+ <tr>
+  <th>BO \ Actor</th>
+  <th>All</th>
+  <th>Student</th>
+  <th>Instructor</th>
+  <th>Admin</th>
+ </tr>
+	
+ <tr>
+  <th>Student record</th>
+  <td>
+   N/A
+  </td>
+  <td>
+   <a href="use-cases.html#UC-01">Register as new user</a>
+   <a href="use-cases.html#UC-02">Request new password</a>
+   <a href="use-cases.html#UC-03">Edit user profile</a>
+  </td>
+  <td><a href="use-cases.html#UC-04">View user profile</a>
+  </td>
+  <td>
+   N/A
+  </td>
+ </tr>
+
+ <tr>
+  <th>Course</th>
+  <td>
+   <a href="use-cases.html#UC-11">View catalog description</a>
+  </td>
+  <td>
+   <a href="use-cases.html#UC-20">Enroll in course</a>
+   <a href="use-cases.html#UC-21">Drop course</a>
+  </td>
+  <td>TODO</td>
+  <td>
+   <a href="use-cases.html#UC-10">Create course</a>
+   <a href="use-cases.html#UC-31">Assign room</a>
+  </td>
+ </tr>
+
+
+ <tr>
+  <th>Room</th>
+  <td>
+   <a href="use-cases.html#UC-30">View room description</a>
+  </td>
+  <td>
+   N/A
+  </td>
+  <td>
+   N/A
+  </td>
+  <td>
+     <a href="use-cases.html#UC-31">Assign room</a>
+  </td>
+ </tr>
+</table>
+ </div> <!-- /bybusinessobject -->
+
+
+</div>
+
+  <div class="todo">
+  TODO:  Check for <a
+  href="http://readyset.tigris.org/words-of-wisdom/use-case-suite.html">words
+  of wisdom</a> and discuss ways to improve this template.
+  Or, evaluate the ReadySET Pro <a
+  href="http://www.readysetpro.com/">professional use case suite template</a>.
+  </div>
+
+<div class="legal1">Company Proprietary</div>
+
+<div class="footnote">
+ Copyright &#169; 2003-2004 Jason Robbins.  All rights reserved. <a
+ href="readyset-license.html">License terms</a>.  Retain this
+ copyright statement whenever this file is used as a template.
+</div>
+
+</div>
+</body>
+</html>

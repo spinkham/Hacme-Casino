@@ -1,0 +1,8 @@
+<%= render_partial('table', game) %> 
+<%=	render_partial('opts',  'state' => game.state, 'cards' => game.player.hand.length, 'hand' => game.player.hand)%>
+<%=	render_partial('status', 'chips' => @session['user'].chips, 
+                             'current_bet' => game.player.current_bet, 
+                             'state' => game.state, 
+                             'result' => game.result,
+                             'chips_result' => @chips_result) %>
+                             

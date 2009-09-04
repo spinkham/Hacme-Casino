@@ -1,0 +1,13 @@
+<%= render_partial('pay_schedule') %> 
+<%= render_partial('denominations', 'denomination' => game.denomination, 'state' => game.state) %> 
+<%= render_partial('screen', game) %> 
+<%=	render_partial('opts',  'state' => game.state, 
+                            'hand' => game.player.hand, 
+                            'denomination' => game.denomination) %>
+<%=	render_partial('status', 'chips' => @session['user'].chips, 
+                             'current_bet' => game.player.current_bet, 
+                             'state' => game.state, 
+                             'result' => game.result,
+                             'hand' => game.player.hand,
+                             'chips_result' => @chips_result,
+                             'denomination' => game.denomination) %>

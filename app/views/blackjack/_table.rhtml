@@ -1,0 +1,56 @@
+<div id = "bj-table-top">
+  <div id = "dealer">
+    Dealer
+    <%if (table.state == 'NEW_GAME')%>
+        <div class = "card"> 
+            <%=card_img(nil)%>
+        </div>
+        <div class = "card">         
+        <%=card_img(nil)%>
+        </div>
+    <%else
+        i = 0            
+        table.dealer.hand.cards.each do |card|%>  
+        <div class = "card"> 
+        <!-- check for dealer_card test parameter -->
+        <% if ((i==1) && (table.state == 'PLAYER_H_OR_S') && @params['dealer_card'].nil?)%>
+                <img src='/images/cards/empty.bmp'/>
+            <%else%>
+                <%=card_img(card)%>
+            <%end
+          i += 1%>
+          </div>
+        <%end
+    end%>
+     </div>
+     <div id="table-img">
+        <%= image_tag "blackjack.jpg" %>
+     </div>
+     <div id="player">
+        Player
+        <%if (table.state == 'NEW_GAME')%>
+            <div class="card">
+                <%=card_img(nil)%>
+            </div>
+            <div class="card">
+                <%=card_img(nil)%>
+            </div>
+        <%else
+        table.player.hand.cards.each do |card| %>     
+        <div class="card">
+            <%=player_card_img(card)%>
+         </div>
+        <%end%>        
+    <%end%>    
+    <%if @session['accessible']  && table.state != 'NEW_GAME' %>
+            <div class="accessible-hand">
+            <% 
+                length = table.player.hand.cards.length
+                for i in 0..length - 2%> 
+                <%=  "#{table.player.hand.cards[i]}, " %>
+            <% end %>
+            <%=  "#{table.player.hand.cards[length - 1]}" %>
+            </div>
+    <% end %>
+    </div>
+</div>

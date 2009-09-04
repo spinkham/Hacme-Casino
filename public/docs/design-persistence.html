@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//Tigris//DTD XHTML 1.0 Transitional//EN"
+"http://style.tigris.org/tigris_transitional.dtd">
+<html>
+<head>
+ <style type="text/css">
+/* <![CDATA[ */ 
+@import "css/readyset.css"; 
+@import "css/inst.css";
+/*  ]]> */
+ </style>
+
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+ <title>Persistence</title>
+</head>
+
+<body>
+<div class="app">
+<div class="readyset">
+ <h2><a href="design.html">Design</a> &gt; Persistence</h2>
+
+ <div id="releaseinfo">
+ <h3>Release Information</h3>
+ <table border="1" cellpadding="3" cellspacing="2" class="axial">
+  <tr>
+   <th>Project:</th> 
+   <td><a href="index.html">PROJECTNAME</a></td> 
+  </tr>
+  <tr>
+   <th>Internal Release Number:</th> 
+   <td>X.Y.Z</td> 
+  </tr>
+  <tr>
+   <th>Related Documents:</th> 
+   <td>
+    <div>LINKS TO RELEVANT STANDARDS</div>
+    <div>LINKS TO OTHER DOCUMENTS</div>
+   </td>
+  </tr>
+ </table>
+ </div> <!-- /releaseinfo -->
+
+
+
+ <div id="overview">
+ <h3>Overview</h3>
+ <div class="todo">
+  TODO: Answer the questions below to help you design needed persistence
+  features.  Some example text is provided.  Add or delete text as
+  needed.
+ </div>
+
+ <dl>
+
+  <dt>What are the most important facts that a developer should know
+  about persistent data storage in this system?</dt>
+
+  <dd>PARAGRAPH OR BULLETS</dd>
+
+ 
+  <dt>What are the ranked goals for persistence in this system?</dt>
+
+  <dd>
+   <ol>
+    <li><a class="def" href="glossary-std.html#dg_expressiveness">Expressiveness</a></li>
+
+    <li><a class="def" href="glossary-std.html#dg_easy_access">Ease of access</a></li>
+
+    <li><a class="def" href="glossary-std.html#dg_data_reliability">Reliability</a></li>
+
+    <li><a class="def" href="glossary-std.html#dg_data_capacity">Data capacity</a></li>
+
+    <li><a class="def" href="glossary-std.html#dg_data_security">Data security</a></li>
+
+    <li><a class="def" href="glossary-std.html#dg_data_performance">Performance</a></li>
+
+    <li><a class="def" href="glossary-std.html#dg_data_interop">Interoperability</a></li>
+   </ol>
+  </dd>
+ </dl>
+ </div> <!-- /overview -->
+
+
+
+ <div id="database">
+ <h3>Central Database</h3>
+
+ <dl>
+
+  <dt>What is the logical database design?</dt>
+
+  <dd class="sample1">The logical database design is described in this
+  <a href="LINK-TO-MODEL">UML model</a> or this <a
+  href="LINK-TO-DIAGRAM">ER diagram</a>.
+
+   <p>Additional logical constraints on the database are:</p>
+   <ul>
+    <li>Students can repeat a course (and thus have two records for
+    the same course in their transcript), if and only if they got a
+    grade of "C-" or lower, or the course number is 198, 199, 298, or
+    299.</li>
+
+    <li>A grade of "A+" is valid only for transcript entries during or
+    after Fall 1990.  Prior to that term, the highest possible grade
+    was an "A".</li>
+
+    <li>LOGICAL CONSTRAINT THAT CANNOT BE EXPRESSED IN THE DIAGRAM</li>
+
+    <li>LOGICAL CONSTRAINT THAT CANNOT BE EXPRESSED IN THE DIAGRAM</li>
+   </ul>
+  </dd>
+
+
+  <dt>What are the physical tables and views?</dt>
+
+  <dd class="sample1">The physical database design is described in
+  this <a href="LINK-TO-MODEL">UML model</a> or this <a
+  href="LINK-TO-DIAGRAM">ER diagram</a>.</dd>
+
+
+  <dt>How will objects in the application be stored in the database?</dt>
+
+  <dd class="sample1">We will use one database table for each class, and one row in
+  the database for each persistent instance of that class.</dd>
+
+  <dd class="sample2">We will use a <a href="LINK-TO-LIBRARY">library</a> to do our
+  object-relational mapping.  (E.g., torque, castor, JDO, ADO,
+  hibernate)</dd>
+
+
+  <dt>What database access controls will be used?</dt>
+
+  <dd class="sample1">A database user account has been created that has access to the
+  needed application database tables.  The username and password for
+  this account is stored in a configuration file read by the
+  application server.  The database limits login by that user to only
+  the IP-address used by the application server.</dd>
+
+  
+  <dt>Is this application's central database accessible to other
+  applications?</dt>
+
+  <dd class="sample1">Yes.  The database is an important point of interoperability for new
+  applications to be added later.  The database itself provides
+  support for access controls and checks validity constraints so that
+  a defective application cannot corrupt the database.</dd>
+
+  <dd class="sample2">No. This database should always be accessed through this
+  application.  All relevant pieces of information are available
+  through the application interfaces.  The database itself does not
+  protect against data corruption that could be caused by other
+  applications.</dd>
+
+ </dl>
+ </div> <!-- /database -->
+
+
+
+
+ <div id="filestorage">
+ <h3>File Storage</h3>
+
+ <dl>
+  <dt>What data needs to be stored in files?</dt>
+
+  <dd class="sample1">Nothing is stored in files, everything is in the database.</dd>
+
+  <dd class="sample2">The server stores most data in the database, but mailing list
+  attachments are written to files on the server hard disk.</dd>
+
+  <dd class="sample3">All user documents are stored in files on their computer hard
+  disk.</dd>
+
+
+  <dt>What are the conventions for directory structure and file naming?</dt>
+
+  <dd class="sample1">N/A</dd>
+
+  <dd class="sample2">Files are stored on the server as
+  <tt>/var/data/attachments/msgNNNN-MMM.dat</tt>.</dd>
+
+  <dd class="sample3">Users store files anywhere on their computer, with the filename
+  extension <tt>.TST</tt>.</dd>
+
+  
+  <dt>What file system access controls will be used?</dt>
+
+  <dd class="sample1">N/A</dd>
+
+  <dd class="sample2">Files for message attachments are only readable and writable by
+  the mailing list archiving process that runs as operating system
+  user "archdaemon".</dd>
+
+  <dd class="sample3">Users can use whatever file permissions they like.</dd>
+
+  
+  <dt>What file format will be used?</dt>
+
+  <dd class="sample1">The <a href="LINK-TO-STANDARD">XYZ</a> standard file format.</dd>
+
+  <dd class="sample2">A java .properties file.</dd>
+
+  <dd class="sample3">A window's .ini file.</dd>
+
+  <dd class="sample4">An XML file using <a href="LINK-TO-DTD">this DTD
+   file</a>.</dd>
+   
+  <dd class="sample1">A simple text file with the following format: ...</dd>
+  
+  <dd class="sample2">A custom binary file in the following format: ...</dd>
+
+
+ </dl>
+ </div> <!-- /filestorage -->
+
+
+
+ <div id="distributedstorage">
+ <h3>Distributed Storage</h3>
+
+ <dl>
+  <dt>What information (if any) will be stored on client machines?
+  For how long?</dt>
+
+  <dd class="sample1">A cookie will be stored on the user machine for the purpose of
+  identifying a user session.  When the user logs out or closes their
+  web browser, the cookie is deleted.  Most browsers will not even
+  write this cookie to the disk.</dd>
+
+  <dd class="sample2">The a cookie is stored on the user's computer that is equivalent
+  to their password (but it is NOT actually their password).  This
+  cookie is needed for the auto-login feature.  The cookie lasts a
+  maximum of 30 days, and it can only be used from the same IP
+  address.</dd>
+
+  <dd class="sample3">User preferences for color scheme are stored in cookies in their
+  browser.  This information is not at all sensitive, so it is kept
+  indefinitely.</dd>
+
+  <dd class="sample4">All the user data will be stored on files on their
+  computers.</dd>
+
+ </dl>
+ </div> <!-- /distributedstorage -->
+
+
+
+
+ <div id="checklist">
+ <h3>Persistence Mechanisms Checklist</h3>
+
+ <dl>
+  <dt>Expressiveness: To what extent has this been achieved?</dt>
+
+  <dd>2-4 SENTENCES</dd>
+
+
+  <dt>Ease of access: To what extent has this been achieved?</dt>
+
+  <dd>2-4 SENTENCES</dd>
+
+
+  <dt>Reliability: To what extent has this been achieved?</dt>
+
+  <dd>2-4 SENTENCES</dd>
+
+
+  <dt>Capacity: To what extent has this been achieved?</dt>
+
+  <dd>2-4 SENTENCES</dd>
+
+
+  <dt>Security: To what extent has this been achieved?</dt>
+
+  <dd>2-4 SENTENCES</dd>
+
+
+  <dt>Performance: To what extent has this been achieved?</dt>
+
+  <dd>2-4 SENTENCES</dd>
+
+
+  <dt>Interoperability: To what extent has this been achieved?</dt>
+
+  <dd>2-4 SENTENCES</dd>
+
+
+  <dt>Has the persistence design been communicated to the development
+  team and other stakeholders?</dt>
+
+  <dd class="sample1">Yes, everyone understands.  Feedback is
+  welcome.</dd>
+
+  <dd class="sample1">No, this is a risk that is noted in the <a
+  href="plan.html#risks">Risk Management</a> section.</dd>
+  
+ </dl>  
+ </div> <!-- /checklist -->
+
+</div>
+
+
+ <div class="todo">
+  TODO:  Check for <a
+  href="http://readyset.tigris.org/words-of-wisdom/design-persistence.html">words
+  of wisdom</a> and discuss ways to improve this template.
+  Or, evaluate the ReadySET Pro <a title="pro use case template and sample test plan"
+  href="http://www.readysetpro.com/">professional persistence design template</a>.
+ </div>
+
+<div class="legal1">Company Proprietary</div>
+
+<div class="footnote">
+ Copyright &#169; 2003-2004 Jason Robbins.  All rights reserved. <a href="readyset-license.html">License terms</a>.
+ Retain this copyright statement whenever this file is used as a
+ template.
+</div>
+
+</div>
+</body>
+</html>

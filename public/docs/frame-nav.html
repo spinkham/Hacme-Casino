@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//Tigris//DTD XHTML 1.0 Transitional//EN"
+"http://style.tigris.org/tigris_transitional.dtd">
+<html>
+<head>
+ <style type="text/css">
+/* <![CDATA[ */ 
+@import "/branding/css/tigris.css"; 
+@import "/branding/css/inst.css"; 
+@import "css/nav.css";
+/*  ]]> */
+ </style>
+
+<script src="js/super-simple-tree.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+
+ <title>ReadySET Template Navigation</title>
+</head>
+
+<body onload="collapseAll(); openBookMark();">
+
+
+ <h2><a href="http://readyset.tigris.org/" target="_top">ReadySET</a></h2>
+
+ <ol id="root">
+  <li class="panel"><a id="default" href="#default" class="folder" onclick="toggle(this)"></a>By Activity
+   <ol>
+    <li><a id="planning" href="#default.planning" class="folder"  onclick="toggle(this)"></a>Project Planning
+     <ol>
+      <li><a href="index.html" target="objects" class="doc"></a><a href="index.html" target="objects">Overview</a></li>
+      <li><a href="proposal.html" target="objects" class="doc"></a><a href="proposal.html" target="objects">Proposal</a>
+        <ul>
+      <li><a href="target-and-benefits.html" target="objects"></a><a href="target-and-benefits.html" target="objects">Target and benefits</a></li>
+        </ul>
+      </li>
+      <li><a href="plan.html" target="objects" class="doc"></a><a href="plan.html" target="objects">Project plan</a>
+       <ul>
+        <li><a href="resource-needs.html" target="objects">Resource needs</a></li>
+       </ul>
+      </li>
+      <li><a href="legal.html" target="objects" class="doc"></a><a href="legal.html" target="objects">Legal issues</a></li>
+      <li><a href="qa-plan.html" target="objects" class="doc"></a><a href="qa-plan.html" target="objects">QA Plan</a></li>
+     </ol>
+    </li>
+    <li><a id="req" href="#default.req" class="folder"  onclick="toggle(this)"></a>Requirements and Specification
+     <ol>
+      <li><a href="user-needs.html" target="objects" class="doc"></a><a href="user-needs.html" target="objects">User needs</a>
+       <ul>
+        <li><a href="interview-notes.html" target="objects">Interview notes</a></li>
+       </ul>
+      </li>
+      <li><a href="srs.html" target="objects" class="doc"></a><a href="srs.html" target="objects">Software Requirements Specification</a>
+       <ul>
+        <li><a href="use-case-suite.html" target="objects">Use case suite</a></li>
+        <li><a href="feature-set.html" target="objects">Feature set</a></li>
+       </ul>
+      </li>
+     </ol>
+    </li>
+    <li><a id="design" href="#default.design" class="folder"  onclick="toggle(this)"></a>Architecture and Design
+     <ol>
+      <li><a href="design.html" target="objects" class="doc"></a><a href="design.html" target="objects">Design</a>
+       <ul>
+        <li><a href="design-architecture.html" target="objects">Architecture worksheet</a></li>
+        <li><a href="design-src-org.html" target="objects">Source and build</a></li>
+        <li><a href="design-ui.html" target="objects">User interface worksheet</a></li>
+        <li><a href="design-persistence.html" target="objects">Persistence worksheet</a></li>
+        <li><a href="design-security.html" target="objects">Security worksheet</a></li>
+       </ul>
+      </li>
+     </ol>
+    </li>
+    <li><a id="impl" href="#default.impl" class="folder"  onclick="toggle(this)"></a>Implementation and Testing
+     <ol>
+      <li><a href="userguide.html" target="objects" class="doc"></a><a href="userguide.html" target="objects">User guide</a></li>
+      <li><a href="test-suite.html" target="objects" class="doc"></a><a href="test-suite.html" target="objects">Test suite</a>
+       <ul>
+        <li><a href="test-case-format.html" target="objects">Test case format</a></li>
+        <li><a href="test-cases.html" target="objects">Test cases</a></li>
+       </ul>
+      </li>
+     </ol>
+    </li>
+    <li><a id="deploy" href="#default.deploy" class="folder"  onclick="toggle(this)"></a>Deployment and Installation
+     <ol>
+      <li><a href="release-checklist.html" target="objects" class="doc"></a><a href="release-checklist.html" target="objects">Release checklist</a></li>
+      <li><a href="install.html" target="objects" class="doc"></a><a href="install.html" target="objects">Installation / Quick start guide</a></li>
+      <li><a href="release-notes.html" target="objects" class="doc"></a><a href="release-notes.html" target="objects">Release notes</a></li>
+      <li><a href="demo-script.html" target="objects" class="doc"></a><a href="demo-script.html" target="objects">Demo script</a></li>
+     </ol>
+    </li>
+    <li><a id="ops" href="#default.ops" class="folder"  onclick="toggle(this)"></a>Operations and Support
+     <ol>
+      <li><a href="faq.html" target="objects" class="doc"></a><a href="faq.html" target="objects">FAQ / Troubleshooting</a></li>
+      <li><a href="implementation-notes.html" target="objects"
+   class="doc"></a><a href="implementation-notes.html"
+   target="objects">Implementation notes</a></li>
+     </ol>
+    </li>
+    <li><a id="continuous" href="#default.continuous" class="folder"  onclick="toggle(this)"></a>Continuous or Final
+     <ol>
+      <li><a href="glossary.html" target="objects" class="doc"></a><a href="glossary.html" target="objects">Glossary</a></li>
+      <li><a href="status-report.html" target="objects" class="doc"></a><a href="status-report.html" target="objects">Status report</a></li>
+      <li><a href="review-meeting-notes.html" target="objects" class="doc"></a><a href="review-meeting-notes.html" target="objects">Review meeting notes</a></li>
+      <li><a href="sdm.html" target="objects" class="doc"></a><a href="sdm.html" target="objects">Software development methodology</a></li>
+     </ol>
+    </li>
+ 
+   </ol>
+  </li>
+ 
+<!--
+  <li class="panel"><a id="stake" href="#stake" class="folder"  onclick="toggle(this)"></a>By Stakeholder
+   <ol>
+    <li><a id="everyone" href="#stake.everyone" class="folder"  onclick="toggle(this)"></a>For Everyone
+     <ol>
+      <li><a href="glossary.html" target="objects" class="doc"></a><a href="glossary.html" target="objects">Glossary</a></li>
+      <li><a href="index.html" target="objects" class="doc"></a><a href="index.html" target="objects">Overview</a></li>
+      <li><a href="release-checklist.html" target="objects" class="doc"></a><a href="release-checklist.html" target="objects">Release checklist</a></li>
+      <li><a href="user-needs.html" target="objects" class="doc"></a><a href="user-needs.html" target="objects">User needs</a>
+       <ul>
+        <li><a href="interview-notes.html" target="objects">Interview notes</a></li>
+       </ul>
+      </li>
+      <li><a href="srs.html" target="objects" class="doc"></a><a href="srs.html" target="objects">Software Requirements Specification</a>
+       <ul>
+        <li><a href="use-case-suite.html" target="objects">Use case suite</a></li>
+        <li><a href="feature-set.html" target="objects">Feature set</a></li>
+       </ul>
+      </li>
+      <li><a href="plan.html" target="objects" class="doc"></a><a href="plan.html" target="objects">Project plan</a></li>
+      <li><a href="sdm.html" target="objects" class="doc"></a><a href="sdm.html" target="objects">Software development methodology</a></li>
+     </ol>
+    </li>
+    <li><a id="management" href="#stake.management" class="folder"  onclick="toggle(this)"></a>For Management
+     <ol>
+      <li><a href="status-report.html" target="objects" class="doc"></a><a href="status-report.html" target="objects">Status report</a></li>
+      <li><a href="proposal.html" target="objects" class="doc"></a><a href="proposal.html" target="objects">Proposal</a></li>
+      <li><a href="resource-needs.html" target="objects" class="doc"></a><a href="resource-needs.html" target="objects">Resource needs</a></li>
+     </ol>
+    </li>
+    <li><a id="dev" href="#stake.dev" class="folder"  onclick="toggle(this)"></a>For Developers
+     <ol>
+      <li><a href="design.html" target="objects" class="doc"></a><a href="design.html" target="objects">Design</a>
+       <ul>
+        <li><a href="design-architecture.html" target="objects">Architecture worksheet</a></li>
+        <li><a href="design-src-org.html" target="objects">Source and build</a></li>
+        <li><a href="design-ui.html" target="objects">User interface worksheet</a></li>
+        <li><a href="design-persistence.html" target="objects">Persistence worksheet</a></li>
+        <li><a href="design-security.html" target="objects">Security worksheet</a></li>
+       </ul>
+      </li>
+      <li><a href="review-meeting-notes.html" target="objects" class="doc"></a><a href="review-meeting-notes.html" target="objects">Review meeting notes</a></li>
+     </ol>
+    </li>
+    <li><a id="qa" href="#stake.qa" class="folder"  onclick="toggle(this)"></a>For QA
+     <ol>
+      <li><a href="qa-plan.html" target="objects" class="doc"></a><a href="qa-plan.html" target="objects">QA Plan</a></li>
+      <li><a href="test-suite.html" target="objects" class="doc"></a><a href="test-suite.html" target="objects">Test suite</a>
+       <ul>
+        <li><a href="test-case-format.html" target="objects">Test case format</a></li>
+        <li><a href="test-cases.html" target="objects">Test cases</a></li>
+       </ul>
+     </ol>
+    </li>
+    <li><a id="support" href="#stake.support" class="folder"  onclick="toggle(this)"></a>For Tech Support and Operations
+     <ol>
+      <li><a href="faq.html" target="objects" class="doc"></a><a href="faq.html" target="objects">FAQ / Troubleshooting</a></li>
+      <li><a href="implementation-notes.html" target="objects" class="doc"></a><a href="implementation-notes.html" target="objects">Implementation notes</a></li>
+     </ol>
+    </li>
+    <li><a id="users" href="#stake.users" class="folder"  onclick="toggle(this)"></a>For End Users
+     <ol>
+      <li><a href="install.html" target="objects" class="doc"></a><a href="install.html" target="objects">Installation / Quick start guide</a></li>
+      <li><a href="userguide.html" target="objects" class="doc"></a><a href="userguide.html" target="objects">User guide</a></li>
+      <li><a href="release-notes.html" target="objects" class="doc"></a><a href="release-notes.html" target="objects">Release notes</a></li>
+      <li><a href="faq.html" target="objects" class="doc"></a><a href="faq.html" target="objects">FAQ</a></li>
+     </ol>
+    </li>
+    <li><a id="sales" href="#stake.sales" class="folder"  onclick="toggle(this)"></a>For Sales and Marketing
+     <ol>
+      <li><a href="demo-script.html" target="objects" class="doc"></a><a href="demo-script.html" target="objects">Demo script</a></li>
+      <li><a href="target-and-benefits.html" target="objects" class="doc"></a><a href="target-and-benefits.html" target="objects">Target and benefits</a></li>
+     </ol>
+    </li>
+    <li><a id="legal" href="#stake.legal" class="folder"  onclick="toggle(this)"></a>For Legal
+     <ol>
+      <li><a href="legal.html" target="objects" class="doc"></a><a href="legal.html" target="objects">Legal issues</a></li>
+     </ol>
+    </li>
+   </ol>
+  </li>
+-->
+
+  <li  class="panel"><a id="week" href="#week" class="folder" onclick="toggle(this)"></a>By Suggested Sequence
+   <ol>
+    <li><a id="two" href="#week.two" class="folder"  onclick="toggle(this)"></a>Step 1
+     <ol>
+      <li><a href="index.html" target="objects" class="doc"></a><a href="index.html" target="objects">Overview</a></li>
+      <li><a href="proposal.html" target="objects" class="doc"></a><a href="proposal.html" target="objects">Proposal</a>
+       <ul>
+      <li><a href="target-and-benefits.html" target="objects"></a><a href="target-and-benefits.html" target="objects">Target and benefits</a></li>
+        </ul>
+       </li>
+      <li><a href="plan.html" target="objects" class="doc"></a><a href="plan.html" target="objects">Project plan</a>
+       <ul>
+        <li><a href="resource-needs.html" target="objects">Resource needs</a></li>
+       </ul>
+      </li>
+      <li><a href="legal.html" target="objects" class="doc"></a><a href="legal.html" target="objects">Legal issues</a></li>
+      <li><a href="glossary.html" target="objects" class="doc"></a><a href="glossary.html" target="objects">Glossary</a></li>
+     </ol>
+    </li>
+    <li><a id="three" href="#week.three" class="folder"  onclick="toggle(this)"></a>Step 2
+     <ol>
+      <li><a href="user-needs.html" target="objects" class="doc"></a><a href="user-needs.html" target="objects">User needs</a>
+       <ul>
+        <li><a href="interview-notes.html" target="objects">Interview notes</a></li>
+       </ul>
+      </li>
+      <li><a href="srs.html" target="objects" class="doc"></a><a href="srs.html" target="objects">Software Requirements Specification</a>
+       <ul>
+        <li><a href="use-case-suite.html" target="objects">Use case suite</a></li>
+        <li><a href="feature-set.html" target="objects">Feature set</a></li>
+       </ul>
+      </li>
+     </ol>
+    </li>
+    <li><a id="five" href="#week.five" class="folder"  onclick="toggle(this)"></a>Step 3
+     <ol>
+      <li><a href="design.html" target="objects" class="doc"></a><a href="design.html" target="objects">Design</a>
+       <ul>
+        <li><a href="design-architecture.html" target="objects">Architecture worksheet</a></li>
+        <li><a href="design-src-org.html" target="objects">Source and build</a></li>
+        <li><a href="design-ui.html" target="objects">User interface worksheet</a></li>
+        <li><a href="design-persistence.html" target="objects">Persistence worksheet</a></li>
+        <li><a href="design-security.html" target="objects">Security worksheet</a></li>
+       </ul>
+      </li>
+     </ol>
+    </li>
+    <li><a id="seven" href="#week.seven" class="folder"  onclick="toggle(this)"></a>Step 4
+     <ol>
+      <li><a href="qa-plan.html" target="objects" class="doc"></a><a href="qa-plan.html" target="objects">QA Plan</a></li>
+      <li><a href="test-suite.html" target="objects" class="doc"></a><a href="test-suite.html" target="objects">Test suite</a>
+       <ul>
+        <li><a href="test-case-format.html" target="objects">Test case format</a></li>
+        <li><a href="test-cases.html" target="objects">Test cases</a></li>
+       </ul>
+      </li>
+     </ol>
+    </li>
+    <li><a id="eight" href="#week.eight" class="folder"  onclick="toggle(this)"></a>Step 5
+     <ol>
+      <li><a href="review-meeting-notes.html" target="objects" class="doc"></a><a href="review-meeting-notes.html" target="objects">Review meeting notes</a></li>
+     </ol>
+    </li>
+    <li><a id="nine" href="#week.nine" class="folder"  onclick="toggle(this)"></a>Step 6
+     <ol>
+      <li><a href="release-checklist.html" target="objects" class="doc"></a><a href="release-checklist.html" target="objects">Release checklist</a></li>
+     </ol>
+    </li>
+    <li><a id="ten" href="#week.ten" class="folder"  onclick="toggle(this)"></a>Step 7
+     <ol>
+      <li><a href="install.html" target="objects" class="doc"></a><a href="install.html" target="objects">Installation / Quick start guide</a></li>
+      <li><a href="release-notes.html" target="objects" class="doc"></a><a href="release-notes.html" target="objects">Release notes</a></li>
+      <li><a href="userguide.html" target="objects" class="doc"></a><a href="userguide.html" target="objects">User guide</a></li>
+      <li><a href="demo-script.html" target="objects" class="doc"></a><a href="demo-script.html" target="objects">Demo script</a></li>
+      <li><a href="faq.html" target="objects" class="doc"></a><a href="faq.html" target="objects">FAQ / Troubleshooting</a></li>
+      <li><a href="implementation-notes.html" target="objects" class="doc"></a><a href="implementation-notes.html" target="objects">Implementation notes</a></li>
+     </ol>
+    </li>
+    <li><a id="most" href="#week.most" class="folder"  onclick="toggle(this)"></a>Every week
+     <ol>
+      <li><a href="status-report.html" target="objects" class="doc"></a><a href="status-report.html" target="objects">Status report</a></li>
+     </ol>
+    </li>
+ 
+   </ol>
+  </li>
+
+
+  <li  class="panel"><a id="all" href="#all" class="folder" onclick="toggle(this)"></a>All Templates
+   <ol>
+      <li><a href="all-in-one.html" target="objects" class="doc"></a><a href="all-in-one.html" target="objects">All-in-one</a></li>
+      <li><a href="index.html" target="objects" class="doc"></a><a href="index.html" target="objects">Overview</a></li>
+      <li><a href="proposal.html" target="objects" class="doc"></a><a href="proposal.html" target="objects">Proposal</a>
+       <ul>
+      <li><a href="target-and-benefits.html" target="objects"></a><a href="target-and-benefits.html" target="objects">Target and benefits</a></li>
+       </ul>
+      </li>
+      <li><a href="plan.html" target="objects" class="doc"></a><a href="plan.html" target="objects">Project plan</a>
+       <ul>
+      <li><a href="resource-needs.html" target="objects"></a><a href="resource-needs.html" target="objects">Resource needs</a></li>
+       </ul>
+      </li>
+      <li><a href="qa-plan.html" target="objects" class="doc"></a><a href="qa-plan.html" target="objects">QA Plan</a>
+       <ul>
+        <li><a href="test-suite.html" target="objects"></a><a href="test-suite.html" target="objects">Test suite</a>
+         <ul>
+          <li><a href="test-case-format.html" target="objects">Test case format</a></li>
+          <li><a href="test-cases.html" target="objects">Test cases</a></li>
+         </ul>
+        </li>
+        <li><a href="review-meeting-notes.html" target="objects"></a><a href="review-meeting-notes.html" target="objects">Review meeting notes</a></li>
+       </ul>
+      </li>
+      <li><a href="legal.html" target="objects" class="doc"></a><a href="legal.html" target="objects">Legal issues</a></li>
+      <li><a href="user-needs.html" target="objects" class="doc"></a><a href="user-needs.html" target="objects">User needs</a>
+       <ul>
+        <li><a href="interview-notes.html" target="objects">Interview notes</a></li>
+       </ul>
+      </li>
+      <li><a href="srs.html" target="objects" class="doc"></a><a href="srs.html" target="objects">Software Requirements Specification</a>
+       <ul>
+        <li><a href="use-case-suite.html" target="objects">Use case suite</a></li>
+        <li><a href="feature-set.html" target="objects">Feature set</a></li>
+       </ul>
+      </li>
+      <li><a href="glossary.html" target="objects" class="doc"></a><a href="glossary.html" target="objects">Glossary</a></li>
+      <li><a href="design.html" target="objects" class="doc"></a><a href="design.html" target="objects">Design</a>
+       <ul>
+        <li><a href="design-architecture.html" target="objects">Architecture worksheet</a></li>
+        <li><a href="design-src-org.html" target="objects">Source and build</a></li>
+        <li><a href="design-ui.html" target="objects">User interface worksheet</a></li>
+        <li><a href="design-persistence.html" target="objects">Persistence worksheet</a></li>
+        <li><a href="design-security.html" target="objects">Security worksheet</a></li>
+       </ul>
+      </li>
+      <li><a href="userguide.html" target="objects" class="doc"></a><a href="userguide.html" target="objects">User guide</a></li>
+      <li><a href="release-checklist.html" target="objects" class="doc"></a><a href="release-checklist.html" target="objects">Release checklist</a></li>
+      <li><a href="install.html" target="objects" class="doc"></a><a href="install.html" target="objects">Installation / Quick start guide</a></li>
+      <li><a href="release-notes.html" target="objects" class="doc"></a><a href="release-notes.html" target="objects">Release notes</a></li>
+      <li><a href="demo-script.html" target="objects" class="doc"></a><a href="demo-script.html" target="objects">Demo script</a></li>
+      <li><a href="faq.html" target="objects" class="doc"></a><a href="faq.html" target="objects">FAQ / Troubleshooting</a></li>
+      <li><a href="implementation-notes.html" target="objects" class="doc"></a><a href="implementation-notes.html" target="objects">Implementation notes</a></li>
+      <li><a href="status-report.html" target="objects" class="doc"></a><a href="status-report.html" target="objects">Status report</a></li>
+      <li><a href="sdm.html" target="objects" class="doc"></a><a href="sdm.html" target="objects">Software development methodology</a></li>
+   </ol>
+  </li>
+</ol>
+
+
+<p>How to download these templates:</p>
+
+<ul style="padding-left: 15px;">
+ <li><a href="/servlets/ProjectDocumentList" target="_top">Download template archive</a>, or</li>
+ <li>Use CVS to <a href="http://readyset.tigris.org/servlets/ProjectSource" target="_top">check out</a> project "readyset"</li>
+</ul>
+
+
+</body>
+</html>
