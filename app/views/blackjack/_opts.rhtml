@@ -1,13 +1,13 @@
 <div id = "bj-user-opts">
 <% if (state == 'GAME_OVER') %>
-        <%=form_remote_tag(:update => "room-body", :url => { :action => :new_game })%>
+        <% form_remote_tag(:update => "room-body", :url => { :action => :new_game }) do %>
     <div class = "opt-element">
         <%=image_submit_tag "web/newgame_button.gif"%>
     </div>
-        <%= end_form_tag%>
+        <% end %>
 
 <% elsif (state == 'NEW_GAME')  %>
-        <%=form_remote_tag(:update => "room-body", :url => { :action => :bet })%>
+        <% form_remote_tag(:update => "room-body", :url => { :action => :bet }) do %>
     <%= flash[:errors] %>
     <div class = "opt-element">
         <%=text_field_tag :bet%>
@@ -15,12 +15,12 @@
     <div class = "opt-element">
         <%=image_submit_tag "web/bet_button.gif"%>
     </div>
-        <%= end_form_tag%>
+        <% end %>
 <% elsif (state == 'PLAYER_H_OR_S')  %>
 
 
     <div class = "opt-element">
-        <%=form_remote_tag(:update => "room-body", :url => { :action => :"hit_or_stay"})%>
+        <% form_remote_tag(:update => "room-body", :url => { :action => :"hit_or_stay"}) do %>
 
         <%if session['accessible']%>
         <% for i in 0..cards - 1%>
@@ -29,7 +29,7 @@
         <% end %>
         <%=hidden_field_tag "act", "H" %>
         <%= image_submit_tag "web/hit_button.gif"%>   
-        <%=end_form_tag%>  
+        <% end %>  
     </div>
 
 
@@ -38,19 +38,19 @@
 
         <%if session['accessible']%>
         <% for i in 0..cards - 1%>
-            <%=hidden_field_tag "card"+i.to_s, hand.cards[i] %>
+            <%hidden_field_tag "card"+i.to_s, hand.cards[i] do %>
         <% end %>
         <% end %>
     
             <%=hidden_field_tag "act", "S" %>
         <%= image_submit_tag "web/stay_button.gif",  :name => "S"%>
 
-        <%=end_form_tag%>  
+        <% end %>  
     </div>
 
     <% if cards == 2 %>           
         <div class = "opt_element">
-        <%=form_remote_tag(:update => "room-body", :url => { :action => :"hit_or_stay" })%>
+        <% form_remote_tag(:update => "room-body", :url => { :action => :"hit_or_stay" }) do %>
 
         <%if session['accessible']%>
         <% for i in 0..cards - 1%>
@@ -58,7 +58,7 @@
         <% end %>
         <% end %>
         <%=hidden_field_tag "act", "D" %>
-         <%=end_form_tag%>  
+         <% end %>  
         </div>      
     <% end %>
 <% end %>

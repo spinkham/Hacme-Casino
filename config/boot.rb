@@ -17,7 +17,7 @@ unless defined?(Rails::Initializer)
       end
 
     if rails_gem_version
-      rails_gem = Gem.cache.search('rails', "=#{rails_gem_version}.0").sort_by { |g| g.version.version }.last
+      rails_gem = Gem.cache.find_name('rails', "=#{rails_gem_version}.0").sort_by { |g| g.version.version }.last
 
       if rails_gem
         gem "rails", "=#{rails_gem.version.version}"
