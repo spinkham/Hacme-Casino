@@ -2,15 +2,15 @@ class AccountController < ApplicationController
   model   :user
   layout "standard-layout"
   def login
-    case @request.method
+    case request.method
       when :post
-        if @session['user'] = User.authenticate(@params['user_login'], @params['user_password'])
-          @session['photo'] = 'on'
-          @session['accessible'] = nil         
+        if session['user'] = User.authenticate(params['user_login'], params['user_password'])
+          session['photo'] = 'on'
+          session['accessible'] = nil         
           redirect_back_or_default :controller=> "lobby", :action => "games"
         else
           flash[:errors] = "Login unsuccessful. Please try again."
-          @login = @params['user_login']
+          @login = params['user_login']
           redirect_back_or_default :controller=> "welcome"
       end
     end
@@ -20,12 +20,12 @@ class AccountController < ApplicationController
   end 
   
   def signup
-    case @request.method
+    case request.method
       when :post
-        @user = User.new(@params['user'])
+        @user = User.new(params['user'])
         @user.chips = 0
         if @user.save
-          @session['user'] = User.authenticate(@user.login, @params['user']['password'])
+          session['user'] = User.authenticate(@user.login, params['user']['password'])
           redirect_back_or_default :controller=> "lobby", :action => "games"          
         else                  
           flash[:errors] = @user.errors.full_messages
@@ -37,41 +37,41 @@ class AccountController < ApplicationController
   end  
   
   def delete
-    if @params['id']
-      @user = User.find(@params['id'])
+    if params['id']
+      @user = User.find(params['id'])
       @user.destroy
     end
     redirect_back_or_default :controller => "welcome"
   end        
 
   def transfer_chips
-    amt = @params['transfer'].to_i
+    amt = params['transfer'].to_i
     if !is_valid_amt?(amt)
       flash[:transfer_error] = "This is not an acceptable value"
       redirect_back_or_default :action => "options"
       return
     end
-    donor = @session['user']
-    recipient = User.find_by_login(@params['login'][0])
+    donor = session['user']
+    recipient = User.find_by_login(params['login'][0])
     donor.change_chips(donor.chips - amt)
     recipient.change_chips(recipient.chips + amt)
     redirect_back_or_default :action => "options"
   end
   
   def options
-    @users = User.find_all(['login!=?', @session['user'].login])
+    @users = User.find_all(['login!=?', session['user'].login])
   end
 
   def cash_out
-    amt = @params['amount'].to_i
+    amt = params['amount'].to_i
     if !is_valid_amt?(amt)
       flash[:cash_out_error] = "This is not an acceptable value"
       redirect_back_or_default :action => "options"  
       return
     end
-    @session['user'].chips -= amt
-    puts @params['account']
-    if !(@session['user'].login == 'andy_aces' && @params['amount'].to_i >= 100000 && params['account']=="111-1111-111")
+    session['user'].chips -= amt
+    puts params['account']
+    if !(session['user'].login == 'andy_aces' && params['amount'].to_i >= 100000 && params['account']=="111-1111-111")
       redirect_back_or_default :action => "options"  
     end
   end
@@ -85,8 +85,8 @@ class AccountController < ApplicationController
   end
   
   def update_options
-    @session['photo'] = @params['photo']
-    @session['accessible'] = @params['accessible']
+    session['photo'] = params['photo']
+    session['accessible'] = params['accessible']
     redirect_back_or_default :action => "options"
   end
   

@@ -13,7 +13,7 @@
         table.dealer.hand.cards.each do |card|%>  
         <div class = "card"> 
         <!-- check for dealer_card test parameter -->
-        <% if ((i==1) && (table.state == 'PLAYER_H_OR_S') && @params['dealer_card'].nil?)%>
+        <% if ((i==1) && (table.state == 'PLAYER_H_OR_S') && params['dealer_card'].nil?)%>
                 <img src='/images/cards/empty.bmp'/>
             <%else%>
                 <%=card_img(card)%>
@@ -42,7 +42,7 @@
          </div>
         <%end%>        
     <%end%>    
-    <%if @session['accessible']  && table.state != 'NEW_GAME' %>
+    <%if session['accessible']  && table.state != 'NEW_GAME' %>
             <div class="accessible-hand">
             <% 
                 length = table.player.hand.cards.length

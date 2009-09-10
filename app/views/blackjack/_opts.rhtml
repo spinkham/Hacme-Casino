@@ -22,7 +22,7 @@
     <div class = "opt-element">
         <%=form_remote_tag(:update => "room-body", :url => { :action => :"hit_or_stay"})%>
 
-        <%if @session['accessible']%>
+        <%if session['accessible']%>
         <% for i in 0..cards - 1%>
             <%=hidden_field_tag "card"+i.to_s, hand.cards[i] %>
         <% end %>
@@ -36,7 +36,7 @@
     <div class = "opt-element">
         <%=form_remote_tag(:update => "room-body", :url => { :action => :"hit_or_stay"})%>
 
-        <%if @session['accessible']%>
+        <%if session['accessible']%>
         <% for i in 0..cards - 1%>
             <%=hidden_field_tag "card"+i.to_s, hand.cards[i] %>
         <% end %>
@@ -52,7 +52,7 @@
         <div class = "opt_element">
         <%=form_remote_tag(:update => "room-body", :url => { :action => :"hit_or_stay" })%>
 
-        <%if @session['accessible']%>
+        <%if session['accessible']%>
         <% for i in 0..cards - 1%>
             <%=hidden_field_tag "card"+i.to_s, hand.cards[i] %>
         <% end %>

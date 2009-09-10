@@ -1,6 +1,7 @@
 class BlackjackController < GameController
-  require "blackjack_game"
-  require "blackjack_player"
+  require File.dirname(__FILE__)+"/../models/blackjack/blackjack_game"
+  require File.dirname(__FILE__)+"/../models/blackjack/blackjack_player" 
+
   def show
     session['bjgame'] = nil
     @game = game
@@ -20,7 +21,7 @@ class BlackjackController < GameController
   end
 	
   def bet
-    amt = @params['bet'].to_i
+    amt = params['bet'].to_i
     if is_valid_amt?(amt)
       @chips_result = game.bet(amt)
     else
@@ -30,12 +31,12 @@ class BlackjackController < GameController
   end
 	
   def hit_or_stay
-#   if (@params['card0']) 
+#   if (params['card0']) 
 #	 for i in 0..game.player.hand.cards.length-1
-#       game.player.hand.cards[i] = Card.create_from_value(@params["card"+i.to_s])
+#       game.player.hand.cards[i] = Card.create_from_value(params["card"+i.to_s])
 #     end
 #   end
-   @chips_result = game.player_hit_or_stay(@params['act'])
+   @chips_result = game.player_hit_or_stay(params['act'])
    render_partial('game')
   end
 end

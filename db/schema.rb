@@ -5,11 +5,11 @@
 ActiveRecord::Schema.define() do
 
   create_table "users", :force => true do |t|
-    t.column "login", :string
-    t.column "password", :string
-    t.column "chips", :integer
+    t.column "login",      :string
+    t.column "password",   :string
+    t.column "chips",      :integer
     t.column "first_name", :string
-    t.column "last_name", :string
+    t.column "last_name",  :string
   end
 
 end

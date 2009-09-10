@@ -1,5 +1,6 @@
 require File.dirname(__FILE__) + '/../../test_helper'
 require 'casino/card'
+require File.dirname(__FILE__) + '/../../../app/models/video_poker/video_poker_game'
 class VideoPokerGameTest < Test::Unit::TestCase
   fixtures :users
   def test_game

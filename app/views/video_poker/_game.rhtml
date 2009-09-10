@@ -4,7 +4,7 @@
 <%=	render_partial('opts',  'state' => game.state, 
                             'hand' => game.player.hand, 
                             'denomination' => game.denomination) %>
-<%=	render_partial('status', 'chips' => @session['user'].chips, 
+<%=	render_partial('status', 'chips' => session['user'].chips, 
                              'current_bet' => game.player.current_bet, 
                              'state' => game.state, 
                              'result' => game.result,

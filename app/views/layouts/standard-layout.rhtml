@@ -17,12 +17,12 @@
 
     </div>
     <div id="sidebar">
-        <% if @user = @session['user'] %>
-            <% @in_room = (@params[:action]=='show') %>
+        <% if @user = session['user'] %>
+            <% @in_room = (params[:action]=='show') %>
             <%= render_partial "account/profile" %>
             <%= render_partial "account/nav" %>
         <% else%> 
-          <%if @params['signup'] == "true" %>
+          <%if params['signup'] == "true" %>
             <%= render_partial "account/signup" %>
           <% else %>
             <%= render_partial "account/login" %>

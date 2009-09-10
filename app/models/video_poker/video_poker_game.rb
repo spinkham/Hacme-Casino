@@ -1,10 +1,11 @@
-require 'video_poker_deck'
-require 'video_poker_dealer'
-require 'video_poker_player'
-require 'casino/card_game'
-require 'video_poker_pay_schedule'
+require File.dirname(__FILE__)+"/video_poker_deck"
+require File.dirname(__FILE__)+'/video_poker_dealer'
+require File.dirname(__FILE__)+'/video_poker_player'
+#require File.dirname(__FILE__)+'/../casino/card_game'
+require File.dirname(__FILE__)+'/video_poker_pay_schedule'
 
-class VideoPokerGame < CardGame
+
+class VideoPokerGame < Casino::CardGame
   attr_accessor :denomination
   def initialize(name, player, denomination)
     super(name)

@@ -1,4 +1,5 @@
 require File.dirname(__FILE__) + '/../../test_helper'
+require File.dirname(__FILE__) + '/../../../app/models/blackjack/blackjack_game'
 
 class BlackjackGameTest < Test::Unit::TestCase
   fixtures :users

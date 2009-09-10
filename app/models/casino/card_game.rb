@@ -1,4 +1,4 @@
-class CardGame
+class Casino::CardGame
   attr_accessor :name, :player, :dealer, :state, :result
   def initialize(name)
     @name = name

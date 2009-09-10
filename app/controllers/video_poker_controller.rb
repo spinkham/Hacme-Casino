@@ -1,3 +1,4 @@
+require File.dirname(__FILE__)+"/../models/video_poker/video_poker_game"
 class VideoPokerController < GameController
   def show
     session['vpgame'] = nil
@@ -17,8 +18,8 @@ class VideoPokerController < GameController
   end
   
   def bet
-    denomination = @params['denomination'].to_i
-    bet = @params['bet'].to_i
+    denomination = params['denomination'].to_i
+    bet = params['bet'].to_i
     if (is_valid_amt?(bet * denomination))
 	  @game.denomination = denomination
 	  @game.bet(bet)	  
@@ -35,7 +36,7 @@ class VideoPokerController < GameController
   
   def draw
     for @index in 0..4
-      if @params['hold_' + @index.to_s] == 'true'
+      if params['hold_' + @index.to_s] == 'true'
         @game.hold_card_toggle(@index)
       end
     end

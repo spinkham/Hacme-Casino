@@ -1,9 +1,9 @@
-require "blackjack_deck"
-require "blackjack_player"
-require "blackjack_dealer"
-require "blackjack_hand"
+require File.dirname(__FILE__)+"/blackjack_deck"
+require File.dirname(__FILE__)+"/blackjack_player"
+require File.dirname(__FILE__)+"/blackjack_dealer"
+require File.dirname(__FILE__)+"/blackjack_hand"
 
-class BlackjackGame < CardGame
+class BlackjackGame < Casino::CardGame
   def initialize(name, player)
     super(name)
     @dealer = BlackjackDealer.new(BlackjackDeck.new())
