@@ -3,7 +3,7 @@ require 'digest/sha1'
 # this model expects a certain database layout and its based on the name/login pattern. 
 class User < ActiveRecord::Base
   def self.authenticate(login, pass)
-    find_first("login = '#{login}' AND password = '#{sha1(pass)}'")
+    find(:first, :conditions => "login = '#{login}' AND password = '#{sha1(pass)}'")
   end
 
   def change_password(pass)

@@ -4,7 +4,7 @@ require 'login_system'
 
 class ApplicationController < ActionController::Base
     include LoginSystem
-    model :user
+    require_dependency("user")
     def require_game
       @game = game
     end

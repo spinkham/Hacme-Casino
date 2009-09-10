@@ -1,5 +1,5 @@
 class AccountController < ApplicationController
-  model   :user
+  require_dependency("user")
   layout "standard-layout"
   def login
     case request.method
