@@ -6,7 +6,7 @@ class LobbyController < ApplicationController
   end
 
   def not_yet
-    render_text("This game is not available yet. Please check back soon!")
+    render(:text, "This game is not available yet. Please check back soon!")
   end
 
 end
