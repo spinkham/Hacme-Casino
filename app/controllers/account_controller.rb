@@ -59,7 +59,7 @@ class AccountController < ApplicationController
   end
   
   def options
-    @users = User.find_all(['login!=?', session['user'].login])
+    @users = User.find(:all, ['login!=?', session['user'].login])
   end
 
   def cash_out

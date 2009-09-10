@@ -8,7 +8,7 @@
          <% if !flash[:errors].nil? %>         
          <div id="message"> <%=flash[:errors]%> </div>            
          <% end %>
-<%= start_form_tag :controller => "account", :action=> "login" %>
+<% form_tag( :controller => "account", :action=> "login") do %>
         <h3>Please login</h3>
         <label for="user_login">Login:</label><br/>
         <input type="text" name="user_login" id="user_login" size="30" value=""/><br/>
@@ -20,7 +20,7 @@
         <%= image_submit_tag "web/login_button.gif", :class => "submit" %>
     <br>
         <%= link_to_remote "<< Register", :update=>"sidebar", :url => {:controller=> "account", :action => "signup_form"} %>
-<%= end_form_tag %>
+<% end %>
    </div>
     <div id="s_bottom">
         <%= image_tag "web/round_div_bottom.gif" %>

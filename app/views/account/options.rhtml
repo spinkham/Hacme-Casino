@@ -5,7 +5,7 @@
     <div id="options-body">
         <div id = "opt">
   <%= flash[:transfer_error] %>
-  <%= start_form_tag :controller => "account", :action => "transfer_chips" %>
+  <% form_tag(:controller => "account", :action => "transfer_chips") do  %>
 <h3>Transfer chips to another player: </h3>
   <table>
   <tr>
@@ -30,14 +30,14 @@
     </td>
   </tr>
   </table>
-<%= end_form_tag %>
+<% end %>
 </table>
 </div>
 
 <div id="opt">
 <%=flash[:cash_out_error]%>
 <h3>Cash out: </h3>
-  <%= start_form_tag :controller => "account", :action => "cash_out" %>
+  <% form_tag(:controller => "account", :action => "cash_out") do %>
   <table>
   <tr>
     <td>
@@ -64,14 +64,14 @@
     </td>
   </tr>
   </table>
-<%= end_form_tag %>
+<% end  %>
 </table>
 </div>
 
 <div id="opt">
 
 <h3> Session Options</h3>
-  <%= start_form_tag :controller => "account", :action => "update_options" %>
+  <% form_tag(:controller => "account", :action => "update_options") do %>
   <table>
     <tr>
         <td>
@@ -107,7 +107,7 @@
     </td>
    </table>
 
-   <%= end_form_tag %>
+   <% end %>
  </div>
  </div>
     <div id="c_bottom">
